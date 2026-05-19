@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="穿戴甲 vs 凝膠美甲：哪個適合你？" description="比較穿戴甲與凝膠美甲的優缺點、適合場合、價格與維護方式，幫助您做出最佳選擇。">
+  <Header />
+  <main class="pt-8 pb-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <nav class="text-sm text-it-text mb-4">
+        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-it-cta">部落格</a> <span class="mx-2">/</span>
+        <span>穿戴甲 vs 凝膠美甲</span>
+      </nav>
+      <article class="prose prose-lg mx-auto">
+        <h1>穿戴甲 vs 凝膠美甲：哪個適合你？</h1>
+        <p class="text-sm text-it-text">發布日期：2025-01-05</p>
+        <table class="w-full text-sm border border-it-secondary/20 rounded-xl overflow-hidden">
+          <tr class="bg-it-secondary/20"><th class="p-3 text-left">比較項目</th><th class="p-3 text-left">凝膠美甲</th><th class="p-3 text-left">穿戴甲</th></tr>
+          <tr class="border-t"><td class="p-3">持久度</td><td class="p-3">2-4 週</td><td class="p-3">數天至 1-2 週</td></tr>
+          <tr class="border-t bg-it-light"><td class="p-3">施作時間</td><td class="p-3">1.5-2 小時</td><td class="p-3">10-15 分鐘</td></tr>
+          <tr class="border-t"><td class="p-3">價格</td><td class="p-3">NT$1,200 起</td><td class="p-3">NT$1,000 起（可重複使用）</td></tr>
+          <tr class="border-t bg-it-light"><td class="p-3">適合場合</td><td class="p-3">日常長期使用</td><td class="p-3">特殊場合、臨時需求</td></tr>
+        </table>
+        <p>若您追求長期持妝與專業質感，凝膠美甲是較佳選擇；若您喜歡經常變換款式或有臨時重要場合，穿戴甲更為靈活。</p>
+      </article>
+    </div>
+  </main>
+  <Footer />
+</Layout>

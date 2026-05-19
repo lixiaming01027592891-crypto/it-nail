@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout title="美甲教學課程 | 零基礎到創業開店" description="伊特美甲提供台北中山區一對一及小班制日式美甲教學。基礎班 20 小時、進階班 40 小時、創業輔導班 60 小時。立即諮詢課程。">
+  <Header />
+  <main class="pt-8 pb-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <nav class="text-sm text-it-text mb-4"><a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>美甲教學</span></nav>
+      <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">美甲教學課程</h1>
+        <p class="text-it-text max-w-2xl mx-auto">從零基礎到創業開店，一對一專業指導。台北中山區美甲教學推薦，附完整工具組。</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-it-secondary/20 text-center hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold text-it-dark mb-2">基礎班</h3>
+          <p class="text-3xl font-bold text-it-cta mb-4">NT$18,000</p>
+          <p class="text-sm text-it-text mb-4">20 小時課程</p>
+          <ul class="text-sm text-it-text space-y-2 text-left mb-6">
+            <li>指甲生理學與衛生規範</li>
+            <li>工具認識與使用</li>
+            <li>基礎保養與修剪</li>
+            <li>單色凝膠技法</li>
+          </ul>
+          <a href="https://line.me/R/ti/p/@itnail" target="_blank" class="inline-block w-full py-3 bg-it-secondary text-it-dark font-bold rounded-full hover:bg-it-cta hover:text-white transition-colors">諮詢課程</a>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border-2 border-it-cta text-center ring-2 ring-it-cta/10 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-it-cta text-white text-xs font-bold px-3 py-1 rounded-full">最熱門</div>
+          <h3 class="text-xl font-bold text-it-dark mb-2">進階班</h3>
+          <p class="text-3xl font-bold text-it-cta mb-4">NT$35,000</p>
+          <p class="text-sm text-it-text mb-4">40 小時課程</p>
+          <ul class="text-sm text-it-text space-y-2 text-left mb-6">
+            <li>基礎班全部內容</li>
+            <li>漸層與貓眼技法</li>
+            <li>手繪花卉與幾何</li>
+            <li>延甲與甲型矯正</li>
+          </ul>
+          <a href="https://line.me/R/ti/p/@itnail" target="_blank" class="inline-block w-full py-3 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors">諮詢課程</a>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-it-secondary/20 text-center hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold text-it-dark mb-2">創業輔導班</h3>
+          <p class="text-3xl font-bold text-it-cta mb-4">NT$55,000</p>
+          <p class="text-sm text-it-text mb-4">60 小時課程</p>
+          <ul class="text-sm text-it-text space-y-2 text-left mb-6">
+            <li>進階班全部內容</li>
+            <li>創業成本分析</li>
+            <li>店面選址與裝潢</li>
+            <li>行銷與社群經營</li>
+          </ul>
+          <a href="https://line.me/R/ti/p/@itnail" target="_blank" class="inline-block w-full py-3 bg-it-secondary text-it-dark font-bold rounded-full hover:bg-it-cta hover:text-white transition-colors">諮詢課程</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

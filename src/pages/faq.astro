@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const title = '常見問題 FAQ | 伊特美甲';
+const description = '伊特美甲 FAQ：預約方式、凝膠美甲價格、參考圖、臨時改款式、美甲教學課程內容與費用等常見問題完整解答。';
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main class="pt-8 pb-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <nav class="text-sm text-it-text mb-4">
+          <a href="/" class="hover:text-it-cta">首頁</a>
+          <span class="mx-2">/</span>
+          <span>常見問題</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">美甲常見問題 FAQ</h1>
+        <p class="text-it-text">關於預約、價格、款式、教學的完整解答</p>
+      </div>
+      <div class="space-y-4">
+        <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50">
+            <span>美甲需要提前預約嗎？</span>
+            <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">是的，伊特美甲採全預約制，建議提前 3-7 天透過 LINE 或電話預約，以確保為您保留專屬時段與美甲師。臨時預約視當日空檔而定。</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50">
+            <span>可以帶參考圖給美甲師嗎？</span>
+            <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">當然可以！我們非常歡迎您攜帶喜歡的風格參考圖。美甲師會根據您的甲型、膚色與生活習慣，給予專業調整建議。</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50">
+            <span>凝膠美甲價格怎麼確認？</span>
+            <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">基礎凝膠單色 NT$1,200 起，設計款依複雜度報價。預約時可先傳參考圖詢問，現場也會再次確認最終價格後才開始操作。</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50">
+            <span>可以臨時改款式嗎？</span>
+            <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">可以，但建議在預約時盡量確認款式。若現場臨時更換複雜度差異較大的設計，可能需要調整價格與施作時間。</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50">
+            <span>美甲教學課程適合新手嗎？</span>
+            <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">非常適合！我們的基礎課程專為零經驗學員設計，從指甲構造、工具認識到基礎凝膠技法，一步步帶您進入美甲世界。</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50">
+            <span>美甲課程會教哪些內容？</span>
+            <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">課程內容涵蓋指甲生理學、衛生消毒規範、基礎保養、單色凝膠、漸層技法、貓眼設計、手繪基礎、卸甲技巧、創業輔導等完整技能。</div>
+        </details>
+        <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50">
+            <span>學美甲需要準備工具嗎？</span>
+            <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">基礎課程已包含完整工具組，學員無需額外準備。進階課程會建議添購個人慣用工具，老師會提供採購建議。</div>
+        </details>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
