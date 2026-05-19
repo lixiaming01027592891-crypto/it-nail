@@ -1,41 +1,33 @@
 ---
 const serviceLinks = [
-  { label: '凝膠美甲', href: '/services/gel-nails' },
-  { label: '光療延甲', href: '/services/gel-extension' },
-  { label: '手足保養', href: '/services/manicure-pedicure' },
-  { label: '穿戴甲訂製', href: '/services/press-on-nails' },
-];
-
-const infoLinks = [
+  { label: '凝膠美甲', href: '/services' },
+  { label: '手足保養', href: '/services#care' },
   { label: '價格表', href: '/pricing' },
-  { label: '常見問題 FAQ', href: '/faq' },
-  { label: '作品集', href: '/gallery' },
-  { label: '部落格', href: '/blog' },
+  { label: '常見問題', href: '/faq' },
 ];
-
-const locationLinks = [
-  { label: '台北中山店', href: '/locations/zhongshan' },
-  { label: '台北信義店', href: '/locations/xinyi' },
+const infoLinks = [
+  { label: '作品集', href: '/gallery' },
+  { label: '真實評價', href: '/reviews' },
+  { label: '部落格', href: '/blog' },
+  { label: '關於伊特', href: '/about' },
 ];
 ---
-
-<footer class="bg-it-dark text-white/80" itemscope itemtype="https://schema.org/LocalBusiness">
-  <meta itemprop="name" content="伊特美甲 It Nail" />
+<footer class="bg-it-dark text-white/80" itemscope itemtype="https://schema.org/NailSalon">
+  <meta itemprop="name" content="ITUNG NAILS 伊特美甲" />
   <meta itemprop="image" content="https://itnail-kimi.pages.dev/images/og-default.jpg" />
-  
+  <meta itemprop="url" content="https://itnail-kimi.pages.dev" />
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div>
-        <h3 class="text-lg font-serif font-bold text-white mb-4">伊特美甲 It Nail</h3>
+        <h3 class="text-lg font-serif font-bold text-white mb-4">伊特美甲</h3>
         <p class="text-sm leading-relaxed mb-4" itemprop="description">
-          台北中山區精緻凝膠美甲工作室，提供光療美甲、手足保養、穿戴甲訂製與日式美甲教學課程。
+          ITUNG NAILS 伊特美甲，台北景美、新店地區平價高CP值美甲沙龍。IG 10K+ 粉絲推薦，專業凝膠美甲與手足保養。
         </p>
         <div class="flex gap-3">
-          <a href="https://instagram.com/itnail" target="_blank" rel="noopener" class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-it-cta transition-colors">Instagram</a>
-          <a href="https://line.me/R/ti/p/@itnail" target="_blank" rel="noopener" class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-it-cta transition-colors">LINE</a>
+          <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener" class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-it-cta transition-colors">Instagram</a>
+          <a href="https://www.facebook.com/itung.lin.nails/" target="_blank" rel="noopener" class="px-3 py-1 bg-white/10 rounded-full text-xs hover:bg-it-cta transition-colors">Facebook</a>
         </div>
       </div>
-      
       <div>
         <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">服務項目</h4>
         <ul class="space-y-2">
@@ -44,7 +36,6 @@ const locationLinks = [
           ))}
         </ul>
       </div>
-      
       <div>
         <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">資訊中心</h4>
         <ul class="space-y-2">
@@ -53,29 +44,20 @@ const locationLinks = [
           ))}
         </ul>
       </div>
-      
       <div>
-        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">分店資訊</h4>
-        <ul class="space-y-2">
-          {locationLinks.map(link => (
-            <li><a href={link.href} class="text-sm hover:text-it-blush transition-colors">{link.label}</a></li>
-          ))}
-        </ul>
-        <div class="mt-4 text-sm space-y-1">
-          <p itemprop="telephone">📞 02-0000-0000</p>
+        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">聯絡我們</h4>
+        <div class="text-sm space-y-2">
+          <p><a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="hover:text-white transition-colors">📩 IG 私訊預約</a></p>
           <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <span itemprop="addressLocality">台北市中山區</span>
+            <span itemprop="addressLocality">台北市文山區景美</span> /
+            <span itemprop="addressRegion">新北市新店區</span>
           </p>
         </div>
       </div>
     </div>
-    
     <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p class="text-xs text-white/60">© 2025 伊特美甲 It Nail. All rights reserved.</p>
-      <div class="flex gap-4 text-xs text-white/60">
-        <a href="/privacy" class="hover:text-white transition-colors">隱私政策</a>
-        <a href="/terms" class="hover:text-white transition-colors">服務條款</a>
-      </div>
+      <p class="text-xs text-white/60">© ITUNG NAILS 伊特美甲. All rights reserved.</p>
+      <p class="text-xs text-white/60">IG: @itung_lin_nails · 10K+ Followers</p>
     </div>
   </div>
 </footer>

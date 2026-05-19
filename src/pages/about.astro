@@ -3,25 +3,42 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
-<Layout title="關於伊特美甲 | 台北中山區精緻美甲工作室" description="伊特美甲 It Nail 創立於台北中山區，以義式美學為靈感，專注於精緻凝膠美甲與日式美甲教學。Google 五星好評推薦。">
+<Layout title="關於伊特美甲 | ITUNG NAILS" description="ITUNG NAILS 伊特美甲，台北景美、新店地區平價高CP值美甲沙龍。IG 10K+ 粉絲、972 篇作品分享，深受部落客與顧客推薦。">
   <Header />
   <main class="pt-8 pb-20">
-    <div class="max-w-3xl mx-auto px-4">
-      <nav class="text-sm text-it-text mb-4"><a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>關於伊特</span></nav>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-it-text mb-4">
+        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>關於伊特</span>
+      </nav>
       <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">關於伊特美甲</h1>
+        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">關於 ITUNG NAILS 伊特美甲</h1>
       </div>
-      <div class="prose prose-lg mx-auto text-it-text">
-        <p>伊特美甲 It Nail 創立於台北中山區，以義式美學為靈感，專注於精緻凝膠美甲與日式美甲教學。</p>
-        <p>我們相信，美甲不只是裝飾，更是一種生活態度的展現。每一位來到伊特的顧客，都值得擁有專屬的指尖藝術。</p>
-        <p>伊特美甲採全預約制，確保每位顧客都能享有充足的時間與專業的服務品質。我們使用日本進口凝膠與專業級工具，堅持衛生消毒標準。</p>
-        <h2>我們的堅持</h2>
+      <div class="prose prose-lg mx-auto text-it-text space-y-6">
+        <p>ITUNG NAILS 伊特美甲是一家位於<strong>台北市文山區景美及新北市新店區</strong>附近的平價高CP值美甲沙龍。</p>
+        <p>我們在 Instagram 上累積了 <strong>10,000+ 粉絲</strong>，分享了超過 <strong>972 篇</strong>美甲作品與風格靈感，深受在地顧客與美甲愛好者的喜愛。</p>
+        <p>伊特美甲主打<strong>平價高CP值</strong>的專業凝膠美甲服務，讓小資族也能輕鬆享受沙龍級品質。我們的設計風格多元，從簡約日常到華麗設計款都能精準呈現。</p>
+        <h2>為什麼選擇伊特美甲？</h2>
         <ul>
-          <li>全預約制，確保服務品質</li>
-          <li>使用日本進口凝膠產品</li>
-          <li>嚴格衛生消毒流程</li>
-          <li>一對一專屬服務</li>
+          <li><strong>平價高CP值</strong>：多家部落格評比推薦的親民價格</li>
+          <li><strong>豐富作品</strong>：IG 累積 972+ 篇真實作品分享</li>
+          <li><strong>在地深耕</strong>：服務景美、新店地區顧客多年</li>
+          <li><strong>預約彈性</strong>：透過 IG 私訊即可輕鬆預約</li>
         </ul>
+        <h2>媒體與部落客推薦</h2>
+        <p>伊特美甲曾獲得多家部落格介紹與推薦，包括：</p>
+        <ul>
+          <li>非常寶貝 Very Baby - 台北平價高CP值美甲沙龍評比</li>
+          <li>Misseping 美甲評價網</li>
+          <li>May128 美甲推薦</li>
+          <li>Dryad 生活風格誌</li>
+          <li>Evan Chin 生活部落格</li>
+        </ul>
+        <div class="text-center mt-10">
+          <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            <span>追蹤 IG 看更多作品</span>
+          </a>
+        </div>
       </div>
     </div>
   </main>

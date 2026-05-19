@@ -3,32 +3,25 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
-<Layout title="服務項目 | 凝膠美甲・手足保養・穿戴甲・美甲教學" description="伊特美甲提供台北中山區凝膠美甲、光療延甲、手足保養、穿戴甲訂製與日式美甲教學。立即預約享新客優惠。">
+<Layout title="服務項目 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲提供台北景美、新店地區平價高CP值凝膠美甲、手足保養、光療延甲與 nail art 設計。">
   <Header />
   <main class="pt-8 pb-20">
     <div class="max-w-6xl mx-auto px-4">
-      <nav class="text-sm text-it-text mb-4"><a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>服務項目</span></nav>
+      <nav class="text-sm text-it-text mb-4">
+        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>服務項目</span>
+      </nav>
       <div class="text-center mb-12">
         <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">伊特美甲服務項目</h1>
-        <p class="text-it-text max-w-2xl mx-auto">從日常凝膠美甲到專業美甲教學，提供全方位的指尖美學服務。台北中山區美甲推薦首選。</p>
+        <p class="text-it-text max-w-2xl mx-auto">平價高CP值的專業美甲服務，讓小資族也能享受沙龍級品質。</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-white rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg transition-shadow">
           <h2 class="text-2xl font-serif font-bold text-it-dark mb-4">凝膠美甲</h2>
-          <p class="text-it-text mb-4">專業光療凝膠技術，色彩飽和持久，呵護您的天然指甲。包含前置保養、凝膠上色、建構加固。</p>
+          <p class="text-it-text mb-4">專業凝膠上色，色彩飽和持久。從單色、貓眼到漸層設計，滿足各種風格需求。</p>
           <ul class="text-sm text-it-text space-y-2 mb-6">
-            <li class="flex justify-between"><span>單色凝膠</span><span class="font-bold text-it-cta">NT$1,200 起</span></li>
-            <li class="flex justify-between"><span>貓眼 / 漸層</span><span class="font-bold text-it-cta">NT$1,500 起</span></li>
+            <li class="flex justify-between"><span>單色凝膠</span><span class="font-bold text-it-cta">NT$699 起</span></li>
+            <li class="flex justify-between"><span>貓眼 / 漸層</span><span class="font-bold text-it-cta">NT$899 起</span></li>
             <li class="flex justify-between"><span>設計款</span><span class="font-bold text-it-cta">依複雜度報價</span></li>
-          </ul>
-          <a href="/pricing" class="text-it-cta font-medium hover:text-it-dark transition-colors">查看完整價格表 →</a>
-        </div>
-        <div class="bg-white rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg transition-shadow">
-          <h2 class="text-2xl font-serif font-bold text-it-dark mb-4">光療延甲</h2>
-          <p class="text-it-text mb-4">硬式凝膠延甲技術，改善甲型問題，打造完美長度與弧度。適合指甲較短或甲型不整者。</p>
-          <ul class="text-sm text-it-text space-y-2 mb-6">
-            <li class="flex justify-between"><span>單指延甲</span><span class="font-bold text-it-cta">NT$150</span></li>
-            <li class="flex justify-between"><span>全手延甲</span><span class="font-bold text-it-cta">NT$1,500 起</span></li>
           </ul>
           <a href="/pricing" class="text-it-cta font-medium hover:text-it-dark transition-colors">查看完整價格表 →</a>
         </div>
@@ -36,21 +29,34 @@ import Footer from '../components/Footer.astro';
           <h2 class="text-2xl font-serif font-bold text-it-dark mb-4">手足保養</h2>
           <p class="text-it-text mb-4">深層滋養與角質護理，讓雙手雙足恢復細緻柔嫩。使用專業級保養產品。</p>
           <ul class="text-sm text-it-text space-y-2 mb-6">
-            <li class="flex justify-between"><span>手部基礎保養</span><span class="font-bold text-it-cta">NT$800</span></li>
-            <li class="flex justify-between"><span>足部基礎保養</span><span class="font-bold text-it-cta">NT$1,000</span></li>
-            <li class="flex justify-between"><span>深層護理療程</span><span class="font-bold text-it-cta">NT$1,500</span></li>
+            <li class="flex justify-between"><span>手部基礎保養</span><span class="font-bold text-it-cta">NT$500</span></li>
+            <li class="flex justify-between"><span>足部基礎保養</span><span class="font-bold text-it-cta">NT$600</span></li>
+            <li class="flex justify-between"><span>深層護理療程</span><span class="font-bold text-it-cta">NT$900</span></li>
+          </ul>
+          <a href="/pricing" class="text-it-cta font-medium hover:text-it-dark transition-colors">查看完整價格表 →</a>
+        </div>
+        <div id="extension" class="bg-white rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg transition-shadow">
+          <h2 class="text-2xl font-serif font-bold text-it-dark mb-4">光療延甲</h2>
+          <p class="text-it-text mb-4">改善甲型問題，打造完美長度與弧度。適合指甲較短或甲型不整者。</p>
+          <ul class="text-sm text-it-text space-y-2 mb-6">
+            <li class="flex justify-between"><span>單指延甲</span><span class="font-bold text-it-cta">NT$100</span></li>
+            <li class="flex justify-between"><span>全手延甲</span><span class="font-bold text-it-cta">NT$1,000 起</span></li>
           </ul>
           <a href="/pricing" class="text-it-cta font-medium hover:text-it-dark transition-colors">查看完整價格表 →</a>
         </div>
         <div class="bg-white rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg transition-shadow">
-          <h2 class="text-2xl font-serif font-bold text-it-dark mb-4">穿戴甲訂製</h2>
-          <p class="text-it-text mb-4">量身訂製的時尚穿戴甲，隨時變換風格。附贈專用果凍膠與收納盒。</p>
+          <h2 class="text-2xl font-serif font-bold text-it-dark mb-4">Nail Art 設計</h2>
+          <p class="text-it-text mb-4">從簡約線條到華麗手繪，依據您的風格量身設計。歡迎帶參考圖討論。</p>
           <ul class="text-sm text-it-text space-y-2 mb-6">
-            <li class="flex justify-between"><span>基礎款</span><span class="font-bold text-it-cta">NT$1,000 起</span></li>
-            <li class="flex justify-between"><span>設計款</span><span class="font-bold text-it-cta">NT$1,500 起</span></li>
+            <li class="flex justify-between"><span>簡單設計款</span><span class="font-bold text-it-cta">NT$1,200 起</span></li>
+            <li class="flex justify-between"><span>複雜設計款</span><span class="font-bold text-it-cta">NT$1,800 起</span></li>
           </ul>
-          <a href="/pricing" class="text-it-cta font-medium hover:text-it-dark transition-colors">查看完整價格表 →</a>
+          <a href="/gallery" class="text-it-cta font-medium hover:text-it-dark transition-colors">看作品集 →</a>
         </div>
+      </div>
+      <div class="mt-12 text-center">
+        <p class="text-it-text mb-4">* 以上價格僅供參考，實際價格依現場報價為準。</p>
+        <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors">IG 私訊詢問最新價格</a>
       </div>
     </div>
   </main>
