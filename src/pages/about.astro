@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
-<Layout title="關於伊特美甲 | ITUNG NAILS" description="ITUNG NAILS 伊特美甲，台北景美、新店地區平價高CP值美甲沙龍。IG 10K+ 粉絲、972 篇作品分享，深受部落客與顧客推薦。">
+<Layout title="關於伊特美甲 | ITUNG NAILS" description="ITUNG NAILS 伊特美甲，台北景美、新店兩間分店的平價高CP值美甲沙龍。日本材料、專業技術，IG 10,431 粉絲、972 篇作品推薦。">
   <Header />
   <main class="pt-8 pb-20">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,26 +14,41 @@ import Footer from '../components/Footer.astro';
         <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">關於 ITUNG NAILS 伊特美甲</h1>
       </div>
       <div class="prose prose-lg mx-auto text-it-text space-y-6">
-        <p>ITUNG NAILS 伊特美甲是一家位於<strong>台北市文山區景美及新北市新店區</strong>附近的平價高CP值美甲沙龍。</p>
-        <p>我們在 Instagram 上累積了 <strong>10,000+ 粉絲</strong>，分享了超過 <strong>972 篇</strong>美甲作品與風格靈感，深受在地顧客與美甲愛好者的喜愛。</p>
-        <p>伊特美甲主打<strong>平價高CP值</strong>的專業凝膠美甲服務，讓小資族也能輕鬆享受沙龍級品質。我們的設計風格多元，從簡約日常到華麗設計款都能精準呈現。</p>
-        <h2>為什麼選擇伊特美甲？</h2>
+        <p>在忙碌的城市裡，我們相信每個人都值得擁有一段真正屬於自己的放鬆時光。</p>
+        <p><strong>ITUNG NAILS 伊特美甲</strong> 從創立之初，便致力於打造一個讓你能夠卸下壓力、專注感受美好的空間。我們選用<strong>日本材料</strong>，以純熟的技術與細膩的服務，為每一位客人提供高品質且<strong>平價高 CP 值</strong>的美甲體驗。</p>
+
+        <h2 class="text-2xl font-bold text-it-dark mt-8 mb-4">兩間店，同一份用心</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 not-prose my-6">
+          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/20">
+            <h3 class="font-bold text-it-dark mb-2">🏠 景美店</h3>
+            <p class="text-sm text-it-text">台北市文山區<strong>景興路</strong>，鄰近<strong>景美捷運站</strong>（步行約 7 分鐘），周邊有景美翰星百貨等生活商圈。木質色調空間，質感放鬆。</p>
+          </div>
+          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/20">
+            <h3 class="font-bold text-it-dark mb-2">🏠 新店店</h3>
+            <p class="text-sm text-it-text">新店<strong>眷村巷弄內</strong>，鄰近<strong>新店區公所捷運站 1 號出口</strong>。空間寬敞寧靜、無壓迫感，鬧中取靜。</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-it-dark mt-8 mb-4">我們的服務</h2>
+        <ul>
+          <li><strong>凝膠美甲</strong>：單色、貓眼、漸層，專業上色持久飽和</li>
+          <li><strong>指甲彩繪</strong>：從簡約日常到世界名畫/藝術設計，如芙莉蓮、霍爾、油畫玫瑰、花磚、復古窗花等</li>
+          <li><strong>手足深層保養</strong>：特別做到<strong>手到肩、足到膝</strong>，搭配蜂蠟磨砂去角質與淨白凍膜</li>
+          <li><strong>光療延甲</strong>：改善甲型，打造完美長度與弧度</li>
+          <li><strong>美甲教學</strong>：彩繪教學課程、美甲全科班、穿戴甲教學</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-it-dark mt-8 mb-4">為什麼選擇伊特？</h2>
         <ul>
           <li><strong>平價高CP值</strong>：多家部落格評比推薦的親民價格</li>
-          <li><strong>豐富作品</strong>：IG 累積 972+ 篇真實作品分享</li>
-          <li><strong>在地深耕</strong>：服務景美、新店地區顧客多年</li>
-          <li><strong>預約彈性</strong>：透過 IG 私訊即可輕鬆預約</li>
+          <li><strong>日本材料</strong>：嚴選品質，安心使用</li>
+          <li><strong>豐富作品</strong>：IG <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="text-it-cta hover:underline">@itung_lin_nails</a> 累積 <strong>10,431 位粉絲</strong>、<strong>972 篇作品</strong></li>
+          <li><strong>美甲師團隊</strong>：細心、風趣、親切，技術純熟且持續確認客人感受</li>
+          <li><strong>兩間分店</strong>：景美與新店，交通便利</li>
         </ul>
-        <h2>媒體與部落客推薦</h2>
-        <p>伊特美甲曾獲得多家部落格介紹與推薦，包括：</p>
-        <ul>
-          <li>非常寶貝 Very Baby - 台北平價高CP值美甲沙龍評比</li>
-          <li>Misseping 美甲評價網</li>
-          <li>May128 美甲推薦</li>
-          <li>Dryad 生活風格誌</li>
-          <li>Evan Chin 生活部落格</li>
-        </ul>
-        <div class="text-center mt-10">
+
+        <div class="text-center mt-10 not-prose">
           <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             <span>追蹤 IG 看更多作品</span>

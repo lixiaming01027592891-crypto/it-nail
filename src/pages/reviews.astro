@@ -2,16 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const reviews = [
-  { source: '非常寶貝 Very Baby', title: '台北平價高CP值美甲沙龍評比', url: 'https://verybaby.tw/wiki/11246', desc: '收錄伊特美甲為台北平價高CP值美甲沙龍推薦名單。' },
-  { source: 'Misseping', title: 'ITUNG NAILS 美甲推薦', url: 'https://misseping.com/itung-nails/', desc: '專業美甲評價網站對伊特美甲的詳細介紹與評分。' },
-  { source: 'May128', title: '伊特美甲體驗分享', url: 'https://may128.com/itung-nails/', desc: '真實顧客體驗分享與作品評價。' },
-  { source: 'Evan Chin', title: 'ITUNG NAILS 探店心得', url: 'https://evanchiny.com/20260128itungnails/', desc: '生活部落格的景美美甲探店心得文。' },
-  { source: 'Dryad 生活風格誌', title: '伊特美甲介紹', url: 'https://dryad.tw/itung-nails/', desc: '生活風格媒體對伊特美甲的介紹與推薦。' },
-  { source: '波波黛莉 PopDaily', title: '美甲推薦', url: 'https://www.popdaily.com.tw/forum/beauty/1527362', desc: '知名女性社群媒體的美甲相關討論與推薦。' },
-];
 ---
-<Layout title="真實評價 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲的真實評價與部落客推薦。多家媒體與部落客評比推薦的景美、新店平價高CP值美甲沙龍。">
+<Layout title="真實評價 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲的真實評價。PopDaily、范范愛分享等多家媒體與部落客實際體驗推薦。景美店與新店店雙分店好評。">
   <Header />
   <main class="pt-8 pb-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,26 +12,55 @@ const reviews = [
       </nav>
       <div class="text-center mb-12">
         <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">真實評價與推薦</h1>
-        <p class="text-it-text">多家部落格與媒體評比推薦的景美、新店平價高CP值美甲沙龍</p>
+        <p class="text-it-text">多家媒體與部落客實際體驗後的真實分享</p>
       </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        {reviews.map(review => (
-          <a href={review.url} target="_blank" rel="noopener" class="block bg-white rounded-xl p-6 border border-it-secondary/20 hover:shadow-md transition-shadow">
-            <p class="text-xs text-it-cta font-bold uppercase tracking-wider mb-2">{review.source}</p>
-            <h3 class="text-lg font-bold text-it-dark mb-2">{review.title}</h3>
-            <p class="text-sm text-it-text">{review.desc}</p>
-            <div class="mt-4 text-it-cta text-sm font-medium">閱讀全文 →</div>
-          </a>
-        ))}
+
+      <div class="space-y-8">
+        <blockquote class="bg-white rounded-xl p-8 border border-it-secondary/20">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-it-cta/10 flex items-center justify-center flex-shrink-0 text-it-cta font-bold text-lg">K</div>
+            <div>
+              <p class="text-it-text leading-relaxed mb-4">「伊特美甲 ITUNG NAILS 的空間環境很舒適……手部深層保養特別做到肩膀，流程包含蜂蠟蠟磨砂去角質、手部淨白凍膜，做完肌膚透亮、膚色均勻靚白。卸甲與磨甲機操作輕柔無不適，美甲師細心風趣、會確認顏色與舒適度。推薦給所有想擁有漂亮指甲、想好好保養手足的朋友們唷！」</p>
+              <footer class="flex items-center justify-between">
+                <div>
+                  <p class="font-bold text-it-dark">Karen W.</p>
+                  <p class="text-sm text-it-text">PopDaily 波波黛莉 · 景美店體驗</p>
+                </div>
+                <a href="https://www.popdaily.com.tw/forum/beauty/1527362" target="_blank" rel="noopener" class="text-it-cta text-sm hover:underline">閱讀原文 →</a>
+              </footer>
+            </div>
+          </div>
+        </blockquote>
+
+        <blockquote class="bg-white rounded-xl p-8 border border-it-secondary/20">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-it-cta/10 flex items-center justify-center flex-shrink-0 text-it-cta font-bold text-lg">范</div>
+            <div>
+              <p class="text-it-text leading-relaxed mb-4">「老師技術純熟，速度又快，讓我能把世界名畫帶著走……環境寬敞寧靜無壓迫感，使用日本材料，星空指甲彩繪成品精緻漂亮、詢問度超高！另有提供彩繪教學，很推薦有美甲需求或想學彩繪的人到伊特美甲 ITUNG NAILS 喔！」</p>
+              <footer class="flex items-center justify-between">
+                <div>
+                  <p class="font-bold text-it-dark">范范</p>
+                  <p class="text-sm text-it-text">范范愛分享 · 新店店體驗</p>
+                </div>
+                <a href="https://fanfan1105.nidbox.com/diary/read/10003001" target="_blank" rel="noopener" class="text-it-cta text-sm hover:underline">閱讀原文 →</a>
+              </footer>
+            </div>
+          </div>
+        </blockquote>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/20 text-center">
+            <p class="text-4xl font-bold text-it-cta mb-2">10,431</p>
+            <p class="text-it-text">IG 粉絲追蹤</p>
+          </div>
+          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/20 text-center">
+            <p class="text-4xl font-bold text-it-cta mb-2">972</p>
+            <p class="text-it-text">真實作品分享</p>
+          </div>
+        </div>
       </div>
+
       <div class="mt-12 text-center">
         <p class="text-it-text mb-4">想看更多真實作品與顧客評價？</p>
-        <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          <span>前往 IG 看 972+ 作品</span>
-        </a>
-      </div>
-    </div>
-  </main>
-  <Footer />
-</Layout>
+        <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-bold rounded-full hover:opacity-90 transition-opacity">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.
