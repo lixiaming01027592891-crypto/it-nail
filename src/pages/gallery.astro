@@ -2,52 +2,201 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const categories = [
-  { name: '芙莉蓮 / 霍爾手繪', tag: '動漫彩繪' },
-  { name: '油畫玫瑰', tag: '藝術美甲' },
-  { name: '星空指甲彩繪', tag: '主題設計' },
-  { name: '花磚設計', tag: '幾何藝術' },
-  { name: '復古窗花', tag: '精緻手繪' },
-  { name: '七海建人', tag: '咒術迴戰' },
-  { name: '星座幸運色', tag: '開運美甲' },
-  { name: '母親節活動款', tag: '節慶設計' },
+
+const images = [
+  '/images/portfolio/portfolio-01.jpg',
+  '/images/portfolio/portfolio-02.jpg',
+  '/images/portfolio/portfolio-03.jpg',
+  '/images/portfolio/portfolio-04.jpg',
+  '/images/portfolio/portfolio-05.jpg',
+  '/images/portfolio/portfolio-06.jpg',
+  '/images/portfolio/portfolio-07.jpg',
+  '/images/portfolio/portfolio-08.jpg',
+  '/images/portfolio/portfolio-09.jpg',
 ];
 ---
-<Layout title="作品集 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲作品集。IG @itung_lin_nails 累積 972+ 篇真實美甲作品，從簡約到華麗設計、動漫手繪、占星開運美甲一應俱全。">
+
+<Layout title="作品集 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲作品集。從簡約日常到華麗藝術設計、動漫手繪、占星開運美甲，真實作品一覽。">
   <Header />
   <main class="pt-8 pb-20">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-sm text-it-text mb-4">
-        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>作品集</span>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-it-text mb-6">
+        <a href="/" class="hover:text-it-cta transition-colors">首頁</a>
+        <span class="mx-2 text-it-secondary">/</span>
+        <span class="text-it-dark">作品集</span>
       </nav>
-      <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">作品集</h1>
-        <p class="text-it-text mb-8">伊特美甲在 IG 上累積了超過 972 篇真實作品，從簡約日常到華麗藝術設計、動漫手繪、占星開運美甲，歡迎追蹤觀看完整作品集。</p>
+
+      <!-- Heading -->
+      <div class="mb-10">
+        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-3">作品集</h1>
+        <p class="text-it-text max-w-2xl">真實美甲作品一覽。從簡約日常到華麗藝術設計、動漫手繪、星座開運主題，每一款都是依顧客需求量身打造。</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-        {categories.map(cat => (
-          <div class="aspect-square rounded-xl bg-it-secondary/20 flex flex-col items-center justify-center hover:shadow-md transition-shadow p-4 text-center">
-            <span class="text-3xl mb-2">💅</span>
-            <p class="font-medium text-it-dark text-sm">{cat.name}</p>
-            <span class="text-[10px] text-it-text mt-1 px-2 py-0.5 bg-white rounded-full">{cat.tag}</span>
-          </div>
+      <!-- Photo Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4" id="gallery-grid">
+        {images.map((src, i) => (
+          <button
+            class="gallery-item aspect-square overflow-hidden rounded-lg cursor-pointer border-0 p-0 bg-transparent group"
+            data-index={i}
+            data-src={src}
+            aria-label={`查看作品圖 ${i + 1}`}
+          >
+            <img
+              src={src}
+              alt={`ITUNG NAILS 美甲作品 ${i + 1}`}
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+          </button>
         ))}
       </div>
 
-      <div class="bg-it-light rounded-2xl p-8 border border-it-secondary/20 text-center">
-        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 mx-auto mb-6 flex items-center justify-center">
-          <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </div>
-        <h2 class="text-2xl font-bold text-it-dark mb-2">@itung_lin_nails</h2>
-        <p class="text-it-text mb-2">10,431 Followers · 972 Posts</p>
-        <p class="text-sm text-it-text mb-6">從簡約日常到華麗設計，累積近千篇真實作品分享。</p>
-        <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-bold rounded-full hover:opacity-90 transition-opacity">
-          <span>在 Instagram 上查看完整作品集</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- Instagram CTA -->
+      <div class="mt-16 text-center">
+        <a
+          href="https://www.instagram.com/itung_lin_nails/"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-bold rounded-full hover:opacity-90 transition-opacity"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <span>在 Instagram 看更多作品 → @itung_lin_nails</span>
         </a>
+        <p class="text-sm text-it-text mt-3">10,431 Followers · 972 Posts</p>
       </div>
     </div>
   </main>
+
+  <!-- Lightbox -->
+  <div
+    id="lightbox"
+    class="fixed inset-0 z-50 bg-black/90 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-200"
+    aria-hidden="true"
+  >
+    <!-- Close button -->
+    <button
+      id="lightbox-close"
+      class="absolute top-4 right-4 text-white/80 hover:text-white p-2 z-10"
+      aria-label="關閉"
+    >
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+
+    <!-- Prev button -->
+    <button
+      id="lightbox-prev"
+      class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10 hidden md:block"
+      aria-label="上一張"
+    >
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+
+    <!-- Next button -->
+    <button
+      id="lightbox-next"
+      class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10 hidden md:block"
+      aria-label="下一張"
+    >
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <!-- Image container -->
+    <div class="max-w-[90vw] max-h-[85vh] flex items-center justify-center p-4">
+      <img
+        id="lightbox-img"
+        src=""
+        alt=""
+        class="max-w-full max-h-[85vh] object-contain rounded"
+      />
+    </div>
+
+    <!-- Counter -->
+    <div
+      id="lightbox-counter"
+      class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm"
+    >
+    </div>
+  </div>
+
   <Footer />
 </Layout>
+
+<script>
+  const images = [
+    '/images/portfolio/portfolio-01.jpg',
+    '/images/portfolio/portfolio-02.jpg',
+    '/images/portfolio/portfolio-03.jpg',
+    '/images/portfolio/portfolio-04.jpg',
+    '/images/portfolio/portfolio-05.jpg',
+    '/images/portfolio/portfolio-06.jpg',
+    '/images/portfolio/portfolio-07.jpg',
+    '/images/portfolio/portfolio-08.jpg',
+    '/images/portfolio/portfolio-09.jpg',
+  ];
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCounter = document.getElementById('lightbox-counter');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  let currentIndex = 0;
+
+  function openLightbox(index: number) {
+    currentIndex = index;
+    lightboxImg.src = images[index];
+    lightboxImg.alt = `ITUNG NAILS 美甲作品 ${index + 1}`;
+    lightboxCounter.textContent = `${index + 1} / ${images.length}`;
+    lightbox.classList.remove('opacity-0', 'pointer-events-none');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('opacity-0', 'pointer-events-none');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function goToPrev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex];
+    lightboxImg.alt = `ITUNG NAILS 美甲作品 ${currentIndex + 1}`;
+    lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+  }
+
+  function goToNext() {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex];
+    lightboxImg.alt = `ITUNG NAILS 美甲作品 ${currentIndex + 1}`;
+    lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+  }
+
+  // Gallery item clicks
+  galleryItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const index = parseInt(item.getAttribute('data-index') || '0', 10);
+      openLightbox(index);
+    });
+  });
+
+  // Close button
+  document.getElementById('lightbox-close')?.addEventListener('click', closeLightbox);
+
+  // Prev / Next buttons
+  document.getElementById('lightbox-prev')?.addEventListener('click', goToPrev);
+  document.getElementById('lightbox-next')?.addEventListener('click', goToNext);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.getAttribute('aria-hidden') === 'true') return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') goToPrev();
+    if (e.key === 'ArrowRight') goToNext();
+  });
+
+  // Click background to close
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+</script>
