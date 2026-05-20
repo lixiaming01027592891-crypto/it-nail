@@ -8,7 +8,7 @@ interface Props {
 }
 const {
   title,
-  description = "ITUNG NAILS 伊特美甲 - 台北景美、新店地區平價高CP值美甲沙龍。10K+ IG 粉絲推薦，專業凝膠美甲與手足保養。",
+  description = "ITUNG NAILS 伊特美甲 - 台北景美、新店地區平價高CP值美甲沙龍。IG 萬名粉絲推薦，專業凝膠美甲與手足保養。",
   image = "/images/og-default.jpg",
   type = "website",
   schema
@@ -38,6 +38,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <meta name="twitter:image" content={new URL(image, Astro.site)} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet" />
   {schema && (
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />

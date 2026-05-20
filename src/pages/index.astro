@@ -7,8 +7,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "NailSalon",
   "name": "ITUNG NAILS 伊特美甲",
-  "image": "https://itnail-kimi.pages.dev/images/og-default.jpg",
-  "url": "https://itnail-kimi.pages.dev",
+  "image": "https://it-nail.pages.dev/images/og-default.jpg",
+  "url": "https://it-nail.pages.dev",
   "sameAs": [
     "https://www.instagram.com/itung_lin_nails/",
     "https://www.facebook.com/itung.lin.nails/"
@@ -27,7 +27,9 @@ const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
-    "reviewCount": "500"
+    "reviewCount": "500",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 };
 
@@ -74,7 +76,7 @@ const services = [
             美甲沙龍
           </h1>
           <p class="text-lg text-it-text mb-8 max-w-lg leading-relaxed">
-            ITUNG NAILS 伊特美甲，IG 10K+ 粉絲推薦的專業美甲工作室。提供凝膠美甲、手足保養、光療延甲與 nail art 設計，以親民價格享受高品質服務。
+            ITUNG NAILS 伊特美甲，IG 萬名粉絲推薦的專業美甲工作室。提供凝膠美甲、手足保養、光療延甲與 nail art 設計，以親民價格享受高品質服務。
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg">
@@ -89,7 +91,7 @@ const services = [
             <div class="flex items-center gap-1">
               <span class="text-yellow-500">★★★★★</span>
               <span class="font-bold">4.8</span>
-              <span>(多家部落格推薦)</span>
+              <span class="text-xs text-it-text/70">(多家部落格推薦，個人經驗因人而異)</span>
             </div>
             <div class="flex items-center gap-1">
               <svg class="w-4 h-4 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -109,15 +111,24 @@ const services = [
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8 text-center">
           <div class="p-6 rounded-2xl bg-it-primary/50">
-            <h3 class="font-bold text-it-dark mb-2">📍 景美・新店美甲</h3>
+            <h3 class="font-bold text-it-dark mb-2 flex items-center gap-2">
+              <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              景美・新店美甲
+            </h3>
             <p class="text-sm text-it-text">台北市文山區景美及新北市新店區，交通便利的社區美甲工作室。</p>
           </div>
           <div class="p-6 rounded-2xl bg-it-primary/50">
-            <h3 class="font-bold text-it-dark mb-2">📸 IG 10K+ 推薦</h3>
-            <p class="text-sm text-it-text">Instagram @itung_lin_nails 累積 10K+ 粉絲、972 篇作品分享。</p>
+            <h3 class="font-bold text-it-dark mb-2 flex items-center gap-2">
+              <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              IG 萬名粉絲推薦
+            </h3>
+            <p class="text-sm text-it-text">Instagram @itung_lin_nails 累積萬名粉絲、千篇作品分享。</p>
           </div>
           <div class="p-6 rounded-2xl bg-it-primary/50">
-            <h3 class="font-bold text-it-dark mb-2">💰 平價高CP值</h3>
+            <h3 class="font-bold text-it-dark mb-2 flex items-center gap-2">
+              <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+              平價高CP值
+            </h3>
             <p class="text-sm text-it-text">多家部落格評比推薦的平價高品質美甲沙龍，小資族首選。</p>
           </div>
         </div>

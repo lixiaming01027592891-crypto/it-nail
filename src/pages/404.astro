@@ -9,4 +9,15 @@ import Footer from '../components/Footer.astro';
     <div class="max-w-xl mx-auto px-4">
       <h1 class="text-6xl font-bold text-it-dark mb-4">404</h1>
       <p class="text-xl text-it-text mb-8">頁面不存在</p>
-      <div class="flex flex-col sm:flex-row g
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors">
+          <span>返回首頁</span>
+        </a>
+        <a href="/services" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-it-dark text-it-dark font-bold rounded-full hover:bg-it-dark hover:text-white transition-colors">
+          <span>瀏覽服務項目</span>
+        </a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
