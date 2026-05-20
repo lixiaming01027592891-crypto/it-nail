@@ -7,7 +7,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "NailSalon",
   "name": "ITUNG NAILS 伊特美甲",
-  "image": "https://it-nail.pages.dev/images/og-default.jpg",
+  "image": "https://it-nail.pages.dev/images/portfolio/portfolio-01.jpg",
   "url": "https://it-nail.pages.dev",
   "sameAs": [
     "https://www.instagram.com/itung_lin_nails/",
@@ -39,44 +39,62 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "伊特美甲在哪裡？",
-      "acceptedAnswer": { "@type": "Answer", "text": "ITUNG NAILS 伊特美甲位於台北市文山區景美及新北市新店區附近，詳細地址請透過 Instagram 私訊詢問。" }
+      "name": "伊特美甲在哪裡？怎麼預約？",
+      "acceptedAnswer": { "@type": "Answer", "text": "ITUNG NAILS 伊特美甲有兩個據點：景美店（台北市文山區景美，近景美捷運站，電話 02-2934-9297）與新店店（新北市新店區，近新店區公所捷運站 1 號出口，電話 02-8665-6288）。目前主要透過 Instagram 私訊 @itung_lin_nails 預約，也歡迎直接電話詢問。" }
     },
     {
       "@type": "Question",
-      "name": "如何預約伊特美甲？",
-      "acceptedAnswer": { "@type": "Answer", "text": "目前主要透過 Instagram 私訊 @itung_lin_nails 進行預約。" }
+      "name": "凝膠美甲價格大約多少？",
+      "acceptedAnswer": { "@type": "Answer", "text": "單色凝膠 NT$699 起，貓眼/漸層/法式 NT$899 起，簡單手繪款 NT$1,200 起。詳細價目表請參考網站價格頁。" }
     },
     {
       "@type": "Question",
-      "name": "伊特美甲的價格大約多少？",
-      "acceptedAnswer": { "@type": "Answer", "text": "伊特美甲主打平價高CP值，凝膠美甲價格親民，詳細價目表請參考網站價格頁或 IG 私訊詢問。" }
+      "name": "可以帶圖片給美甲師參考嗎？",
+      "acceptedAnswer": { "@type": "Answer", "text": "當然可以！伊特美甲非常歡迎您攜帶喜歡的風格參考圖，無論是動漫彩繪、油畫玫瑰、星空暈染或韓系簡約風格都可以。美甲師會根據您的甲型與膚色給予專業建議。" }
+    },
+    {
+      "@type": "Question",
+      "name": "有提供美甲教學課程嗎？",
+      "acceptedAnswer": { "@type": "Answer", "text": "有的！伊特美甲提供美甲基礎到進階的教學課程，包含凝膠技法、彩繪設計與穿戴甲製作。詳細課程資訊請參考課程頁面或 IG 私訊詢問。" }
+    },
+    {
+      "@type": "Question",
+      "name": "什麼是星座命盤美甲？",
+      "acceptedAnswer": { "@type": "Answer", "text": "星座命盤美甲是伊特美甲的獨家特色服務！結合占星命盤分析與美甲設計，根據您的星座特質與命盤元素，設計專屬於您的美甲風格。費用約 NT$3,600–$7,200。" }
     }
   ]
 };
 
 const services = [
-  { title: '凝膠美甲', desc: '專業凝膠上色，色彩飽和持久，平價高CP值首選。', href: '/services' },
-  { title: '手足保養', desc: '深層滋養與角質護理，讓雙手雙足恢復細緻柔嫩。', href: '/services#care' },
-  { title: '光療延甲', desc: '改善甲型問題，打造完美長度與弧度。', href: '/services#extension' },
-  { title: 'Nail Art 設計', desc: '從簡約到華麗，依據您的風格量身設計。', href: '/gallery' },
+  { title: '凝膠美甲', desc: '專業凝膠上色，色彩飽和持久。單色、貓眼、法式、漸層、暈染皆可執行。', href: '/services', icon: 'nail' },
+  { title: '手足保養', desc: '保養範圍延伸到手臂與小腿，搭配蜂蠟磨砂與淨白凍膜，讓肌膚回到細緻柔嫩。', href: '/services#care', icon: 'care' },
+  { title: '光療延甲', desc: '改善甲型問題，打造完美長度與弧度。適合指甲較短或甲型不整者。', href: '/services#extension', icon: 'extension' },
+  { title: 'Nail Art 設計', desc: '從簡約日常到世界名畫/藝術設計，依據您的風格量身打造。', href: '/gallery', icon: 'art' },
 ];
+
+const serviceIcons: Record<string, string> = {
+  nail: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01',
+  care: 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646zM9 18h.01M15 10h.01M9.5 13.5h.01M14.5 7.5h.01M12 3v2m0 14v2M5 12H3m18 0h-2',
+  extension: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+  art: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01',
+};
 ---
-<Layout title="ITUNG NAILS 伊特美甲 | 景美・新店平價高CP值美甲" description="ITUNG NAILS 伊特美甲，台北景美、新店地區平價高CP值美甲沙龍。IG 10K+ 粉絲推薦，專業凝膠美甲與手足保養。" schema={[localBusinessSchema, faqSchema]}>
+<Layout title="ITUNG NAILS 伊特美甲 | 景美・新店美甲推薦" description="ITUNG NAILS 伊特美甲，台北景美、新店地區專業美甲沙龍。日本材料、手到肩保養、萬篇真實作品。凝膠美甲 NT$699 起。" schema={[localBusinessSchema, faqSchema]}>
   <Header />
   <main>
-    <section class="relative min-h-[90vh] flex items-center bg-it-primary overflow-hidden">
+    <!-- Hero -->
+    <section class="relative min-h-[80vh] md:min-h-[70vh] flex items-center bg-it-primary overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-it-secondary/20 via-transparent to-it-blush/10"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p class="text-it-cta text-sm tracking-[0.3em] uppercase mb-4 font-medium">ITUNG NAILS · 景美・新店</p>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-it-dark mb-6 leading-tight">
             台北景美・新店<br/>
-            <span class="text-it-cta">平價高CP值</span><br/>
-            美甲沙龍
+            <span class="text-it-cta">專業凝膠美甲</span><br/>
+            沙龍推薦
           </h1>
           <p class="text-lg text-it-text mb-8 max-w-lg leading-relaxed">
-            ITUNG NAILS 伊特美甲，IG 萬名粉絲推薦的專業美甲工作室。提供凝膠美甲、手足保養、光療延甲與 nail art 設計，以親民價格享受高品質服務。
+            日本材料、手到肩深度保養、萬篇真實作品分享。從簡約單色到藝術彩繪，為你量身打造專屬指尖風格。
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg">
@@ -100,58 +118,70 @@ const services = [
           </div>
         </div>
         <div class="hidden lg:block relative">
-          <div class="aspect-[4/5] rounded-3xl bg-gradient-to-br from-it-secondary/40 to-it-blush/30 flex items-center justify-center">
-            <img src="/images/og-default.jpg" alt="ITUNG NAILS 伊特美甲" class="w-full h-full object-cover rounded-3xl" loading="eager" />
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+            <img src="/images/portfolio/portfolio-01.jpg" alt="ITUNG NAILS 伊特美甲作品 - 黑白線條水磨石美甲" class="w-full h-full object-cover" loading="eager" />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl px-5 py-3 shadow-lg border border-it-secondary/20">
+            <p class="text-xs text-it-text">凝膠美甲</p>
+            <p class="text-lg font-bold text-it-dark">NT$699 <span class="text-sm font-normal text-it-text">起</span></p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-16 bg-white border-b border-it-secondary/20">
+    <!-- Features -->
+    <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8 text-center">
-          <div class="p-6 rounded-2xl bg-it-primary/50">
-            <h3 class="font-bold text-it-dark mb-2 flex items-center gap-2">
+          <div class="p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 transition-colors">
+            <h3 class="font-bold text-it-dark mb-2 flex items-center justify-center gap-2">
               <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               景美・新店美甲
             </h3>
             <p class="text-sm text-it-text">台北市文山區景美及新北市新店區，交通便利的社區美甲工作室。</p>
           </div>
-          <div class="p-6 rounded-2xl bg-it-primary/50">
-            <h3 class="font-bold text-it-dark mb-2 flex items-center gap-2">
+          <div class="p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 transition-colors">
+            <h3 class="font-bold text-it-dark mb-2 flex items-center justify-center gap-2">
               <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               IG 萬名粉絲推薦
             </h3>
             <p class="text-sm text-it-text">Instagram @itung_lin_nails 累積萬名粉絲、千篇作品分享。</p>
           </div>
-          <div class="p-6 rounded-2xl bg-it-primary/50">
-            <h3 class="font-bold text-it-dark mb-2 flex items-center gap-2">
-              <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-              平價高CP值
+          <div class="p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 transition-colors">
+            <h3 class="font-bold text-it-dark mb-2 flex items-center justify-center gap-2">
+              <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              日本材料安心使用
             </h3>
-            <p class="text-sm text-it-text">多家部落格評比推薦的平價高品質美甲沙龍，小資族首選。</p>
+            <p class="text-sm text-it-text">嚴選日本凝膠材料，專業技術純熟，安心享受高品質美甲體驗。</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Section divider -->
+    <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent max-w-4xl mx-auto"></div>
+
+    <!-- Services -->
     <section class="py-20 md:py-28 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-14">
           <p class="text-it-cta text-sm tracking-widest uppercase mb-3 font-medium">Our Services</p>
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-it-dark">伊特美甲服務項目</h2>
-          <p class="mt-4 text-it-text max-w-2xl mx-auto">專業美甲服務，以親民價格享受沙龍級品質。</p>
+          <p class="mt-4 text-it-text max-w-2xl mx-auto">從日常美甲到藝術彩繪、占星開運，滿足各種風格需求。</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map(service => (
-            <a href={service.href} class="group block bg-it-light rounded-2xl p-6 hover:shadow-lg transition-all border border-transparent hover:border-it-secondary/30">
+            <a href={service.href} class="group block bg-it-light rounded-2xl p-6 border border-it-secondary/10 hover:border-it-cta/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
               <div class="w-12 h-12 rounded-xl bg-it-secondary/30 flex items-center justify-center mb-4 group-hover:bg-it-cta/10 transition-colors">
-                <svg class="w-6 h-6 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                <svg class="w-6 h-6 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={serviceIcons[service.icon]}/></svg>
               </div>
-              <h3 class="text-lg font-bold text-it-dark mb-2">{service.title}</h3>
+              <h3 class="text-lg font-bold text-it-dark mb-2 font-sans">{service.title}</h3>
               <p class="text-sm text-it-text leading-relaxed">{service.desc}</p>
               <div class="mt-4 flex items-center text-it-cta text-sm font-medium">
-                <span>了解詳情</span>
+                <span class="relative">
+                  了解詳情
+                  <span class="absolute bottom-0 left-0 w-0 h-px bg-it-cta group-hover:w-full transition-all duration-300"></span>
+                </span>
                 <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
               </div>
             </a>
@@ -160,20 +190,23 @@ const services = [
       </div>
     </section>
 
-    <!-- FAQ with Schema -->
+    <!-- Section divider -->
+    <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent max-w-4xl mx-auto"></div>
+
+    <!-- FAQ -->
     <section class="py-20 md:py-28 bg-it-primary/30">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <p class="text-it-cta text-sm tracking-widest uppercase mb-3 font-medium">FAQ</p>
-          <h2 class="text-3xl md:text-4xl font-serif font-bold text-it-dark">美甲常見問題 FAQ</h2>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-it-dark">美甲常見問題</h2>
           <p class="mt-4 text-it-text">整理了顧客最常詢問的問題，幫助您快速了解我們的服務。</p>
         </div>
 
         <div class="space-y-4">
           <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md transition-all">
-            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors list-none">
               <span>伊特美甲在哪裡？怎麼預約？</span>
-              <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <svg class="w-6 h-6 text-it-cta group-open:rotate-180 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </summary>
             <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">
               <p>ITUNG NAILS 伊特美甲有兩個據點：景美店（台北市文山區景美，近景美捷運站，電話 02-2934-9297）與新店店（新北市新店區，近新店區公所捷運站 1 號出口，電話 02-8665-6288）。目前主要透過 Instagram 私訊 @itung_lin_nails 預約，也歡迎直接電話詢問。</p>
@@ -181,19 +214,19 @@ const services = [
           </details>
 
           <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md transition-all">
-            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors list-none">
               <span>凝膠美甲價格大約多少？</span>
-              <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <svg class="w-6 h-6 text-it-cta group-open:rotate-180 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </summary>
             <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">
-              <p>伊特美甲主打平價高CP值，凝膠美甲價格親民。詳細價目表請參考網站<a href="/pricing" class="text-it-cta underline">價格頁</a>，或直接在 IG 私訊詢問，美甲師會根據您的需求提供報價。</p>
+              <p>單色凝膠 NT$699 起，貓眼/漸層/法式 NT$899 起，簡單手繪款 NT$1,200 起。詳細價目表請參考網站<a href="/pricing" class="text-it-cta underline hover:no-underline">價格頁</a>，或直接在 IG 私訊詢問。</p>
             </div>
           </details>
 
           <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md transition-all">
-            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors list-none">
               <span>可以帶圖片給美甲師參考嗎？</span>
-              <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <svg class="w-6 h-6 text-it-cta group-open:rotate-180 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </summary>
             <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">
               <p>當然可以！伊特美甲非常歡迎您攜帶喜歡的風格參考圖，無論是動漫彩繪、油畫玫瑰、星空暈染或韓系簡約風格都可以。美甲師會根據您的甲型與膚色給予專業建議。</p>
@@ -201,22 +234,22 @@ const services = [
           </details>
 
           <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md transition-all">
-            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors list-none">
               <span>有提供美甲教學課程嗎？</span>
-              <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <svg class="w-6 h-6 text-it-cta group-open:rotate-180 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </summary>
             <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">
-              <p>有的！伊特美甲提供美甲基礎到進階的教學課程，包含凝膠技法、彩繪設計與穿戴甲製作。詳細課程資訊請參考<a href="/courses" class="text-it-cta underline">課程頁面</a>或 IG 私訊詢問。</p>
+              <p>有的！伊特美甲提供美甲基礎到進階的教學課程，包含凝膠技法、彩繪設計與穿戴甲製作。詳細課程資訊請參考<a href="/courses" class="text-it-cta underline hover:no-underline">課程頁面</a>或 IG 私訊詢問。</p>
             </div>
           </details>
 
           <details class="group bg-white rounded-xl border border-it-secondary/20 overflow-hidden open:shadow-md transition-all">
-            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-medium text-it-dark hover:bg-it-light/50 transition-colors list-none">
               <span>什麼是星座命盤美甲？</span>
-              <svg class="w-5 h-5 text-it-cta group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <svg class="w-6 h-6 text-it-cta group-open:rotate-180 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </summary>
             <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">
-              <p>星座命盤美甲是伊特美甲的獨家特色服務！結合占星命盤分析與美甲設計，根據您的星座特質與命盤元素，設計專屬於您的美甲風格。費用約 NT$3,600–$7,200，詳情請參考<a href="/services" class="text-it-cta underline">服務頁面</a>。</p>
+              <p>星座命盤美甲是伊特美甲的獨家特色服務！結合占星命盤分析與美甲設計，根據您的星座特質與命盤元素，設計專屬於您的美甲風格。費用約 NT$3,600–$7,200，詳情請參考<a href="/services" class="text-it-cta underline hover:no-underline">服務頁面</a>。</p>
             </div>
           </details>
         </div>
@@ -230,12 +263,14 @@ const services = [
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 md:py-28 bg-it-dark text-white">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">準備好讓指尖煥然一新了嗎？</h2>
-        <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">
-          景美・新店地區平價高CP值美甲推薦。立即透過 Instagram 私訊預約專屬時段。
+    <!-- CTA Section with gradient -->
+    <section class="relative py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#2D2420] via-[#3D3229] to-[#5A4A3D]"></div>
+      <div class="absolute inset-0 opacity-10" style="background-image: url('/images/portfolio/portfolio-07.jpg'); background-size: cover; background-position: center; filter: blur(40px) saturate(0.3);"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6">準備好讓指尖煥然一新了嗎？</h2>
+        <p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+          景美・新店地區專業美甲沙龍。立即透過 Instagram 私訊預約專屬時段。
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-10 py-5 bg-it-cta text-white text-lg font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg">

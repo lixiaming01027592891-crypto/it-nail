@@ -4,50 +4,52 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const images = [
-  '/images/portfolio/portfolio-01.jpg',
-  '/images/portfolio/portfolio-02.jpg',
-  '/images/portfolio/portfolio-03.jpg',
-  '/images/portfolio/portfolio-04.jpg',
-  '/images/portfolio/portfolio-05.jpg',
-  '/images/portfolio/portfolio-06.jpg',
-  '/images/portfolio/portfolio-07.jpg',
-  '/images/portfolio/portfolio-08.jpg',
-  '/images/portfolio/portfolio-09.jpg',
+  { src: '/images/portfolio/portfolio-01.jpg', label: '黑白線條水磨石' },
+  { src: '/images/portfolio/portfolio-02.jpg', label: '手足保養完成' },
+  { src: '/images/portfolio/portfolio-03.jpg', label: '雙魚座星座美甲' },
+  { src: '/images/portfolio/portfolio-04.jpg', label: '花磗幾何設計' },
+  { src: '/images/portfolio/portfolio-05.jpg', label: '聖誕花星座款' },
+  { src: '/images/portfolio/portfolio-06.jpg', label: '金色相框星座美甲' },
+  { src: '/images/portfolio/portfolio-07.jpg', label: '大理石紋乾花' },
+  { src: '/images/portfolio/portfolio-08.jpg', label: '溫柔粉色系' },
+  { src: '/images/portfolio/portfolio-09.jpg', label: '史努比蛋黃哥彩繪' },
 ];
 ---
 
-<Layout title="作品集 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲作品集。從簡約日常到華麗藝術設計、動漫手繪、占星開運美甲，真實作品一覽。">
+<Layout title="作品集 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲作品集。從簡約日常到華麗藝術設計、動漫手繪、星座開運美甲，真實作品一覽。">
   <Header />
   <main class="pt-8 pb-20">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Breadcrumb -->
       <nav class="text-sm text-it-text mb-6">
         <a href="/" class="hover:text-it-cta transition-colors">首頁</a>
         <span class="mx-2 text-it-secondary">/</span>
         <span class="text-it-dark">作品集</span>
       </nav>
 
-      <!-- Heading -->
       <div class="mb-10">
         <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-3">作品集</h1>
-        <p class="text-it-text max-w-2xl">真實美甲作品一覽。從簡約日常到華麗藝術設計、動漫手繪、星座開運主題，每一款都是依顧客需求量身打造。</p>
+        <p class="text-it-text max-w-2xl">真實美甲作品一覽。每一款都是依顧客需求量身打造。</p>
       </div>
 
-      <!-- Photo Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4" id="gallery-grid">
-        {images.map((src, i) => (
+      <!-- Photo Grid: 3-column (9 = perfect fit) -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4" id="gallery-grid">
+        {images.map((img, i) => (
           <button
-            class="gallery-item aspect-square overflow-hidden rounded-lg cursor-pointer border-0 p-0 bg-transparent group"
+            class="gallery-item aspect-square overflow-hidden rounded-lg cursor-pointer border-0 p-0 bg-transparent group relative"
             data-index={i}
-            data-src={src}
-            aria-label={`查看作品圖 ${i + 1}`}
+            data-src={img.src}
+            aria-label={`查看作品 ${img.label}`}
           >
             <img
-              src={src}
-              alt={`ITUNG NAILS 美甲作品 ${i + 1}`}
-              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              src={img.src}
+              alt={`ITUNG NAILS ${img.label}`}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
+            <!-- Hover overlay with label -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+              <span class="text-white text-sm font-medium">{img.label}</span>
+            </div>
           </button>
         ))}
       </div>
@@ -74,49 +76,19 @@ const images = [
     class="fixed inset-0 z-50 bg-black/90 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-200"
     aria-hidden="true"
   >
-    <!-- Close button -->
-    <button
-      id="lightbox-close"
-      class="absolute top-4 right-4 text-white/80 hover:text-white p-2 z-10"
-      aria-label="關閉"
-    >
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 z-10" aria-label="關閉">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
-
-    <!-- Prev button -->
-    <button
-      id="lightbox-prev"
-      class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10 hidden md:block"
-      aria-label="上一張"
-    >
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10 hidden md:block" aria-label="上一張">
       <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
     </button>
-
-    <!-- Next button -->
-    <button
-      id="lightbox-next"
-      class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10 hidden md:block"
-      aria-label="下一張"
-    >
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10 hidden md:block" aria-label="下一張">
       <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </button>
-
-    <!-- Image container -->
     <div class="max-w-[90vw] max-h-[85vh] flex items-center justify-center p-4">
-      <img
-        id="lightbox-img"
-        src=""
-        alt=""
-        class="max-w-full max-h-[85vh] object-contain rounded"
-      />
+      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[85vh] object-contain rounded" />
     </div>
-
-    <!-- Counter -->
-    <div
-      id="lightbox-counter"
-      class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm"
-    >
-    </div>
+    <div id="lightbox-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm"></div>
   </div>
 
   <Footer />
@@ -134,12 +106,10 @@ const images = [
     '/images/portfolio/portfolio-08.jpg',
     '/images/portfolio/portfolio-09.jpg',
   ];
-
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCounter = document.getElementById('lightbox-counter');
   const galleryItems = document.querySelectorAll('.gallery-item');
-
   let currentIndex = 0;
 
   function openLightbox(index: number) {
@@ -151,52 +121,34 @@ const images = [
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
-
   function closeLightbox() {
     lightbox.classList.add('opacity-0', 'pointer-events-none');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
-
   function goToPrev() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     lightboxImg.src = images[currentIndex];
     lightboxImg.alt = `ITUNG NAILS 美甲作品 ${currentIndex + 1}`;
     lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
   }
-
   function goToNext() {
     currentIndex = (currentIndex + 1) % images.length;
     lightboxImg.src = images[currentIndex];
     lightboxImg.alt = `ITUNG NAILS 美甲作品 ${currentIndex + 1}`;
     lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
   }
-
-  // Gallery item clicks
   galleryItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      const index = parseInt(item.getAttribute('data-index') || '0', 10);
-      openLightbox(index);
-    });
+    item.addEventListener('click', () => openLightbox(parseInt(item.getAttribute('data-index') || '0', 10)));
   });
-
-  // Close button
   document.getElementById('lightbox-close')?.addEventListener('click', closeLightbox);
-
-  // Prev / Next buttons
   document.getElementById('lightbox-prev')?.addEventListener('click', goToPrev);
   document.getElementById('lightbox-next')?.addEventListener('click', goToNext);
-
-  // Keyboard navigation
   document.addEventListener('keydown', (e) => {
     if (lightbox.getAttribute('aria-hidden') === 'true') return;
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') goToPrev();
     if (e.key === 'ArrowRight') goToNext();
   });
-
-  // Click background to close
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 </script>

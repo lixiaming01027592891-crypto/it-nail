@@ -3,57 +3,163 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
-<Layout title="關於伊特美甲 | ITUNG NAILS" description="ITUNG NAILS 伊特美甲，台北景美、新店兩間分店的平價高CP值美甲沙龍。日本材料、專業技術，IG 10,431 粉絲、972 篇作品推薦。">
+<Layout title="關於伊特美甲 | ITUNG NAILS" description="了解 ITUNG NAILS 伊特美甲的品牌故事。台北景美、新店地區專業美甲沙龍，日本材料、手到肩保養、萬篇真實作品。">
   <Header />
   <main class="pt-8 pb-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="text-sm text-it-text mb-4">
         <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>關於伊特</span>
       </nav>
-      <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">關於 ITUNG NAILS 伊特美甲</h1>
+
+      <!-- Hero intro -->
+      <div class="text-center mb-16">
+        <p class="text-it-cta text-sm tracking-widest uppercase mb-3 font-medium">Our Story</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-it-dark mb-6">關於 ITUNG NAILS 伊特美甲</h1>
+        <p class="text-lg text-it-text max-w-2xl mx-auto leading-relaxed">在忙碌的城市裡，我們相信每個人都值得擁有一段真正屬於自己的放鬆時光。</p>
       </div>
-      <div class="prose prose-lg mx-auto text-it-text space-y-6">
-        <p>在忙碌的城市裡，我們相信每個人都值得擁有一段真正屬於自己的放鬆時光。</p>
-        <p><strong>ITUNG NAILS 伊特美甲</strong> 從創立之初，便致力於打造一個讓你能夠卸下壓力、專注感受美好的空間。我們選用<strong>日本材料</strong>，以純熟的技術與細膩的服務，為每一位客人提供高品質且<strong>平價高 CP 值</strong>的美甲體驗。</p>
 
-        <h2 class="text-2xl font-bold text-it-dark mt-8 mb-4">兩間店，同一份用心</h2>
-
-        <div class="grid md:grid-cols-2 gap-6 not-prose my-6">
-          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/20">
-            <h3 class="font-bold text-it-dark mb-2 flex items-center gap-2"><svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>景美店</h3>
-            <p class="text-sm text-it-text">台北市文山區<strong>景興路</strong>，鄰近<strong>景美捷運站</strong>（步行約 7 分鐘），周邊有景美翰星百貨等生活商圈。木質色調空間，質感放鬆。</p>
+      <!-- Brand story -->
+      <section class="mb-20">
+        <div class="grid md:grid-cols-5 gap-8 items-center">
+          <div class="md:col-span-3">
+            <p class="text-it-text leading-relaxed mb-4">
+              <strong class="text-it-dark">ITUNG NAILS 伊特美甲</strong> 從創立之初，便致力於打造一個讓你能夠卸下壓力、專注感受美好的空間。我們選用 <strong class="text-it-dark">日本材料</strong>，以純熟的技術與細膩的服務，為每一位客人提供高品質且親民的美甲體驗。
+            </p>
+            <p class="text-it-text leading-relaxed">
+              從基礎凝膠上色到複雜的手繪彩繪，從日常保養到獨家的星座命盤美甲，我們希望每一位走進店裡的客人，都能帶著滿意的笑容離開。
+            </p>
           </div>
-          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/20">
-            <h3 class="font-bold text-it-dark mb-2 flex items-center gap-2"><svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>新店店</h3>
-            <p class="text-sm text-it-text">新店<strong>眷村巷弄內</strong>，鄰近<strong>新店區公所捷運站 1 號出口</strong>。空間寬敞寧靜、無壓迫感，鬧中取靜。</p>
+          <div class="md:col-span-2">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+              <img src="/images/portfolio/portfolio-07.jpg" alt="伊特美甲作品 - 大理石紋乾花" class="w-full h-full object-cover" loading="lazy" />
+            </div>
           </div>
         </div>
+      </section>
 
-        <h2 class="text-2xl font-bold text-it-dark mt-8 mb-4">我們的服務</h2>
-        <ul>
-          <li><strong>凝膠美甲</strong>：單色、貓眼、漸層，專業上色持久飽和</li>
-          <li><strong>指甲彩繪</strong>：從簡約日常到世界名畫/藝術設計，如芙莉蓮、霍爾、油畫玫瑰、花磚、復古窗花等</li>
-          <li><strong>手足深層保養</strong>：特別做到<strong>手到肩、足到膝</strong>，搭配蜂蠟磨砂去角質與淨白凍膜</li>
-          <li><strong>光療延甲</strong>：改善甲型，打造完美長度與弧度</li>
-          <li><strong>美甲教學</strong>：彩繪教學課程、美甲全科班、穿戴甲教學</li>
-        </ul>
+      <!-- Section divider -->
+      <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent mb-16"></div>
 
-        <h2 class="text-2xl font-bold text-it-dark mt-8 mb-4">為什麼選擇伊特？</h2>
-        <ul>
-          <li><strong>平價高CP值</strong>：多家部落格評比推薦的親民價格</li>
-          <li><strong>日本材料</strong>：嚴選品質，安心使用</li>
-          <li><strong>豐富作品</strong>：IG <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="text-it-cta hover:underline">@itung_lin_nails</a> 累積 <strong>萬名粉絲</strong>、<strong>千篇作品</strong></li>
-          <li><strong>美甲師團隊</strong>：細心、風趣、親切，技術純熟且持續確認客人感受</li>
-          <li><strong>兩間分店</strong>：景美與新店，交通便利</li>
-        </ul>
-
-        <div class="text-center mt-10 not-prose">
-          <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            <span>追蹤 IG 看更多作品</span>
-          </a>
+      <!-- Two stores -->
+      <section class="mb-16">
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8 text-center">兩間店，同一份用心</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-it-dark mb-3 flex items-center gap-2 text-lg">
+              <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              景美店
+            </h3>
+            <p class="text-sm text-it-text leading-relaxed">台北市文山區 <strong>景興路</strong>，鄰近 <strong>景美捷運站</strong>（步行約 7 分鐘），周邊有景美翰星百貨等生活商圈。木質色調空間，質感放鬆。</p>
+            <div class="mt-4 flex items-center gap-4 text-sm">
+              <span class="text-it-text flex items-center gap-1">
+                <svg class="w-4 h-4 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                02-2934-9297
+              </span>
+            </div>
+          </div>
+          <div class="bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-it-dark mb-3 flex items-center gap-2 text-lg">
+              <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              新店店
+            </h3>
+            <p class="text-sm text-it-text leading-relaxed">新店 <strong>眷村巷弄內</strong>，鄰近 <strong>新店區公所捷運站 1 號出口</strong>。空間寬敞寧靜、無壓迫感，鬧中取靜。</p>
+            <div class="mt-4 flex items-center gap-4 text-sm">
+              <span class="text-it-text flex items-center gap-1">
+                <svg class="w-4 h-4 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                02-8665-6288
+              </span>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- Section divider -->
+      <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent mb-16"></div>
+
+      <!-- Services overview -->
+      <section class="mb-16">
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8">我們的服務</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-lg bg-it-secondary/30 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-it-dark mb-1">凝膠美甲</p>
+              <p class="text-sm text-it-text">單色、貓眼、漸層，專業上色持久飽和</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-lg bg-it-secondary/30 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-it-dark mb-1">指甲彩繪</p>
+              <p class="text-sm text-it-text">從簡約日常到世界名畫/藝術設計</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-lg bg-it-secondary/30 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-it-dark mb-1">手足深層保養</p>
+              <p class="text-sm text-it-text">特別做到<strong>手到肩、足到膝</strong>，搭配蜂蠟磨砂與淨白凍膜</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-lg bg-it-secondary/30 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-it-dark mb-1">光療延甲</p>
+              <p class="text-sm text-it-text">改善甲型，打造完美長度與弧度</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why us -->
+      <section class="mb-16">
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8">為什麼選擇伊特？</h2>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40">
+            <div class="w-2 h-2 rounded-full bg-it-cta mt-2 flex-shrink-0"></div>
+            <div>
+              <p class="font-bold text-it-dark mb-1">日本材料</p>
+              <p class="text-sm text-it-text">嚴選品質，安心使用</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40">
+            <div class="w-2 h-2 rounded-full bg-it-cta mt-2 flex-shrink-0"></div>
+            <div>
+              <p class="font-bold text-it-dark mb-1">豐富作品</p>
+              <p class="text-sm text-it-text">IG <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="text-it-cta hover:underline">@itung_lin_nails</a> 累積 <strong>萬名粉絲</strong>、<strong>千篇作品</strong></p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40">
+            <div class="w-2 h-2 rounded-full bg-it-cta mt-2 flex-shrink-0"></div>
+            <div>
+              <p class="font-bold text-it-dark mb-1">美甲師團隊</p>
+              <p class="text-sm text-it-text">細心、風趣、親切，技術純熟且持續確認客人感受</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40">
+            <div class="w-2 h-2 rounded-full bg-it-cta mt-2 flex-shrink-0"></div>
+            <div>
+              <p class="font-bold text-it-dark mb-1">兩間分店</p>
+              <p class="text-sm text-it-text">景美與新店，交通便利</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div class="text-center">
+        <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <span>追蹤 IG 看更多作品</span>
+        </a>
       </div>
     </div>
   </main>

@@ -3,68 +3,86 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
-<Layout title="真實評價 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲的真實評價。PopDaily、范范愛分享等多家媒體與部落客實際體驗推薦。景美店與新店店雙分店好評。">
+<Layout title="真實評價 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲的真實評價。PopDaily、范范愛分享等多家媒體與部落客實際體驗推薦。景美店與新店店雙分店。">
   <Header />
   <main class="pt-8 pb-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="text-sm text-it-text mb-4">
         <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>真實評價</span>
       </nav>
-      <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">真實評價與推薦</h1>
-        <p class="text-it-text">多家媒體與部落客實際體驗後的真實分享</p>
+      <div class="text-center mb-14">
+        <p class="text-it-cta text-sm tracking-widest uppercase mb-3 font-medium">Testimonials</p>
+        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark">真實評價與推薦</h1>
+        <p class="mt-4 text-it-text">多家媒體與部落客實際體驗後的真實分享</p>
       </div>
 
-      <div class="space-y-8">
-        <blockquote class="bg-white rounded-xl p-8 border border-it-secondary/20">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-it-cta/10 flex items-center justify-center flex-shrink-0 text-it-cta font-bold text-lg">K</div>
-            <div>
-              <p class="text-it-text leading-relaxed mb-4">「伊特美甲 ITUNG NAILS 的空間環境很舒適……手部深層保養特別做到肩膀，流程包含蜂蠟蠟磨砂去角質、手部淨白凍膜，做完肌膚透亮、膚色均勻靚白。卸甲與磨甲機操作輕柔無不適，美甲師細心風趣、會確認顏色與舒適度。推薦給所有想擁有漂亮指甲、想好好保養手足的朋友們唷！」</p>
-              <footer class="flex items-center justify-between">
+      <div class="space-y-10">
+        <!-- Quote 1 with decorative styling -->
+        <blockquote class="relative bg-white rounded-2xl p-8 md:p-10 border border-it-secondary/20">
+          <div class="absolute top-4 left-6 text-7xl text-it-cta/10 font-serif leading-none select-none">"</div>
+          <div class="relative z-10 flex items-start gap-5">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-it-cta/20 to-it-blush/30 flex items-center justify-center flex-shrink-0 text-it-cta font-bold text-xl">K</div>
+            <div class="flex-1 min-w-0">
+              <p class="text-it-text leading-relaxed mb-5 text-base">伊特美甲 ITUNG NAILS 的空間環境很舒適……手部深層保養特別做到肩膀，流程包含蜂蠟蠟磨砂去角質、手部淨白凍膜，做完肌膚透亮、膚色均勻靚白。卸甲與磨甲機操作輕柔無不適，美甲師細心風趣、會確認顏色與舒適度。推薦給所有想擁有漂亮指甲、想好好保養手足的朋友們唷！</p>
+              <footer class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
                   <p class="font-bold text-it-dark">Karen W.</p>
                   <p class="text-sm text-it-text">PopDaily 波波黛莉 · 景美店體驗</p>
                 </div>
-                <a href="https://www.popdaily.com.tw/forum/beauty/1527362" target="_blank" rel="noopener" class="text-it-cta text-sm hover:underline">閱讀原文 →</a>
+                <a href="https://www.popdaily.com.tw/forum/beauty/1527362" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-it-cta text-sm font-medium hover:text-it-dark transition-colors">
+                  <span>閱讀原文</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
               </footer>
             </div>
           </div>
         </blockquote>
 
-        <blockquote class="bg-white rounded-xl p-8 border border-it-secondary/20">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-it-cta/10 flex items-center justify-center flex-shrink-0 text-it-cta font-bold text-lg">范</div>
-            <div>
-              <p class="text-it-text leading-relaxed mb-4">「老師技術純熟，速度又快，讓我能把世界名畫帶著走……環境寬敞寧靜無壓迫感，使用日本材料，星空指甲彩繪成品精緻漂亮、詢問度超高！另有提供彩繪教學，很推薦有美甲需求或想學彩繪的人到伊特美甲 ITUNG NAILS 喔！」</p>
-              <footer class="flex items-center justify-between">
+        <!-- Quote 2 -->
+        <blockquote class="relative bg-white rounded-2xl p-8 md:p-10 border border-it-secondary/20">
+          <div class="absolute top-4 left-6 text-7xl text-it-cta/10 font-serif leading-none select-none">"</div>
+          <div class="relative z-10 flex items-start gap-5">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-it-cta/20 to-it-blush/30 flex items-center justify-center flex-shrink-0 text-it-cta font-bold text-xl">范</div>
+            <div class="flex-1 min-w-0">
+              <p class="text-it-text leading-relaxed mb-5 text-base">老師技術純熟，速度又快，讓我能把世界名畫帶著走……環境寬敞寧靜無壓迫感，使用日本材料，星空指甲彩繪成品精緻漂亮、詢問度超高！另有提供彩繪教學，很推薦有美甲需求或想學彩繪的人到伊特美甲 ITUNG NAILS 喔！</p>
+              <footer class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
                   <p class="font-bold text-it-dark">范范</p>
                   <p class="text-sm text-it-text">范范愛分享 · 新店店體驗</p>
                 </div>
-                <a href="https://fanfan1105.nidbox.com/diary/read/10003001" target="_blank" rel="noopener" class="text-it-cta text-sm hover:underline">閱讀原文 →</a>
+                <a href="https://fanfan1105.nidbox.com/diary/read/10003001" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-it-cta text-sm font-medium hover:text-it-dark transition-colors">
+                  <span>閱讀原文</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
               </footer>
             </div>
           </div>
         </blockquote>
 
-        <div class="bg-it-primary/50 rounded-xl p-6 border border-it-secondary/20">
-          <p class="text-xs text-it-text/70 text-center">以上為合作部落客與顧客的個人體驗分享，實際效果與感受因人而異，僅供參考。</p>
+        <!-- Disclaimer -->
+        <div class="bg-it-primary/50 rounded-xl p-5 border border-it-secondary/20">
+          <p class="text-xs text-it-text/70 text-center leading-relaxed">以上為合作部落客與顧客的個人體驗分享，實際效果與感受因人而異，僅供參考。</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div class="bg-it-light rounded-xl p-6 border border-it-secondary/20 text-center">
-            <p class="text-4xl font-bold text-it-cta mb-2">10K+</p>
-            <p class="text-it-text">IG 粉絲追蹤</p>
+            <p class="text-3xl md:text-4xl font-bold text-it-cta mb-1">10K+</p>
+            <p class="text-sm text-it-text">IG 粉絲追蹤</p>
           </div>
           <div class="bg-it-light rounded-xl p-6 border border-it-secondary/20 text-center">
-            <p class="text-4xl font-bold text-it-cta mb-2">900+</p>
-            <p class="text-it-text">真實作品分享</p>
+            <p class="text-3xl md:text-4xl font-bold text-it-cta mb-1">900+</p>
+            <p class="text-sm text-it-text">真實作品分享</p>
+          </div>
+          <div class="col-span-2 md:col-span-1 bg-it-light rounded-xl p-6 border border-it-secondary/20 text-center">
+            <p class="text-3xl md:text-4xl font-bold text-it-cta mb-1">4.8</p>
+            <p class="text-sm text-it-text">顧客評分</p>
           </div>
         </div>
       </div>
 
-      <div class="mt-12 text-center">
+      <!-- CTA -->
+      <div class="mt-14 text-center">
         <p class="text-it-text mb-4">想看更多真實作品與顧客評價？</p>
         <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
