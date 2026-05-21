@@ -110,9 +110,9 @@ const serviceIcons: Record<string, string> = {
           </p>
           <!-- Balanced CTA buttons -->
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg text-sm">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-              <span>立即預約</span>
+            <a href="https://lin.ee/3bxkb2AtG" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg text-sm">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              <span>LINE 預約</span>
             </a>
             <a href="/pricing" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-it-dark text-it-dark font-bold rounded-full hover:bg-it-dark hover:text-white transition-colors text-sm group">
               <span>查看價格表</span>
@@ -153,27 +153,36 @@ const serviceIcons: Record<string, string> = {
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8 text-center">
-          <div class="p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 transition-colors">
+          <a href="/about" class="group block p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
             <h3 class="font-bold text-it-dark mb-2 flex items-center justify-center gap-2">
               <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               景美・新店美甲
             </h3>
             <p class="text-sm text-it-text">台北市文山區景美及新北市新店區，交通便利的社區美甲工作室。</p>
-          </div>
-          <div class="p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 transition-colors">
+            <span class="inline-flex items-center gap-1 mt-3 text-xs text-it-cta font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              了解分店<svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
             <h3 class="font-bold text-it-dark mb-2 flex items-center justify-center gap-2">
               <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               IG 萬名粉絲推薦
             </h3>
             <p class="text-sm text-it-text">Instagram @itung_lin_nails 累積萬名粉絲、千篇作品分享。</p>
-          </div>
-          <div class="p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 transition-colors">
+            <span class="inline-flex items-center gap-1 mt-3 text-xs text-it-cta font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              追蹤 IG<svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </span>
+          </a>
+          <a href="/about#why-us" class="group block p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
             <h3 class="font-bold text-it-dark mb-2 flex items-center justify-center gap-2">
               <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
               日本材料安心使用
             </h3>
             <p class="text-sm text-it-text">嚴選日本凝膠材料，專業技術純熟，安心享受高品質美甲體驗。</p>
-          </div>
+            <span class="inline-flex items-center gap-1 mt-3 text-xs text-it-cta font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              了解優勢<svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </a>
         </div>
       </div>
     </section>
