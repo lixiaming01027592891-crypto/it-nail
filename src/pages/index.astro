@@ -84,47 +84,67 @@ const serviceIcons: Record<string, string> = {
   <main>
     <!-- Hero -->
     <section class="relative min-h-[80vh] md:min-h-[70vh] flex items-center bg-it-primary overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-it-secondary/20 via-transparent to-it-blush/10"></div>
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Decorative subtle gradient -->
+      <div class="absolute inset-0 bg-gradient-to-br from-it-secondary/15 via-transparent to-it-blush/8"></div>
+      <!-- Decorative top-right accent circle -->
+      <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-it-cta/[0.03] blur-3xl"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
-          <p class="text-it-cta text-sm tracking-[0.3em] uppercase mb-4 font-medium">ITUNG NAILS · 景美・新店</p>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-it-dark mb-6 leading-tight">
-            台北景美・新店<br/>
-            <span class="text-it-cta">專業凝膠美甲</span><br/>
-            美甲沙龍
+          <!-- Decorative line -->
+          <div class="w-12 h-px bg-it-cta mb-6"></div>
+          <p class="text-it-cta text-sm tracking-[0.25em] uppercase mb-5 font-medium">ITUNG NAILS · 景美・新店</p>
+          <!-- Two-line title with clear hierarchy -->
+          <h1 class="mb-6">
+            <span class="block text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-it-dark leading-[1.15] tracking-tight">
+              台北景美・新店
+            </span>
+            <span class="block text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold leading-[1.15] tracking-tight mt-1">
+              <span class="text-it-cta">專業</span><span class="text-it-dark">凝膠美甲沙龍</span>
+            </span>
           </h1>
-          <p class="text-lg text-it-text mb-8 max-w-lg leading-relaxed">
+          <!-- Subtitle line -->
+          <p class="text-sm text-it-cta/80 tracking-widest uppercase mb-6 font-medium">NAIL SALON · GEL NAIL · NAIL ART</p>
+          <!-- Description with constrained width -->
+          <p class="text-base text-it-text mb-8 max-w-md leading-relaxed">
             日本材料、手到肩深度保養、萬篇真實作品分享。從簡約單色到藝術彩繪，為你量身打造專屬指尖風格。
           </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg">
+          <!-- Balanced CTA buttons -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg text-sm">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
               <span>IG 私訊預約</span>
             </a>
-            <a href="/pricing" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-it-dark text-it-dark font-bold rounded-full hover:bg-it-dark hover:text-white transition-colors">
+            <a href="/pricing" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-it-dark text-it-dark font-bold rounded-full hover:bg-it-dark hover:text-white transition-colors text-sm group">
               <span>查看價格表</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
           </div>
-          <div class="mt-8 flex items-center gap-6 text-sm text-it-text">
-            <div class="flex items-center gap-1">
-              <span class="text-yellow-500">★★★★★</span>
-              <span class="font-bold">4.8</span>
-              <span class="text-xs text-it-text/70">(多家部落格推薦，個人經驗因人而異)</span>
+          <!-- Trust bar with proper spacing -->
+          <div class="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-it-text">
+            <div class="flex items-center gap-1.5">
+              <span class="text-yellow-500 text-xs">★★★★★</span>
+              <span class="font-bold text-it-dark">4.8</span>
+              <span class="text-xs text-it-text/60">(個人經驗因人而異)</span>
             </div>
-            <div class="flex items-center gap-1">
+            <div class="w-px h-4 bg-it-secondary/50 hidden sm:block"></div>
+            <div class="flex items-center gap-1.5">
               <svg class="w-4 h-4 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               <span>景美・新店地區</span>
             </div>
           </div>
         </div>
+        <!-- Hero image with square aspect + proper positioning -->
         <div class="hidden lg:block relative">
-          <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-            <img src="/images/portfolio/portfolio-hero.jpg" alt="ITUNG NAILS 伊特美甲作品 - 紅色復古花磗美甲" class="w-full h-full object-cover" loading="eager" />
+          <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl ring-1 ring-it-secondary/20">
+            <img src="/images/portfolio/portfolio-hero.jpg" alt="ITUNG NAILS 伊特美甲作品 - 紅色復古花磗美甲" class="w-full h-full object-cover object-[center_30%]" loading="eager" />
           </div>
+          <!-- Price badge -->
           <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl px-5 py-3 shadow-lg border border-it-secondary/20">
             <p class="text-xs text-it-text">凝膠美甲</p>
             <p class="text-lg font-bold text-it-dark">NT$699 <span class="text-sm font-normal text-it-text">起</span></p>
           </div>
+          <!-- Decorative corner accent -->
+          <div class="absolute -top-3 -right-3 w-20 h-20 border-t-2 border-r-2 border-it-cta/20 rounded-tr-2xl"></div>
         </div>
       </div>
     </section>
