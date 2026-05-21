@@ -10,7 +10,7 @@ const navItems = [
   { label: '關於伊特', href: '/about' },
 ];
 ---
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm" id="main-header">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <a href="/" class="flex flex-col">
@@ -29,11 +29,88 @@ const navItems = [
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           <span class="hidden xl:inline">@itung_lin_nails</span>
         </a>
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 text-it-text hover:text-it-cta transition-colors" aria-label="開啟選單">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <!-- Hamburger / Close toggle -->
+        <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center text-it-text hover:text-it-cta transition-colors" aria-label="開啟選單" aria-expanded="false" aria-controls="mobile-menu-panel">
+          <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6 absolute inset-0 m-auto opacity-0 pointer-events-none transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
     </div>
   </div>
+
+  <!-- Mobile dropdown panel -->
+  <div id="mobile-menu-panel" class="lg:hidden hidden bg-white/98 backdrop-blur-lg border-t border-it-secondary/20 shadow-xl absolute top-full left-0 right-0 max-h-[calc(100vh-5rem)] overflow-y-auto">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex flex-col" aria-label="手機導航">
+      {navItems.map(item => (
+        <a href={item.href} class="mobile-nav-link flex items-center justify-between py-3.5 px-4 text-base font-medium text-it-dark hover:text-it-cta hover:bg-it-secondary/20 rounded-lg transition-colors">
+          <span>{item.label}</span>
+          <svg class="w-4 h-4 text-it-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      ))}
+      <div class="border-t border-it-secondary/20 mt-2 pt-3 px-4 pb-2">
+        <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm text-it-text hover:text-it-cta transition-colors py-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <span>@itung_lin_nails</span>
+        </a>
+      </div>
+    </nav>
+  </div>
 </header>
+
+<script is:inline>
+  (function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var panel = document.getElementById('mobile-menu-panel');
+    var iconMenu = document.getElementById('icon-menu');
+    var iconClose = document.getElementById('icon-close');
+    var links = panel ? panel.querySelectorAll('.mobile-nav-link') : [];
+
+    if (!btn || !panel) return;
+
+    function openMenu() {
+      panel.classList.remove('hidden');
+      if (iconMenu) { iconMenu.style.opacity = '0'; iconMenu.style.pointerEvents = 'none'; }
+      if (iconClose) { iconClose.style.opacity = '1'; iconClose.style.pointerEvents = 'auto'; }
+      btn.setAttribute('aria-expanded', 'true');
+      btn.setAttribute('aria-label', '關閉選單');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      panel.classList.add('hidden');
+      if (iconMenu) { iconMenu.style.opacity = '1'; iconMenu.style.pointerEvents = 'auto'; }
+      if (iconClose) { iconClose.style.opacity = '0'; iconClose.style.pointerEvents = 'none'; }
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', '開啟選單');
+      document.body.style.overflow = '';
+    }
+
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (panel.classList.contains('hidden')) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+    });
+
+    links.forEach(function(link) {
+      link.addEventListener('click', function() {
+        closeMenu();
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!panel.classList.contains('hidden') && !panel.contains(e.target) && !btn.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
+        closeMenu();
+      }
+    });
+  })();
+</script>
