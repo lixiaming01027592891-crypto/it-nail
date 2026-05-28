@@ -3,85 +3,533 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
-<Layout title="價格表 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲價格表。凝膠美甲 NT$699 起、深層保養 NT$900 起、占星開運美甲 NT$3,600 起。景美店與新店店雙分店。">
+<Layout title="價目表 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲完整價目表。凝膠美甲、專業保養課程、足部深層課程。景美店與新店店雙分店。">
   <Header />
-  <main class="pt-8 pb-20">
-    <div class="max-w-4xl mx-auto px-4">
-      <nav class="text-sm text-it-text mb-4">
-        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>價格表</span>
-      </nav>
-      <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">價格表</h1>
-        <p class="text-it-text">專業技術，實際價格依現場報價為準</p>
+  <main class="pricing-page">
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  Route-local design tokens                   -->
+    <!-- ═══════════════════════════════════════════ -->
+    <style is:inline>
+      :where(.pricing-page) {
+        /* Spacing scale: 8px base, modular */
+        --ps-1: 4px;   --ps-2: 8px;   --ps-3: 12px;
+        --ps-4: 16px;  --ps-5: 24px;  --ps-6: 32px;
+        --ps-7: 48px;  --ps-8: 64px;  --ps-9: 80px;
+        --ps-10: 96px; --ps-11: 120px;
+
+        /* Typography */
+        --font-serif: 'Noto Serif TC', Georgia, 'Songti SC', serif;
+        --font-sans:  'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
+
+        /* Palette: 4 core colours only */
+        --clr-bg:       #FDFCFA;   /* warm white      */
+        --clr-surface:  #F5F0EA;   /* very subtle warm grey */
+        --clr-ink:      #2E2118;   /* deep cocoa brown    */
+        --clr-ink-2:    #7A6B5F;   /* secondary muted     */
+        --clr-accent:   #B07050;   /* refined rose-ochre  */
+        --clr-gold:     #C9A96E;   /* champagne, hairline only */
+
+        /* Divider */
+        --hairline: 1px solid var(--clr-gold);
+
+        /* Transition */
+        --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      @media (max-width: 767px) {
+        :where(.pricing-page) {
+          --ps-7: 32px; --ps-8: 40px; --ps-9: 48px;
+          --ps-10: 56px; --ps-11: 64px;
+        }
+      }
+
+      /* ── Scroll reveal (reuses global .reveal / .stagger-* ) ── */
+      .pricing-page .reveal {
+        opacity: 0; transform: translateY(20px);
+        transition: opacity .55s var(--ease), transform .55s var(--ease);
+      }
+      .pricing-page .reveal.is-visible {
+        opacity: 1; transform: translateY(0);
+      }
+
+      /* ── Hero divider ── */
+      .pricing-page .hero-line {
+        width: 48px; height: 1px; background: var(--clr-gold);
+        margin: 0 auto var(--ps-5);
+      }
+
+      /* ── Eyebrow label ── */
+      .pricing-page .eyebrow {
+        font-family: var(--font-sans);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--clr-accent);
+        margin-bottom: var(--ps-4);
+      }
+      @media (max-width: 767px) {
+        .pricing-page .eyebrow { font-size: 10px; letter-spacing: 0.18em; }
+      }
+
+      /* ── Section title ── */
+      .pricing-page .section-title {
+        font-family: var(--font-serif);
+        font-size: clamp(1.5rem, 3.2vw, 2rem);
+        font-weight: 700;
+        color: var(--clr-ink);
+        line-height: 1.25;
+        margin-bottom: var(--ps-2);
+      }
+
+      /* ── Editorial menu row: service + dots + price ── */
+      .pricing-page .menu-row {
+        display: flex;
+        align-items: baseline;
+        gap: var(--ps-3);
+        padding: var(--ps-4) 0;
+        border-bottom: 1px solid rgba(201,169,110,0.18);
+        transition: background .25s var(--ease);
+      }
+      .pricing-page .menu-row:hover {
+        background: rgba(201,169,110,0.04);
+      }
+      .pricing-page .menu-row:last-child {
+        border-bottom: none;
+      }
+      .pricing-page .menu-name {
+        font-family: var(--font-sans);
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--clr-ink);
+        line-height: 1.6;
+        flex-shrink: 0;
+      }
+      .pricing-page .menu-dots {
+        flex: 1 1 auto;
+        border-bottom: 1px dotted rgba(201,169,110,0.35);
+        min-width: 24px;
+        margin: 0 var(--ps-2);
+        position: relative; top: -2px;
+      }
+      .pricing-page .menu-price {
+        font-family: var(--font-sans);
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--clr-accent);
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+        flex-shrink: 0;
+        text-align: right;
+      }
+      .pricing-page .menu-note {
+        font-family: var(--font-sans);
+        font-size: 13px;
+        color: var(--clr-ink-2);
+        line-height: 1.7;
+        margin-top: var(--ps-2);
+        padding-left: var(--ps-5);
+      }
+      .pricing-page .menu-note strong {
+        color: var(--clr-ink);
+        font-weight: 500;
+      }
+
+      /* ── Sub-section heading ── */
+      .pricing-page .sub-heading {
+        font-family: var(--font-sans);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--clr-ink);
+        letter-spacing: 0.08em;
+        margin: var(--ps-6) 0 var(--ps-4);
+        padding-bottom: var(--ps-2);
+        border-bottom: var(--hairline);
+      }
+
+      /* ── Gold hairline divider ── */
+      .pricing-page .gold-line {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--clr-gold) 20%, var(--clr-gold) 80%, transparent);
+        opacity: 0.45;
+      }
+
+      /* ── Inclusive note banner ── */
+      .pricing-page .inclusive-banner {
+        background: var(--clr-surface);
+        border-left: 3px solid var(--clr-accent);
+        padding: var(--ps-4) var(--ps-5);
+        margin-top: var(--ps-5);
+        font-size: 13px;
+        color: var(--clr-ink-2);
+        line-height: 1.7;
+      }
+      .pricing-page .inclusive-banner strong { color: var(--clr-ink); font-weight: 500; }
+
+      /* ── Footnote ── */
+      .pricing-page .footnote {
+        font-size: 12px;
+        color: var(--clr-ink-2);
+        text-align: center;
+        margin-top: var(--ps-7);
+      }
+
+      /* ── Trust badges ── */
+      .pricing-page .badge-label {
+        font-family: var(--font-sans);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--clr-ink);
+        margin-top: var(--ps-3);
+      }
+      .pricing-page .badge-desc {
+        font-size: 12px;
+        color: var(--clr-ink-2);
+        line-height: 1.5;
+        margin-top: 2px;
+      }
+      .pricing-page .badge-icon {
+        width: 40px; height: 40px;
+        stroke: var(--clr-accent);
+        stroke-width: 1.5;
+        fill: none;
+      }
+
+      /* ── Footer tagline ── */
+      .pricing-page .closing-line {
+        width: 32px; height: 1px; background: var(--clr-gold);
+        margin: 0 auto var(--ps-4);
+        opacity: .6;
+      }
+
+      /* ── Anchor nav (desktop only) ── */
+      .pricing-page .anchor-nav {
+        display: none;
+      }
+      @media (min-width: 1024px) {
+        .pricing-page .anchor-nav {
+          display: flex;
+          gap: var(--ps-6);
+          justify-content: center;
+          font-size: 12px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--clr-ink-2);
+          margin-bottom: var(--ps-8);
+        }
+        .pricing-page .anchor-nav a {
+          color: inherit;
+          transition: color .25s var(--ease);
+          position: relative;
+        }
+        .pricing-page .anchor-nav a::after {
+          content: ''; position: absolute; bottom: -4px; left: 0;
+          width: 100%; height: 1px; background: var(--clr-accent);
+          transform: scaleX(0); transform-origin: left;
+          transition: transform .3s var(--ease);
+        }
+        .pricing-page .anchor-nav a:hover { color: var(--clr-accent); }
+        .pricing-page .anchor-nav a:hover::after { transform: scaleX(1); }
+      }
+
+      /* ── Mobile: stack touch targets ── */
+      @media (max-width: 767px) {
+        .pricing-page .menu-name,
+        .pricing-page .menu-price { font-size: 14px; }
+        .pricing-page .menu-note { font-size: 13px; padding-left: var(--ps-3); }
+        .pricing-page .menu-row { padding: var(--ps-3) 0; gap: var(--ps-2); }
+        .pricing-page .sub-heading { font-size: 12px; }
+      }
+    </style>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  HERO                                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="reveal" style="background: var(--clr-bg); padding: var(--ps-11) var(--ps-5) var(--ps-9); text-align: center;">
+      <p class="eyebrow" style="margin-bottom: var(--ps-4);">ITUNG NAILS &middot; Pricing</p>
+      <div class="hero-line"></div>
+      <h1 style="font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; color: var(--clr-ink); line-height: 1.15; margin-bottom: var(--ps-4);">
+        伊特美甲
+      </h1>
+      <p style="font-family: var(--font-serif); font-size: clamp(1.1rem, 2.2vw, 1.5rem); font-weight: 400; color: var(--clr-ink-2); line-height: 1.5; margin-bottom: var(--ps-2);">
+        呵護每一寸・綻放自信之美
+      </p>
+      <p style="font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--clr-ink-2); opacity: .7;">
+        Beauty begins at your fingertips
+      </p>
+    </section>
+
+    <!-- Anchor nav (desktop) -->
+    <nav class="anchor-nav reveal stagger-1" style="background: var(--clr-bg);">
+      <a href="#nail-services">美甲項目</a>
+      <a href="#care-courses">保養課程</a>
+      <a href="#trust">品牌承諾</a>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  美甲項目                                    -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="nail-services" style="background: var(--clr-bg); padding: 0 var(--ps-5) var(--ps-10);">
+      <div style="max-width: 720px; margin: 0 auto;">
+        <p class="eyebrow reveal">Nail Services</p>
+        <h2 class="section-title reveal stagger-1">美甲項目</h2>
+
+        <!-- Gel colouring -->
+        <div class="menu-row reveal stagger-1">
+          <span class="menu-name">凝膠上色（俗稱光療）&ensp;手</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$999</span>
+        </div>
+        <div class="menu-row reveal stagger-1">
+          <span class="menu-name">凝膠上色（俗稱光療）&ensp;腳</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$1,099</span>
+        </div>
+
+        <!-- Cat-eye / French / Gradient -->
+        <div class="menu-row reveal stagger-2">
+          <span class="menu-name">貓眼美甲、法式美甲、漸層美甲（不分手腳）</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$1,500</span>
+        </div>
+
+        <!-- Mirror / Mermaid powder -->
+        <div class="menu-row reveal stagger-2">
+          <span class="menu-name">魔鏡粉美甲、人魚粉美甲（不分手腳）</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$1,800</span>
+        </div>
+
+        <!-- Complex designs -->
+        <div class="menu-row reveal stagger-3">
+          <span class="menu-name">複雜造型</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">另外報價</span>
+        </div>
+
+        <!-- Extensions -->
+        <div class="sub-heading reveal stagger-3">延甲</div>
+        <div class="menu-row reveal stagger-3">
+          <span class="menu-name">紙托延長 1 公分以內</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">一指 $150 起</span>
+        </div>
+        <div class="menu-row reveal stagger-4">
+          <span class="menu-name">紙托延長 超過一公分</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">+ $50</span>
+        </div>
+        <div class="menu-row reveal stagger-4">
+          <span class="menu-name">貼甲片</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">一指 $100</span>
+        </div>
+        <div class="menu-row reveal stagger-4">
+          <span class="menu-name">補甲（一個裂痕）</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$100</span>
+        </div>
+
+        <!-- Inclusive note -->
+        <div class="inclusive-banner reveal stagger-5">
+          <strong>美甲項目均包含：</strong>修型、凝膠前置作業、美感建構、晶亮封層、指緣油護理
+        </div>
+
+        <!-- Add-ons -->
+        <div class="sub-heading reveal stagger-5">加購區</div>
+        <div class="menu-row reveal stagger-5">
+          <span class="menu-name">基礎保養&ensp;手</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$150</span>
+        </div>
+        <div class="menu-row reveal stagger-5">
+          <span class="menu-name">基礎保養&ensp;腳</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$300</span>
+        </div>
+        <div class="menu-row reveal stagger-6">
+          <span class="menu-name">卸甲續作&ensp;手 / 腳</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">各 $200</span>
+        </div>
+        <div class="menu-row reveal stagger-6">
+          <span class="menu-name">他店卸甲續作&ensp;手 / 腳</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">各 $300</span>
+        </div>
+        <div class="menu-row reveal stagger-6">
+          <span class="menu-name">除毛（腋下）</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$500</span>
+        </div>
+
+        <!-- Footnote -->
+        <p class="menu-note reveal stagger-7" style="margin-top: var(--ps-5);">
+          <strong>附註：</strong>指緣到指尖總長 2.5 公分以上，一律 + $200 加厚費用
+        </p>
       </div>
+    </section>
 
-      <div class="space-y-8">
-        <div class="bg-white rounded-2xl p-8 border border-it-secondary/20">
-          <h2 class="text-xl font-bold text-it-dark mb-4">凝膠美甲</h2>
-          <table class="w-full text-sm">
-            <tr class="border-b border-it-secondary/20"><td class="py-3">單色凝膠</td><td class="py-3 text-right font-bold text-it-cta">NT$699 起</td></tr>
-            <tr class="border-b border-it-secondary/20"><td class="py-3">貓眼 / 漸層 / 法式</td><td class="py-3 text-right font-bold text-it-cta">NT$899 起</td></tr>
-            <tr class="border-b border-it-secondary/20"><td class="py-3">簡單手繪款</td><td class="py-3 text-right font-bold text-it-cta">NT$1,200 起</td></tr>
-            <tr><td class="py-3">複雜彩繪 / 客製化</td><td class="py-3 text-right font-bold text-it-cta">依設計報價</td></tr>
-          </table>
+    <!-- Divider -->
+    <div class="gold-line" style="max-width: 560px; margin: 0 auto;"></div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  專業保養課程                                 -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="care-courses" style="background: var(--clr-bg); padding: var(--ps-10) var(--ps-5);">
+      <div style="max-width: 720px; margin: 0 auto;">
+        <p class="eyebrow reveal">Professional Care Courses</p>
+        <h2 class="section-title reveal stagger-1">專業保養課程</h2>
+
+        <!-- ── 基礎保養 ── -->
+        <div class="sub-heading reveal stagger-2">基礎保養</div>
+
+        <div class="menu-row reveal stagger-2">
+          <span class="menu-name">手部基礎保養</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$600</span>
+        </div>
+        <div class="menu-note reveal stagger-2">
+          流程：修型、修剪指緣甘皮、磨除指緣硬皮、指甲面膜、強韌硬甲油（升級單色凝膠健甲 + $700）、指緣滋養液
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-it-secondary/20">
-          <h2 class="text-xl font-bold text-it-dark mb-4">手足深層保養</h2>
-          <table class="w-full text-sm">
-            <tr class="border-b border-it-secondary/20"><td class="py-3">手部深層保養（到肩膀）</td><td class="py-3 text-right font-bold text-it-cta">NT$900 起</td></tr>
-            <tr class="border-b border-it-secondary/20"><td class="py-3">足部深層保養（到膝蓋）</td><td class="py-3 text-right font-bold text-it-cta">NT$1,000 起</td></tr>
-            <tr><td class="py-3">凝膠 + 保養組合價</td><td class="py-3 text-right font-bold text-it-cta">NT$1,599 起</td></tr>
-          </table>
+        <div class="menu-row reveal stagger-3">
+          <span class="menu-name">足部基礎保養</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$800</span>
+        </div>
+        <div class="menu-note reveal stagger-3">
+          流程：修型、修剪指緣甘皮、磨除指緣硬皮、指甲面膜、強韌硬甲油（升級單色凝膠健甲 + $800）、指緣滋養液
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-it-secondary/20">
-          <h2 class="text-xl font-bold text-it-dark mb-4">光療延甲</h2>
-          <table class="w-full text-sm">
-            <tr class="border-b border-it-secondary/20"><td class="py-3">單指延甲</td><td class="py-3 text-right font-bold text-it-cta">NT$130–150</td></tr>
-            <tr><td class="py-3">全手延甲</td><td class="py-3 text-right font-bold text-it-cta">NT$1,000 起</td></tr>
-          </table>
+        <!-- ── 深層保養 ── -->
+        <div class="sub-heading reveal stagger-3" style="margin-top: var(--ps-8);">深層保養</div>
+
+        <div class="menu-row reveal stagger-3">
+          <span class="menu-name">手部深層保養（手掌到關節部位）</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$1,000</span>
+        </div>
+        <div class="menu-note reveal stagger-3">
+          流程：蠟磨砂去角質、手部淨白凍膜、修型、修剪指緣硬皮、磨除指緣硬皮、指甲面膜、強韌硬甲油（升級單色凝膠健甲 + $700）、指緣滋養液
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-it-secondary/20">
-          <h2 class="text-xl font-bold text-it-dark mb-4">占星開運美甲</h2>
-          <table class="w-full text-sm">
-            <tr class="border-b border-it-secondary/20"><td class="py-3">單一事項占星諮詢</td><td class="py-3 text-right font-bold text-it-cta">NT$3,600</td></tr>
-            <tr class="border-b border-it-secondary/20"><td class="py-3">流年攻略占星諮詢</td><td class="py-3 text-right font-bold text-it-cta">NT$5,200</td></tr>
-            <tr><td class="py-3">感情合盤</td><td class="py-3 text-right font-bold text-it-cta">NT$7,200</td></tr>
-          </table>
+        <div class="menu-row reveal stagger-4">
+          <span class="menu-name">足部深層保養（全部到膝蓋）</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$1,500 起</span>
+        </div>
+        <div class="menu-note reveal stagger-4">
+          ※ 請參考下方足部課程選擇適合的方案
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-it-secondary/20">
-          <h2 class="text-xl font-bold text-it-dark mb-4">美甲教學</h2>
-          <table class="w-full text-sm">
-            <tr class="border-b border-it-secondary/20"><td class="py-3">美甲全科班</td><td class="py-3 text-right font-bold text-it-cta">請洽詢</td></tr>
-            <tr class="border-b border-it-secondary/20"><td class="py-3">彩繪教學課程</td><td class="py-3 text-right font-bold text-it-cta">請洽詢</td></tr>
-            <tr><td class="py-3">穿戴甲教學</td><td class="py-3 text-right font-bold text-it-cta">請洽詢</td></tr>
-          </table>
+        <!-- ── 足部深層課程 ── -->
+        <div class="sub-heading reveal stagger-4" style="margin-top: var(--ps-8);">足部深層課程</div>
+
+        <div class="menu-row reveal stagger-4">
+          <span class="menu-name">足部潤澤課程（深層滋潤・柔嫩保養）</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$1,500</span>
+        </div>
+        <div class="menu-note reveal stagger-4">
+          流程：磨除足底硬繭、磨砂去角質、奶蜂蜜足膜、修型、修剪指緣甘皮、磨除指緣硬皮、強韌硬甲油（升級單色凝膠健甲 + $800）、指緣滋養液
+        </div>
+
+        <div class="menu-row reveal stagger-5">
+          <span class="menu-name">足部白嫩煥白（淨白提亮・煥發光澤）</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$1,800</span>
+        </div>
+        <div class="menu-note reveal stagger-5">
+          流程：磨除足底硬繭、磨砂去角質、Dunay 拋光足膜、修型、修剪指緣甘皮、磨除指緣硬皮、強韌硬甲油（升級單色凝膠健甲 + $800）、指緣滋養液
+        </div>
+
+        <div class="menu-row reveal stagger-5">
+          <span class="menu-name">精油強效淨化（TRInd 產品・深層淨化・高效修護）</span>
+          <span class="menu-dots"></span>
+          <span class="menu-price">$2,500</span>
+        </div>
+        <div class="menu-note reveal stagger-5">
+          流程：磨除足底硬繭、蜂蠟磨砂去角質、足部滋潤凝膜、修型、修剪指緣甘皮、磨除指緣硬皮、強韌硬甲油（升級單色凝膠健甲 + $800）、指緣滋養液
         </div>
       </div>
+    </section>
 
-      <p class="mt-8 text-center text-sm text-it-text">* 以上價格僅供參考，實際價格依現場報價為準。</p>
+    <!-- Divider -->
+    <div class="gold-line" style="max-width: 560px; margin: 0 auto;"></div>
 
-      <div class="mt-12 bg-it-light rounded-2xl p-8 border border-it-secondary/20">
-        <h3 class="text-xl font-bold text-it-dark mb-4">兩間分店預約方式</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <p class="font-bold text-it-dark mb-2">景美店</p>
-            <p class="text-sm text-it-text">台北市文山區景興路，近景美捷運站</p>
-            <p class="text-sm text-it-text mt-1">02-2934-9297</p>
-            <a href="https://lin.ee/OCPxzKS" target="_blank" class="inline-block mt-2 px-4 py-2 bg-it-cta text-white text-sm font-bold rounded-full hover:bg-it-cta/90 transition-colors">LINE 預約景美店</a>
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  信任標章                                     -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="trust" style="background: var(--clr-surface); padding: var(--ps-10) var(--ps-5);">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p class="eyebrow reveal" style="text-align: center;">Our Promise</p>
+        <h2 class="section-title reveal stagger-1" style="text-align: center; margin-bottom: var(--ps-8);">信任標章</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--ps-7) var(--ps-6);">
+          <!-- 1. 專業技術 -->
+          <div class="reveal stagger-1" style="text-align: center;">
+            <svg class="badge-icon" viewBox="0 0 24 24" style="margin: 0 auto;">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+            <p class="badge-label">專業技術</p>
+            <p class="badge-desc">細心呵護每一步</p>
           </div>
-          <div>
-            <p class="font-bold text-it-dark mb-2">新店店</p>
-            <p class="text-sm text-it-text">新店眷村巷弄內，近新店區公所捷運站1號出口</p>
-            <p class="text-sm text-it-text mt-1">02-8665-6288</p>
-            <a href="https://lin.ee/KFIGAfw" target="_blank" class="inline-block mt-2 px-4 py-2 bg-it-cta text-white text-sm font-bold rounded-full hover:bg-it-cta/90 transition-colors">LINE 預約新店店</a>
+
+          <!-- 2. 嚴選產品 -->
+          <div class="reveal stagger-2" style="text-align: center;">
+            <svg class="badge-icon" viewBox="0 0 24 24" style="margin: 0 auto;">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <p class="badge-label">嚴選產品</p>
+            <p class="badge-desc">高品質安心使用</p>
+          </div>
+
+          <!-- 3. 舒適環境 -->
+          <div class="reveal stagger-3" style="text-align: center;">
+            <svg class="badge-icon" viewBox="0 0 24 24" style="margin: 0 auto;">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <p class="badge-label">舒適環境</p>
+            <p class="badge-desc">放鬆享受專屬時光</p>
+          </div>
+
+          <!-- 4. 貼心服務 -->
+          <div class="reveal stagger-4" style="text-align: center;">
+            <svg class="badge-icon" viewBox="0 0 24 24" style="margin: 0 auto;">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5a8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            <p class="badge-label">貼心服務</p>
+            <p class="badge-desc">讓美麗從指尖延伸</p>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  FOOTER TAGLINE                              -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section style="background: var(--clr-bg); padding: var(--ps-10) var(--ps-5) var(--ps-11); text-align: center;">
+      <div class="reveal">
+        <div class="closing-line"></div>
+        <p style="font-family: var(--font-serif); font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 400; color: var(--clr-ink); line-height: 1.5; margin-bottom: var(--ps-3);">
+          美・從細節開始
+        </p>
+        <p style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clr-ink-2); opacity: .6;">
+          ITUNG NAILS &middot; 景美・新店
+        </p>
+      </div>
+    </section>
+
+    <!-- Footnote -->
+    <div style="background: var(--clr-bg); padding-bottom: var(--ps-8);">
+      <p class="footnote reveal">* 以上價格僅供參考，實際價格依現場報價為準。</p>
     </div>
   </main>
+
+  <!-- Footer 沿用全局 -->
   <Footer />
 </Layout>
