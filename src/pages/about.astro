@@ -21,7 +21,7 @@ import Footer from '../components/Footer.astro';
       <!-- Brand story -->
       <section class="mb-20">
         <div class="grid md:grid-cols-5 gap-8 items-center">
-          <div class="md:col-span-3">
+          <div class="md:col-span-3 reveal">
             <p class="text-it-text leading-relaxed mb-4">
               <strong class="text-it-dark">ITUNG NAILS 伊特美甲</strong> 從創立之初，便致力於打造一個讓你能夠卸下壓力、專注感受美好的空間。我們選用 <strong class="text-it-dark">日本材料</strong>，以純熟的技術與細膩的服務，為每一位客人提供高品質且親民的美甲體驗。
             </p>
@@ -29,7 +29,7 @@ import Footer from '../components/Footer.astro';
               從基礎凝膠上色到複雜的手繪彩繪，從日常保養到獨家的星座命盤美甲，我們希望每一位走進店裡的客人，都能帶著滿意的笑容離開。
             </p>
           </div>
-          <div class="md:col-span-2">
+          <div class="md:col-span-2 reveal-scale stagger-2">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
               <img src="/images/portfolio/portfolio-07.jpg" alt="伊特美甲作品 - 大理石紋乾花" class="w-full h-full object-cover" loading="lazy" />
             </div>
@@ -38,14 +38,14 @@ import Footer from '../components/Footer.astro';
       </section>
 
       <!-- Section divider -->
-      <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent mb-16"></div>
+      <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent mb-16 reveal-line"></div>
 
       <!-- Two stores -->
       <section class="mb-16">
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8 text-center">兩間店，同一份用心</h2>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8 text-center reveal">兩間店，同一份用心</h2>
         <div class="grid md:grid-cols-2 gap-6">
           <!-- 景美店 -->
-          <a href="https://www.google.com/maps/search/?api=1&query=台北市文山區景興路151號2樓" target="_blank" rel="noopener noreferrer" class="group block bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg hover:border-it-cta/30 hover:-translate-y-0.5 transition-all duration-300">
+          <a href="https://www.google.com/maps/search/?api=1&query=台北市文山區景興路151號2樓" target="_blank" rel="noopener noreferrer" class="group block bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg hover:border-it-cta/30 hover:-translate-y-0.5 transition-all duration-300 reveal stagger-1">
             <div class="flex items-center justify-between mb-3">
               <h3 class="font-bold text-it-dark flex items-center gap-2 text-lg">
                 <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
@@ -62,7 +62,7 @@ import Footer from '../components/Footer.astro';
             </div>
           </a>
           <!-- 新店店 -->
-          <a href="https://www.google.com/maps/search/?api=1&query=新北市新店區三民路35巷30號" target="_blank" rel="noopener noreferrer" class="group block bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg hover:border-it-cta/30 hover:-translate-y-0.5 transition-all duration-300">
+          <a href="https://www.google.com/maps/search/?api=1&query=新北市新店區三民路35巷30號" target="_blank" rel="noopener noreferrer" class="group block bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg hover:border-it-cta/30 hover:-translate-y-0.5 transition-all duration-300 reveal stagger-2">
             <div class="flex items-center justify-between mb-3">
               <h3 class="font-bold text-it-dark flex items-center gap-2 text-lg">
                 <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
@@ -86,9 +86,9 @@ import Footer from '../components/Footer.astro';
 
       <!-- Services overview -->
       <section class="mb-16">
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8">我們的服務</h2>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8 reveal">我們的服務</h2>
         <div class="grid sm:grid-cols-2 gap-6">
-          <div class="flex gap-4">
+          <div class="flex gap-4 reveal stagger-1">
             <div class="w-10 h-10 rounded-lg bg-it-secondary/30 flex items-center justify-center flex-shrink-0">
               <svg class="w-5 h-5 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
             </div>
@@ -97,7 +97,7 @@ import Footer from '../components/Footer.astro';
               <p class="text-sm text-it-text">單色、貓眼、漸層，專業上色持久飽和</p>
             </div>
           </div>
-          <div class="flex gap-4">
+          <div class="flex gap-4 reveal stagger-2">
             <div class="w-10 h-10 rounded-lg bg-it-secondary/30 flex items-center justify-center flex-shrink-0">
               <svg class="w-5 h-5 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
             </div>
@@ -106,7 +106,7 @@ import Footer from '../components/Footer.astro';
               <p class="text-sm text-it-text">從簡約日常到世界名畫/藝術設計</p>
             </div>
           </div>
-          <div class="flex gap-4">
+          <div class="flex gap-4 reveal stagger-3">
             <div class="w-10 h-10 rounded-lg bg-it-secondary/30 flex items-center justify-center flex-shrink-0">
               <svg class="w-5 h-5 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
             </div>
@@ -115,7 +115,7 @@ import Footer from '../components/Footer.astro';
               <p class="text-sm text-it-text">特別做到<strong>手到肩、足到膝</strong>，搭配蜂蠟磨砂與淨白凍膜</p>
             </div>
           </div>
-          <div class="flex gap-4">
+          <div class="flex gap-4 reveal stagger-4">
             <div class="w-10 h-10 rounded-lg bg-it-secondary/30 flex items-center justify-center flex-shrink-0">
               <svg class="w-5 h-5 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
             </div>
@@ -129,30 +129,30 @@ import Footer from '../components/Footer.astro';
 
       <!-- Why us -->
       <section id="why-us" class="mb-16">
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8">為什麼選擇伊特？</h2>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8 reveal">為什麼選擇伊特？</h2>
         <div class="space-y-4">
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40">
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40 reveal stagger-1">
             <div class="w-2 h-2 rounded-full bg-it-cta mt-2 flex-shrink-0"></div>
             <div>
               <p class="font-bold text-it-dark mb-1">日本材料</p>
               <p class="text-sm text-it-text">嚴選品質，安心使用</p>
             </div>
           </div>
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40">
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40 reveal stagger-2">
             <div class="w-2 h-2 rounded-full bg-it-cta mt-2 flex-shrink-0"></div>
             <div>
               <p class="font-bold text-it-dark mb-1">豐富作品</p>
               <p class="text-sm text-it-text">IG <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="text-it-cta hover:underline">@itung_lin_nails</a> 累積 <strong>萬名粉絲</strong>、<strong>千篇作品</strong></p>
             </div>
           </div>
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40">
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40 reveal stagger-3">
             <div class="w-2 h-2 rounded-full bg-it-cta mt-2 flex-shrink-0"></div>
             <div>
               <p class="font-bold text-it-dark mb-1">美甲師團隊</p>
               <p class="text-sm text-it-text">細心、風趣、親切，技術純熟且持續確認客人感受</p>
             </div>
           </div>
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40">
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-it-primary/40 reveal stagger-4">
             <div class="w-2 h-2 rounded-full bg-it-cta mt-2 flex-shrink-0"></div>
             <div>
               <p class="font-bold text-it-dark mb-1">兩間分店</p>
@@ -163,13 +163,16 @@ import Footer from '../components/Footer.astro';
       </section>
 
       <!-- CTA -->
-      <div class="text-center">
-        <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg">
+      <div class="text-center reveal">
+        <a href="https://www.instagram.com/itung_lin_nails/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           <span>追蹤 IG 看更多作品</span>
         </a>
       </div>
     </div>
   </main>
+  <Footer />
+</Layout>
+
   <Footer />
 </Layout>

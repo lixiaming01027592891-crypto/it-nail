@@ -35,6 +35,111 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       --z-modal: 50;
       --z-mobile-menu: 60;
       --z-toast: 70;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    /* Global micro-interactions */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s var(--ease-out-quart), transform 0.6s var(--ease-out-quart);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.5s var(--ease-out-quart), transform 0.5s var(--ease-out-quart);
+    }
+    .reveal-left.is-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity 0.5s var(--ease-out-quart), transform 0.5s var(--ease-out-quart);
+    }
+    .reveal-scale.is-visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .reveal-line {
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.8s var(--ease-out-expo);
+    }
+    .reveal-line.is-visible {
+      transform: scaleX(1);
+    }
+    /* Stagger delays */
+    .stagger-1 { transition-delay: 0.05s; }
+    .stagger-2 { transition-delay: 0.1s; }
+    .stagger-3 { transition-delay: 0.15s; }
+    .stagger-4 { transition-delay: 0.2s; }
+    .stagger-5 { transition-delay: 0.25s; }
+    .stagger-6 { transition-delay: 0.3s; }
+    .stagger-7 { transition-delay: 0.35s; }
+    .stagger-8 { transition-delay: 0.4s; }
+    .stagger-9 { transition-delay: 0.45s; }
+    /* FAQ accordion height animation */
+    .faq-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s var(--ease-out-quart);
+    }
+    .faq-content.is-open {
+      grid-template-rows: 1fr;
+    }
+    .faq-content > div {
+      overflow: hidden;
+    }
+    /* Nav underline */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s var(--ease-out-quart);
+    }
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+    /* FAQ chevron */
+    .faq-chevron {
+      transition: transform 0.3s var(--ease-out-quart);
+    }
+    .faq-chevron.is-open {
+      transform: rotate(180deg);
+    }
+    /* Lightbox slide */
+    .lightbox-slide-out {
+      animation: lbSlideOut 0.25s var(--ease-out-quart) forwards;
+    }
+    .lightbox-slide-in {
+      animation: lbSlideIn 0.25s var(--ease-out-quart) forwards;
+    }
+    @keyframes lbSlideOut {
+      from { opacity: 1; transform: translateX(0); }
+      to { opacity: 0.5; transform: translateX(-20px); }
+    }
+    @keyframes lbSlideIn {
+      from { opacity: 0.5; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    /* Count-up number style */
+    .count-up {
+      font-variant-numeric: tabular-nums;
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,5 +172,53 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 </head>
 <body class="bg-it-primary text-it-text font-sans antialiased pt-16 lg:pt-20">
   <slot />
+  <script is:inline>
+    (function() {
+      // Intersection Observer for scroll reveal
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal, .reveal-left, .reveal-scale, .reveal-line').forEach(function(el) {
+        observer.observe(el);
+      });
+
+      // Count-up animation
+      var countObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            var target = parseFloat(el.dataset.target);
+            var suffix = el.dataset.suffix || '';
+            var duration = 1500;
+            var start = performance.now();
+            function update(now) {
+              var elapsed = now - start;
+              var progress = Math.min(elapsed / duration, 1);
+              var eased = 1 - Math.pow(1 - progress, 4);
+              var current = target * eased;
+              if (target % 1 !== 0) {
+                el.textContent = current.toFixed(1) + suffix;
+              } else {
+                el.textContent = Math.round(current) + suffix;
+              }
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+            countObserver.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      document.querySelectorAll('.count-up').forEach(function(el) {
+        countObserver.observe(el);
+      });
+    })();
+  </script>
 </body>
 </html>
