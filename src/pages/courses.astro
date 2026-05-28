@@ -2,70 +2,226 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const courseFeatures = [
+  {
+    num: '01',
+    title: '全方位覆蓋',
+    desc: '從零基礎技術到進階商業技法，讓你一次到位。不只教你做美甲，更教你靠美甲賺錢。',
+    icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+  },
+  {
+    num: '02',
+    title: '成長型學院',
+    desc: '美業技術更新極快，這個線上課的內容持續新增，學員皆可免費學習。你買的不是一堂課，而是技術成長課程。',
+    icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
+  },
+  {
+    num: '03',
+    title: '實戰型陪跑',
+    desc: '提供實戰作業修正、問題解答，直到你真的能靠這份技能賺到錢。這堂課，是陪你持續走下去的職涯路線。',
+    icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
+  },
+];
+
+const liveCoursePoints = [
+  {
+    title: '獲客邏輯',
+    desc: '不靠低價競爭，如何讓客人主動找你？',
+  },
+  {
+    title: '商業效率',
+    desc: '如何將3小時的工作縮短至1.5小時，讓效率翻倍？',
+  },
+  {
+    title: '定價心理',
+    desc: '如何提升客單價，讓客人感受到你的價值？',
+  },
+];
+
+const socialLinks = [
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/itung_lin_nails/',
+    icon: 'M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z',
+  },
+  {
+    label: 'LINE',
+    href: 'https://lin.ee/3bxkb2AtG',
+    icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
+  },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/itung.lin.nails/',
+    icon: 'M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z',
+  },
+  {
+    label: 'Messenger',
+    href: 'https://m.me/itung.lin.nails',
+    icon: 'M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z',
+  },
+];
 ---
-<Layout title="美甲教學課程 | ITUNG NAILS 伊特美甲" description="ITUNG NAILS 伊特美甲提供美甲全科班、彩繪教學課程與穿戴甲教學。由經驗豐富的美甲師帶領，從基礎到進階。景美・新店兩店。">
+<Layout title="美甲線上課程 | ITUNG NAILS 伊特美甲" description="12年經驗美甲師打造「4631美甲創業變現系統」。線上課程持續更新、實戰陪跑，陪你從零基礎到成功創業。免費直播體驗課等你卡位。" image="/images/courses-instructor.jpg" imageWidth={800} imageHeight={1000}>
   <Header />
-  <main class="pt-8 pb-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <nav class="text-sm text-it-text mb-4">
-        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>美甲教學</span>
-      </nav>
-      <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">美甲教學課程</h1>
-        <p class="text-it-text max-w-2xl mx-auto">由經驗豐富的美甲師帶領，從基礎到進階，適合想學習美甲技術或轉職的朋友。</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl p-6 border border-it-secondary/20 text-center hover:shadow-lg transition-shadow">
-          <div class="w-14 h-14 rounded-full bg-it-secondary/30 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-it-dark mb-2">美甲全科班</h3>
-          <p class="text-sm text-it-text mb-4">從基礎保養、凝膠上色到進階彩繪，系統化學習專業美甲技術。</p>
-          <a href="https://lin.ee/OCPxzKS" target="_blank" class="inline-block px-6 py-2 bg-it-cta text-white text-sm font-bold rounded-full hover:bg-it-cta/90 transition-colors">洽詢課程</a>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 border border-it-secondary/20 text-center hover:shadow-lg transition-shadow">
-          <div class="w-14 h-14 rounded-full bg-it-secondary/30 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-it-dark mb-2">彩繪教學課程</h3>
-          <p class="text-sm text-it-text mb-4">學習手繪技巧，從簡單線條到複雜的藝術設計，如油畫玫瑰、花磚、動漫角色等。</p>
-          <a href="https://lin.ee/OCPxzKS" target="_blank" class="inline-block px-6 py-2 bg-it-cta text-white text-sm font-bold rounded-full hover:bg-it-cta/90 transition-colors">洽詢課程</a>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 border border-it-secondary/20 text-center hover:shadow-lg transition-shadow">
-          <div class="w-14 h-14 rounded-full bg-it-secondary/30 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-it-dark mb-2">穿戴甲教學</h3>
-          <p class="text-sm text-it-text mb-4">學習穿戴甲的製作、配戴與卸除技巧，適合想創業或自用的朋友。</p>
-          <a href="https://lin.ee/OCPxzKS" target="_blank" class="inline-block px-6 py-2 bg-it-cta text-white text-sm font-bold rounded-full hover:bg-it-cta/90 transition-colors">洽詢課程</a>
-        </div>
-      </div>
-
-      <div class="mt-12 bg-it-light rounded-2xl p-8 border border-it-secondary/20">
-        <h2 class="text-xl font-bold text-it-dark mb-4 text-center">學員常見問題</h2>
-        <div class="grid md:grid-cols-2 gap-6 text-sm text-it-text">
+  <main class="pb-20">
+    <!-- Hero: Value proposition + Instructor photo -->
+    <section class="relative bg-it-primary overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left: Text -->
           <div>
-            <p class="font-bold text-it-dark mb-1">沒有基礎可以學嗎？</p>
-            <p>當然可以！課程從基礎開始教學，無經驗也能上手。</p>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-it-cta/10 rounded-full mb-6">
+              <svg class="w-4 h-4 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z"/></svg>
+              <span class="text-xs text-it-cta font-bold tracking-wide">長知識學院 × ITUNG NAILS 聯合推出</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-it-dark leading-tight mb-6">
+              美甲線上課程<br/>
+              <span class="text-it-cta">創業變現系統</span>
+            </h1>
+            <p class="text-lg text-it-text mb-6 leading-relaxed">
+              我做美甲12年以上了，我知道很多人怕的根本不是學不會。<br class="hidden md:block"/>
+              而是怕只學到如何製作指甲，卻沒學到如何經營、變現的方法。
+            </p>
+            <p class="text-base text-it-text/80 mb-8 leading-relaxed">
+              這堂課不做普通的入門班。我想打造的是一套「<strong class="text-it-dark">4631美甲創業變現系統</strong>」——從零基礎技術到進階商業技法，陪你持續走下去的職涯路線。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="#live-course" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-it-cta text-white font-bold rounded-full hover:bg-it-cta/90 transition-colors shadow-lg text-sm">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>免費直播體驗課</span>
+              </a>
+              <a href="#contact" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-it-dark text-it-dark font-bold rounded-full hover:bg-it-dark hover:text-white transition-colors text-sm group">
+                <span>了解更多</span>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
           </div>
-          <div>
-            <p class="font-bold text-it-dark mb-1">需要自備工具嗎？</p>
-            <p>基礎課程提供練習工具，進階課程會建議購買個人工具組。</p>
-          </div>
-          <div>
-            <p class="font-bold text-it-dark mb-1">上課地點在哪？</p>
-            <p>課程於景美店或新店店進行，報名時確認上課地點。</p>
-          </div>
-          <div>
-            <p class="font-bold text-it-dark mb-1">如何報名？</p>
-            <p>請透過 LINE 私訊預約諮詢，我們會依您的需求規劃課程。</p>
+          <!-- Right: Instructor photo -->
+          <div class="relative mx-auto lg:mx-0 max-w-sm lg:max-w-none">
+            <div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-it-secondary/20">
+              <img src="/images/courses-instructor.jpg" alt="ITUNG NAILS 伊特美甲創辦人 - 12年經驗專業美甲師" class="w-full h-full object-cover object-center" loading="eager" />
+            </div>
+            <!-- Experience badge -->
+            <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl px-5 py-3 shadow-lg border border-it-secondary/20">
+              <p class="text-xs text-it-text">美甲經驗</p>
+              <p class="text-lg font-bold text-it-dark">12+ <span class="text-sm font-normal text-it-text">年</span></p>
+            </div>
+            <!-- Decorative corner -->
+            <div class="absolute -top-3 -right-3 w-20 h-20 border-t-2 border-r-2 border-it-cta/20 rounded-tr-2xl"></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent max-w-4xl mx-auto"></div>
+
+    <!-- 3 Core Features -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-it-cta text-sm tracking-widest uppercase mb-3 font-medium">4631 System</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">為什麼這堂課不一樣？</h2>
+          <p class="text-it-text max-w-2xl mx-auto">一般的課程只會教你把指甲做美。但光會做美麗的指甲還不夠——美甲師的技術只是基本門檻，「變現」才是真實本事。</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          {courseFeatures.map(f => (
+            <div class="group bg-it-light rounded-2xl p-8 border border-it-secondary/10 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+              <div class="flex items-center gap-4 mb-5">
+                <div class="w-12 h-12 rounded-xl bg-it-secondary/30 flex items-center justify-center flex-shrink-0 group-hover:bg-it-cta/10 transition-colors">
+                  <svg class="w-6 h-6 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={f.icon}/></svg>
+                </div>
+                <div>
+                  <span class="text-xs text-it-cta font-bold tracking-wide">{f.num}</span>
+                  <h3 class="text-lg font-bold text-it-dark">{f.title}</h3>
+                </div>
+              </div>
+              <p class="text-sm text-it-text leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent max-w-4xl mx-auto"></div>
+
+    <!-- Live Course CTA -->
+    <section id="live-course" class="py-20 md:py-28 bg-it-primary/30">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="w-12 h-px bg-it-cta mx-auto mb-6"></div>
+        <p class="text-it-cta text-sm tracking-widest uppercase mb-3 font-medium">Free Live Class</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-6">免費直播體驗課</h2>
+        <p class="text-it-text text-lg mb-4 max-w-2xl mx-auto leading-relaxed">
+          我將直接拆解美甲師最容易卡關，也最關鍵的三件事。
+          你可以先卡位來聽聽看，再決定是不是適合你。
+        </p>
+
+        <!-- 3 Key Points -->
+        <div class="grid sm:grid-cols-3 gap-4 my-10">
+          {liveCoursePoints.map((p, i) => (
+            <div class="bg-white rounded-xl p-6 border border-it-secondary/20 text-left hover:shadow-md transition-shadow">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-8 h-8 rounded-full bg-it-cta/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-sm font-bold text-it-cta">{i + 1}</span>
+                </div>
+                <h3 class="font-bold text-it-dark">{p.title}</h3>
+              </div>
+              <p class="text-sm text-it-text leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-it-cta font-bold text-lg mb-6">👉 立即留言，直播報名連結給你</p>
+
+        <!-- Social Buttons -->
+        <div id="contact" class="flex flex-wrap justify-center gap-3">
+          {socialLinks.map(s => (
+            <a
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full border border-it-secondary/20 text-it-dark font-medium text-sm hover:bg-it-cta hover:text-white hover:border-it-cta transition-all duration-300 shadow-sm"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d={s.icon}/></svg>
+              <span>{s.label}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent max-w-4xl mx-auto"></div>
+
+    <!-- FAQ -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <p class="text-it-cta text-sm tracking-widest uppercase mb-3 font-medium">FAQ</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-it-dark">學員常見問題</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/10">
+            <p class="font-bold text-it-dark mb-2">沒有基礎可以學嗎？</p>
+            <p class="text-sm text-it-text">當然可以！課程從基礎開始教學，無經驗也能上手。</p>
+          </div>
+          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/10">
+            <p class="font-bold text-it-dark mb-2">需要自備工具嗎？</p>
+            <p class="text-sm text-it-text">基礎課程提供練習工具，進階課程會建議購買個人工具組。</p>
+          </div>
+          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/10">
+            <p class="font-bold text-it-dark mb-2">上課地點在哪？</p>
+            <p class="text-sm text-it-text">課程於景美店或新店店進行，報名時確認上課地點。</p>
+          </div>
+          <div class="bg-it-light rounded-xl p-6 border border-it-secondary/10">
+            <p class="font-bold text-it-dark mb-2">如何報名？</p>
+            <p class="text-sm text-it-text">請透過 LINE 私訊預約諮詢，我們會依您的需求規劃課程。</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>
