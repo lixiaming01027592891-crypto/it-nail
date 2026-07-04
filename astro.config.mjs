@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://it-nail.pages.dev',
+  site: 'https://itungnails.com',
   integrations: [tailwind(), sitemap(), mdx()],
   markdown: {
     shikiConfig: {
