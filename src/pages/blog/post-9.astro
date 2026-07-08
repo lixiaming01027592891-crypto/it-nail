@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "新店凝膠美甲與手足護理｜美甲課程從基礎到進階",
+  "image": ["https://itungnails.com/images/portfolio/portfolio-03.jpg","https://itungnails.com/images/courses-instructor.jpg"],
+  "author": { "@type": "Organization", "name": "ITUNG NAILS 伊特美甲", "url": "https://itungnails.com/about/" },
+  "publisher": { "@type": "Organization", "name": "ITUNG NAILS 伊特美甲", "logo": { "@type": "ImageObject", "url": "https://itungnails.com/favicon.svg" } },
+  "datePublished": "2025-07-08",
+  "dateModified": "2025-07-08",
+  "description": "新店凝膠美甲 $999 起，手足護理從 $600 起。美甲課程從基礎到進階，小班制教學。新店區公所捷運站步行 5 分鐘。",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://itungnails.com/blog/post-9/" }
+};
+---
+<Layout title="新店凝膠美甲與手足護理｜美甲課程從基礎到進階 | 伊特美甲" description="新店凝膠美甲 $999 起，手足護理從 $600 起。美甲課程從基礎到進階，小班制教學。新店區公所捷運站步行 5 分鐘。" schema={schema}>
+  <Header />
+  <main class="pt-8 pb-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <nav class="text-sm text-it-text mb-4" aria-label="麵包屑">
+        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span>
+        <a href="/blog/" class="hover:text-it-cta">部落格</a> <span class="mx-2">/</span>
+        <span>新店凝膠美甲與手足護理</span>
+      </nav>
+      <article class="prose prose-lg mx-auto">
+        <h1>新店凝膠美甲與手足護理｜美甲課程從基礎到進階</h1>
+        <p class="text-sm text-it-text">發布日期：2025-07-08 | 作者：伊特美甲團隊 | <a href="/about/" class="text-it-cta hover:underline">關於我們</a></p>
+
+        <img src="/images/portfolio/portfolio-03.jpg" alt="新店凝膠美甲作品展示" class="w-full rounded-2xl my-6" loading="lazy" />
+
+        <p>新北市新店區的美甲需求越來越多元，從單純的凝膠上色到完整的<strong>新店手足護理</strong>，再到想學習一技之長的<strong>新店美甲課程</strong>，每個人來到店裡的目的都不同。我們在新店區公所捷運站附近經營多年，這篇文章將完整介紹我們的凝膠美甲、手足護理與教學課程服務。</p>
+
+        <h2>新店凝膠美甲服務與價格</h2>
+        <p>我們的<strong>新店凝膠美甲</strong>服務價格透明，所有項目均包含修型、凝膠前置作業、美感建構、晶亮封層與指緣油護理。以下是標準價格：</p>
+        <ul>
+          <li><strong>凝膠上色（俗稱光療）</strong>：手部 $999 / 足部 $1,099</li>
+          <li><strong>貓眼美甲、法式美甲、漸層美甲</strong>：$1,500（不分手腳）</li>
+          <li><strong>魔鏡粉美甲、人魚粉美甲</strong>：$1,800（不分手腳）</li>
+          <li><strong>複雜造型</strong>：另外報價</li>
+        </ul>
+        <p>延甲服務方面，紙托延長一公分以內每指 $150 起，超過一公分加收 $50；貼甲片每指 $100；補甲（一個裂痕）$100。指緣到指尖總長 2.5 公分以上，一律加收 $200 加厚費用。</p>
+
+        <h2>新店手足護理服務</h2>
+        <p>除了美甲，我們也提供完整的<strong>新店手足護理</strong>服務。手部與足部的保養同樣重要，以下是兩者的項目與價格：</p>
+
+        <h3>手部保養</h3>
+        <ul>
+          <li><strong>手部基礎保養 $600</strong>：修型、修剪指緣甘皮、磨除指緣硬皮、指甲面膜、強韌硬甲油、指緣滋養液。升級單色凝膠健甲 +$700。</li>
+          <li><strong>手部深層保養 $1,000</strong>：手掌到關節部位，增加蠟磨砂去角質與淨白凍膜。</li>
+        </ul>
+
+        <h3>足部保養</h3>
+        <ul>
+          <li><strong>足部基礎保養 $800</strong>：修型、修剪指緣甘皮、磨除指緣硬皮、指甲面膜、強韌硬甲油、指緣滋養液。升級單色凝膠健甲 +$800。</li>
+          <li><strong>足部深層保養 $1,500 起</strong>：腳趾到膝蓋，增加蠟磨砂去角質與淨白凍膜。</li>
+        </ul>
+
+        <p>許多客人會選擇在同一次預約中，先進行手足護理，再加上凝膠美甲。這樣不只節省時間，保養後的指甲狀態也更適合上色，效果更持久。</p>
+
+        <img src="/images/courses-instructor.jpg" alt="新店美甲課程教學現場" class="w-full rounded-2xl my-6" loading="lazy" />
+
+        <h2>新店美甲課程介紹</h2>
+        <p>我們的<strong>新店美甲課程</strong>由擁有十二年以上經驗的美甲師親自授課，從基礎技法到進階設計，系統性地帶領學員進入美甲領域。課程採小班制教學，確保每位學員都能獲得充分的指導與練習時間。</p>
+
+        <h3>基礎課程</h3>
+        <p>適合完全沒有經驗的學員。內容包含指甲構造知識、工具認識與使用、基礎修型、指緣護理、單色凝膠上色技法等。完成基礎課程後，學員能夠獨立為自己或朋友進行基礎凝膠美甲。</p>
+
+        <h3>進階課程</h3>
+        <p>針對已有基礎、想提升技術的學員。內容包含進階彩繪技法、貓眼與漸層效果、延甲技術、法式美甲的精細做法等。我們也會分享與客人溝通的技巧，以及如何根據客人的甲型與需求給予建議。</p>
+
+        <p>上課地點可選擇景美店或新店店，報名時確認即可。如需了解最新開課時間與費用，請透過 Instagram 私訊或 LINE 詢問。</p>
+
+        <h2>預約與諮詢方式</h2>
+        <p>我們的新店店位於新北市新店區三民路 35 巷 30 號，距離新店區公所捷運站 1 號出口步行約 5 至 7 分鐘。預約方式：</p>
+        <ul>
+          <li><strong>Instagram 私訊</strong>：<a href="https://www.instagram.com/itung_lin_nails/" target="_blank" rel="noopener noreferrer" class="text-it-cta hover:underline">@itung_lin_nails</a></li>
+          <li><strong>電話預約</strong>：新店店 02-8665-6288</li>
+          <li><strong>LINE 預約</strong>：<a href="https://lin.ee/3bxkb2AtG" target="_blank" rel="noopener noreferrer" class="text-it-cta hover:underline">點此加入 LINE 好友</a></li>
+        </ul>
+
+        <h2>結語</h2>
+        <p>無論你是想做專業的凝膠美甲、放鬆身心的手足護理，還是學習美甲技術開創副業，我們都能提供專業的服務與指導。十二年經驗、萬名粉絲肯定，歡迎預約體驗。</p>
+
+        <div class="mt-8 p-4 bg-it-light rounded-xl border border-it-secondary/20 text-sm text-it-text">
+          <strong>關於作者：</strong>ITUNG NAILS 伊特美甲團隊擁有十二年以上的專業美甲經驗，在景美與新店設有兩間分店，提供美甲服務、手足護理與教學課程。<a href="/about/" class="text-it-cta hover:underline">了解更多</a>
+        </div>
+      </article>
+    </div>
+  </main>
+  <Footer />
+</Layout>
