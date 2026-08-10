@@ -2,53 +2,98 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-const posts = [
-  { title: '美甲器材怎麼消毒？景美美甲店的衛生流程與顧客可以觀察的重點', excerpt: '美甲用到的器材是怎麼清潔消毒的？美甲師拆解推棒、剪鉗、磨頭鑽針、指模與毛刷各自的處理方式，說明可拋棄式與重複使用器材的分別、先清洗再消毒再乾燥收納的完整步驟、檯面與手部清潔的時機，並整理顧客到店時可以自己觀察的五個重點。', date: '2026-08-07', href: '/blog/nail-tool-sterilization-hygiene-20260807' },
-  { title: '夏天做美甲容易脫落嗎？新店凝膠美甲師談流汗、玩水與高溫對持久度的影響', excerpt: '同一款凝膠，冬天撐三週、夏天兩週就翹起？美甲師解析流汗與指緣出油對接著的影響、游泳泡湯與長時間泡水的實際傷害、防曬乳與精油碰到甲面的問題，並分享夏天的甲面前置、款式調整與玩水行程的施作時機。', date: '2026-08-05', href: '/blog/summer-gel-durability-20260805' },
-  { title: '指甲顏色怎麼挑才襯膚色？新店造型美甲師的冷暖調判斷與配色指南', excerpt: '同一個色號在別人手上很美、在自己手上卻很暗？美甲師教你用三個小方法判斷冷調、暖調與中性調膚色，說明各自適合的色系方向，並解析甲床長短、指節顏色、季節光線與場合如何影響選色，讓你到店挑色不再猶豫。', date: '2026-08-02', href: '/blog/nail-color-skin-tone-guide-20260802' },
-  { title: '光療可以一直做下去嗎？景美美甲推薦店家談指甲休息期的判斷與安排', excerpt: '連續做了好幾年光療，指甲需要休息嗎？美甲師從甲面實際狀態的五個判斷訊號、休息期該做與不該做的事、用指甲生長速度推算需要多久，到想連續施作時的回店節奏完整說明。', date: '2026-08-01', href: '/blog/nail-rest-period-guide-20260801' },
-  { title: '男生也需要做手部保養嗎？景美手部保養美甲師談男士指甲的常見狀況與到店流程', excerpt: '男生做手部保養會不會很奇怪？美甲師從男性最常見的指甲狀況、不上色的透明與霧面收尾選擇、什麼時候值得升級深層保養，到第一次到店的實際安排完整說明，也一併談腳跟厚繭與腳指甲的處理。', date: '2026-07-30', href: '/blog/mens-hand-care-guide-20260730' },
-  { title: '新店凝膠美甲做完之後怎麼顧？美甲師分享撐滿三週的日常保養與該避開的習慣', excerpt: '凝膠美甲能不能撐滿三週，關鍵往往不在店裡那一小時，而在回家後的日常。美甲師分享洗手後的補油、碰水與清潔劑的防護、用指尖的好習慣，以及什麼狀況不要自己摳、該回店處理。', date: '2026-07-29', href: '/blog/gel-nail-aftercare-guide-20260729' },
-  { title: '指甲形狀怎麼挑才適合自己的手？景美美甲店美甲師的五種甲型解析與選型指南', excerpt: '指甲形狀怎麼選才好看又好用？美甲師解析方形、方圓形、圓形、橢圓形與尖圓形五種甲型的性格差異，教你從甲床長短、指腹寬窄與生活型態判斷適合自己的形狀，並說明甲型如何影響持久度與斷裂位置。', date: '2026-07-28', href: '/blog/nail-shape-guide-20260728' },
-  { title: '懷孕可以做美甲嗎？景美美甲推薦店家談孕期與哺乳期的指甲照顧', excerpt: '懷孕期間可以做美甲嗎？美甲師從孕期指甲變化、店內環境與坐姿調整、款式挑選、待產前的卸甲時機，到哺乳育兒期的長度與衛生考量完整說明，並誠實劃清保養與醫療的界線。', date: '2026-07-25', href: '/blog/pregnancy-nail-care-20260725' },
-  { title: '第一次到景美美甲店該注意什麼？美甲師帶你走一遍預約到售後的完整流程', excerpt: '第一次做美甲不知道怎麼準備？美甲師帶你走一遍從預約、居家準備、諮詢、施作到售後的完整流程，並分享判斷一間店衛生是否到位的觀察重點，讓初次到店也能自在。', date: '2026-07-24', href: '/blog/first-visit-nail-salon-20260724' },
-  { title: '新店手足護理指南｜手部與足部保養的專業療程搭配', excerpt: '新店手足護理完整指南。手部基礎保養 $600、深層 $1,000，足部保養 $800 起。新店區公所捷運站 1 號出口步行 5 分鐘。', date: '2026-07-23', href: '/blog/xindian-hand-foot-care-20260723' },
-  { title: '新店美甲課程學什麼？從零基礎到能接案，美甲師談課程內容與適合對象', excerpt: '想學美甲卻不知道從何開始？新店美甲課程到底教什麼、零基礎能不能上、上完能不能接案？帶你走一遍新店美甲教學的實際內容、課程安排與適合對象，並誠實說明學費之外真正影響學習成效的關鍵。', date: '2026-07-22', href: '/blog/nail-course-guide-20260722' },
-  { title: '指甲總是斷裂、分層、變薄怎麼辦？景美手部保養美甲師的常見指甲問題觀察與日常照顧', excerpt: '指甲一碰就斷、容易分層剝落、表面凹凸不平是怎麼回事？景美手部保養美甲師從實際觀察分享常見指甲問題的成因、在家能做的日常照顧，以及什麼時候該交給專業手足護理或就醫，誠實說明保養與醫療的界線。', date: '2026-07-21', href: '/blog/common-nail-problems-guide-20260721' },
-  { title: '涼鞋季腳跟乾裂粗糙怎麼救？景美足部保養美甲師的夏日去角質與日常照顧指南', excerpt: '夏天穿涼鞋前，腳跟龜裂、腳底粗糙、厚繭該怎麼辦？景美足部保養美甲師分享泡腳、去角質、足膜與補水的完整步驟，並說明在家保養與到店新店手足護理療程如何分工，讓雙腳在涼鞋季也能自在見人。', date: '2026-07-20', href: '/blog/summer-foot-care-guide-20260720' },
-  { title: '光療凝膠和一般指甲油差在哪？新店凝膠美甲師的完整比較與挑選建議', excerpt: '光療凝膠和一般指甲油到底差在哪？新店凝膠美甲師從成分、硬化方式、持久度、光澤與卸除方式完整比較兩者差別，並教你依生活型態挑選最適合自己的那一種。', date: '2026-07-18', href: '/blog/gel-vs-nail-polish-20260718' },
-  { title: '指緣乾裂、倒刺長不停？景美手部保養美甲師的甘皮日常照顧指南', excerpt: '指緣乾裂、倒刺反覆長不停？景美手部保養美甲師分享甘皮與指緣的正確觀念、每天兩分鐘的補油補水步驟、倒刺的安全處理方式，以及在家保養與到店護理該怎麼分工。', date: '2026-07-17', href: '/blog/cuticle-care-guide-20260717' },
-  { title: '新店造型美甲款式怎麼挑？美甲師的熱門風格解析與選款指南', excerpt: '新店造型美甲款式怎麼挑？美甲師解析貓眼、法式、漸層、暈染四大熱門風格各適合哪種人，並分享依場合、生活型態與指型選款的實務建議。', date: '2026-07-16', href: '/blog/styling-nail-trends-20260716' },
-  { title: '新娘婚禮美甲怎麼準備？景美美甲師的婚前時程規劃與款式提案', excerpt: '新娘婚禮美甲該提前多久做？景美美甲師分享婚前手部保養時程、試做的重要性、婚紗與捧花配色原則，以及讓美甲撐過婚宴與蜜月的實務建議。', date: '2026-07-14', href: '/blog/bridal-wedding-nails-20260714' },
-  { title: '新店美甲教學｜凝膠美甲課程與手足護理完整指南', excerpt: '新店美甲教學從基礎到進階。凝膠美甲課程小班制，手足護理從 $600 起。新店區公所捷運站步行 5 分鐘，十二年經驗師資。', date: '2025-07-10', href: '/blog/post-11' },
-  { title: '景美手部保養推薦｜景美美甲店的專業護理與凝膠美甲', excerpt: '景美手部保養推薦。基礎保養 $600、深層保養 $1,000，凝膠美甲 $999 起。景美美甲店十二年經驗，景美捷運站步行 5 分鐘。', date: '2025-07-10', href: '/blog/post-10' },
-  { title: '新店凝膠美甲與手足護理｜美甲課程從基礎到進階', excerpt: '新店凝膠美甲 $999 起，手足護理從 $600 起。美甲課程從基礎到進階，小班制教學。新店區公所捷運站步行 5 分鐘。', date: '2025-07-08', href: '/blog/post-9' },
-  { title: '景美足部保養推薦｜景美美甲店的深層護理體驗', excerpt: '景美足部保養推薦。基礎保養 $800、深層保養 $1,500 起、潤澤課程 $1,500。景美美甲店十二年經驗。', date: '2025-07-08', href: '/blog/post-8' },
-  { title: '新店凝膠美甲｜造型設計與美甲課程完整指南', excerpt: '新店凝膠美甲 $999 起，造型設計另外報價。美甲課程從基礎到進階。新店區公所捷運站 1 號出口步行 5 分鐘。', date: '2025-07-06', href: '/blog/post-7' },
-  { title: '景美美甲店推薦｜手部保養與凝膠美甲的專業選擇', excerpt: '景美美甲店推薦。手部基礎保養 $600、深層保養 $1,000，凝膠美甲 $999 起。景美捷運站步行 5 分鐘。', date: '2025-07-06', href: '/blog/post-6' },
-  { title: '足部深層保養攻略｜台北美甲沙龍的專業護理體驗', excerpt: '完整足部保養指南。基礎保養 $600 起、深層保養 $1,000 起、TRInd 精油強效淨化 $2,500。三種方案比較與選擇建議。', date: '2025-06-20', href: '/blog/post-5' },
-  { title: '景美美甲推薦｜凝膠美甲價格、款式與預約完整指南', excerpt: '景美地區美甲推薦完整指南。凝膠美甲 $999 起，貓眼/法式/漸層 $1,500，魔鏡粉 $1,800。十二年經驗美甲師分享選店技巧。', date: '2025-06-15', href: '/blog/post-4' },
-  { title: '凝膠美甲可以維持多久？保養秘訣公開', excerpt: '凝膠美甲一般可維持 2-3 週，正確保養可延長至 4 週。了解影響持久度的因素與保養技巧。', date: '2025-01-15', href: '/blog/post-1' },
-  { title: '景美・新店美甲推薦：如何選擇適合自己的美甲店？', excerpt: '選擇美甲店的五大要點：衛生標準、技術認證、作品風格、價格透明與顧客評價。', date: '2025-01-10', href: '/blog/post-2' },
-  { title: '穿戴甲 vs 凝膠美甲：哪個適合你？', excerpt: '比較穿戴甲與凝膠美甲的優缺點、適合場合、價格與維護方式。', date: '2025-01-05', href: '/blog/post-3' },
-];
+import { blogClusters, blogPosts } from '../../data/blog';
+
+const groupedPosts = blogClusters.map((cluster) => ({
+  ...cluster,
+  posts: blogPosts.filter((post) => post.cluster === cluster.key),
+}));
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: '伊特美甲專欄',
+  url: 'https://itungnails.com/blog/',
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: blogPosts.length,
+    itemListElement: blogPosts.map((post, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: post.title,
+      url: new URL(post.href, 'https://itungnails.com').href,
+    })),
+  },
+};
 ---
-<Layout title="部落格 | 美甲知識・保養技巧・最新趨勢" description="伊特美甲部落格，分享景美新店美甲知識、凝膠保養技巧、穿戴甲教學與最新美甲趨勢。">
+
+<Layout
+  title="美甲專欄｜保養知識、款式指南與教學"
+  description="伊特美甲專欄依凝膠保養、款式選擇、手足護理與美甲教學分類，整理景美、新店美甲實用知識。"
+  schema={schema}
+>
   <Header />
   <main class="pt-8 pb-20">
-    <div class="max-w-4xl mx-auto px-4">
-      <nav class="text-sm text-it-text mb-4"><a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span> <span>部落格</span></nav>
-      <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">美甲知識部落格</h1>
-        <p class="text-it-text">凝膠保養技巧、穿戴甲教學與最新美甲趨勢</p>
-      </div>
-      <div class="space-y-6">
-        {posts.map(post => (
-          <a href={post.href} class="block bg-white rounded-xl p-6 border border-it-secondary/20 hover:shadow-md transition-shadow">
-            <p class="text-xs text-it-cta mb-2">{post.date}</p>
-            <h2 class="text-xl font-bold text-it-dark mb-2">{post.title}</h2>
-            <p class="text-it-text text-sm">{post.excerpt}</p>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-it-text mb-4" aria-label="麵包屑">
+        <a href="/" class="hover:text-it-cta">首頁</a>
+        <span class="mx-2">/</span>
+        <span>美甲專欄</span>
+      </nav>
+
+      <header class="text-center py-8 md:py-12 max-w-3xl mx-auto">
+        <p class="text-it-cta text-sm tracking-widest uppercase mb-3 font-medium">Nail Journal</p>
+        <h1 class="text-3xl md:text-4xl font-serif font-bold text-it-dark mb-4">美甲知識與保養專欄</h1>
+        <p class="text-it-text leading-relaxed">
+          依需求快速找到凝膠保養、款式挑選、手足護理與美甲課程資訊。
+        </p>
+      </header>
+
+      <nav class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-it-secondary/20 border border-it-secondary/20 mb-16" aria-label="文章主題">
+        {groupedPosts.map((cluster) => (
+          <a href={`#${cluster.key}`} class="group bg-white p-5 hover:bg-it-light transition-colors">
+            <span class="text-xs text-it-cta">{cluster.posts.length} 篇</span>
+            <span class="block mt-1 font-bold text-it-dark group-hover:text-it-cta transition-colors">{cluster.title}</span>
+            <span class="block mt-2 text-xs leading-relaxed text-it-text">{cluster.description}</span>
           </a>
+        ))}
+      </nav>
+
+      <div class="space-y-16">
+        {groupedPosts.map((cluster) => (
+          <section id={cluster.key} class="scroll-mt-24" aria-labelledby={`${cluster.key}-title`}>
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+              <div>
+                <h2 id={`${cluster.key}-title`} class="text-2xl md:text-3xl font-serif font-bold text-it-dark">
+                  {cluster.title}
+                </h2>
+                <p class="mt-2 text-sm text-it-text">{cluster.description}</p>
+              </div>
+              <a href={cluster.hubHref} class="inline-flex items-center gap-2 text-sm font-bold text-it-cta hover:text-it-dark transition-colors">
+                <span>{cluster.hubLabel}</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="border-t border-it-secondary/30">
+              {cluster.posts.map((post) => (
+                <a href={post.href} class="group grid md:grid-cols-[8rem_1fr_auto] gap-2 md:gap-6 py-6 border-b border-it-secondary/20 items-start">
+                  <time datetime={post.date} class="text-xs text-it-cta pt-1">{post.date}</time>
+                  <span>
+                    <span class="block text-lg font-bold text-it-dark group-hover:text-it-cta transition-colors leading-relaxed">
+                      {post.title}
+                    </span>
+                    <span class="block mt-2 text-sm text-it-text leading-relaxed">{post.excerpt}</span>
+                  </span>
+                  <svg class="hidden md:block w-5 h-5 mt-1 text-it-secondary group-hover:text-it-cta group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </section>
         ))}
       </div>
     </div>

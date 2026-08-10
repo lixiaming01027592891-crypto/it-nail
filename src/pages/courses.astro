@@ -178,10 +178,33 @@ const socialLinks = [
               target="_blank"
               rel="noopener noreferrer"
               class={`inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full border border-it-secondary/20 text-it-dark font-medium text-sm hover:bg-it-cta hover:text-white hover:border-it-cta transition-all duration-300 shadow-sm hover:-translate-y-0.5 stagger-${Math.min(i + 1, 9)}`}
+            >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d={s.icon}/></svg>
               <span>{s.label}</span>
             </a>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-it-light/50" aria-labelledby="course-guides-title">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
+          <div>
+            <p class="text-it-cta text-sm tracking-widest uppercase mb-2 font-medium">Course Guide</p>
+            <h2 id="course-guides-title" class="text-2xl md:text-3xl font-serif font-bold text-it-dark">開始學美甲前先了解</h2>
+          </div>
+          <a href="/blog/#courses" class="text-sm font-bold text-it-cta hover:text-it-dark transition-colors">全部教學文章 →</a>
+        </div>
+        <div class="grid md:grid-cols-2 gap-x-8 border-t border-it-secondary/30">
+          <a href="/blog/nail-course-guide-20260722/" class="group py-6 border-b border-it-secondary/20">
+            <h3 class="font-bold text-it-dark group-hover:text-it-cta transition-colors">新店美甲課程學什麼？從零基礎到能接案</h3>
+            <p class="mt-2 text-sm text-it-text">了解課程內容、學習安排與適合對象。</p>
+          </a>
+          <a href="/blog/post-11/" class="group py-6 border-b border-it-secondary/20">
+            <h3 class="font-bold text-it-dark group-hover:text-it-cta transition-colors">新店美甲教學完整指南</h3>
+            <p class="mt-2 text-sm text-it-text">整理凝膠課程、手足護理與進階學習方向。</p>
+          </a>
         </div>
       </div>
     </section>

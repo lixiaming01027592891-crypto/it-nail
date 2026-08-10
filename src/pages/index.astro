@@ -2,29 +2,56 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { blogPosts } from '../data/blog';
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "NailSalon",
-  "name": "ITUNG NAILS 伊特美甲",
-  "image": "https://itungnails.com/images/portfolio/portfolio-01.jpg",
-  "url": "https://itungnails.com",
-  "sameAs": [
-    "https://www.instagram.com/itung_lin_nails/",
-    "https://www.facebook.com/itung.lin.nails/"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "台北市文山區景美",
-    "addressRegion": "台北",
-    "addressCountry": "TW"
+const localBusinessSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "NailSalon",
+    "@id": "https://itungnails.com/#jingmei",
+    "name": "ITUNG NAILS 伊特美甲 景美店",
+    "image": "https://itungnails.com/images/portfolio/portfolio-01.jpg",
+    "url": "https://itungnails.com/about/#jingmei",
+    "telephone": "+886-2-2934-9297",
+    "sameAs": [
+      "https://www.instagram.com/itung_lin_nails/",
+      "https://www.facebook.com/itung.lin.nails/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "景興路151號2樓",
+      "addressLocality": "文山區",
+      "addressRegion": "台北市",
+      "addressCountry": "TW"
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=台北市文山區景興路151號2樓",
+    "areaServed": { "@type": "City", "name": "台北市" },
+    "priceRange": "$"
   },
-  "areaServed": [
-    { "@type": "City", "name": "台北市景美" },
-    { "@type": "City", "name": "新北市新店" }
-  ],
-  "priceRange": "$"
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "NailSalon",
+    "@id": "https://itungnails.com/#xindian",
+    "name": "ITUNG NAILS 伊特美甲 新店店",
+    "image": "https://itungnails.com/images/portfolio/portfolio-01.jpg",
+    "url": "https://itungnails.com/about/#xindian",
+    "telephone": "+886-2-8665-6288",
+    "sameAs": [
+      "https://www.instagram.com/itung_lin_nails/",
+      "https://www.facebook.com/itung.lin.nails/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "三民路35巷30號",
+      "addressLocality": "新店區",
+      "addressRegion": "新北市",
+      "addressCountry": "TW"
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=新北市新店區三民路35巷30號",
+    "areaServed": { "@type": "City", "name": "新北市" },
+    "priceRange": "$"
+  }
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -33,7 +60,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "伊特美甲在哪裡？怎麼預約？",
-      "acceptedAnswer": { "@type": "Answer", "text": "ITUNG NAILS 伊特美甲有兩個據點：景美店（台北市文山區景美，近景美捷運站，電話 02-2934-9297）與新店店（新北市新店區，近新店區公所捷運站 1 號出口，電話 02-8665-6288）。目前主要透過 Instagram 私訊 @itung_lin_nails 預約，也歡迎直接電話詢問。" }
+      "acceptedAnswer": { "@type": "Answer", "text": "ITUNG NAILS 伊特美甲有兩個據點：景美店位於台北市文山區景興路151號2樓，電話 02-2934-9297；新店店位於新北市新店區三民路35巷30號，電話 02-8665-6288。目前主要透過 Instagram 私訊 @itung_lin_nails 預約，也歡迎直接電話詢問。" }
     },
     {
       "@type": "Question",
@@ -59,11 +86,13 @@ const faqSchema = {
 };
 
 const services = [
-  { title: '凝膠美甲', desc: '專業凝膠上色，色彩飽和持久。單色、貓眼、法式、漸層、暈染皆可執行。', href: '/services', icon: 'nail' },
-  { title: '手足保養', desc: '保養範圍延伸到手臂與小腿，搭配蜂蠟磨砂與淨白凍膜，讓肌膚回到細緻柔嫩。', href: '/services#care', icon: 'care' },
-  { title: '光療延甲', desc: '改善甲型問題，打造完美長度與弧度。適合指甲較短或甲型不整者。', href: '/services#extension', icon: 'extension' },
-  { title: 'Nail Art 設計', desc: '從簡約日常到世界名畫/藝術設計，依據您的風格量身打造。', href: '/gallery', icon: 'art' },
+  { title: '凝膠美甲', desc: '專業凝膠上色，色彩飽和持久。單色、貓眼、法式、漸層、暈染皆可執行。', href: '/services/', icon: 'nail' },
+  { title: '手足保養', desc: '保養範圍延伸到手臂與小腿，搭配蜂蠟磨砂與淨白凍膜，讓肌膚回到細緻柔嫩。', href: '/services/#care', icon: 'care' },
+  { title: '光療延甲', desc: '改善甲型問題，打造完美長度與弧度。適合指甲較短或甲型不整者。', href: '/services/#extension', icon: 'extension' },
+  { title: 'Nail Art 設計', desc: '從簡約日常到世界名畫/藝術設計，依據您的風格量身打造。', href: '/gallery/', icon: 'art' },
 ];
+
+const featuredPosts = blogPosts.slice(0, 3);
 
 const serviceIcons: Record<string, string> = {
   nail: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01',
@@ -72,7 +101,7 @@ const serviceIcons: Record<string, string> = {
   art: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c.36 0 .71-.02 1.05-.06a1 1 0 00.92-1.37 8.03 8.03 0 01-.73-3.37c0-4.42 3.58-8 8-8 .71 0 1.39.09 2.05.26a1 1 0 001.18-1.06C21.96 6.73 22 6.37 22 6c0-.18-.02-.35-.05-.52A9.95 9.95 0 0012 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm5-9a1 1 0 11-2 0 1 1 0 012 0zm-4 0a1 1 0 11-2 0 1 1 0 012 0zm-4 0a1 1 0 11-2 0 1 1 0 012 0z',
 };
 ---
-<Layout title="ITUNG NAILS 伊特美甲 | 景美・新店美甲推薦" description="ITUNG NAILS 伊特美甲，台北景美、新店地區專業美甲沙龍。日本材料、手到肩保養、萬篇真實作品。凝膠美甲 NT$699 起。" image="/images/hero.jpg" imageWidth={1920} imageHeight={1080} schema={[localBusinessSchema, faqSchema]}>
+<Layout title="ITUNG NAILS 伊特美甲 | 景美・新店美甲推薦" description="ITUNG NAILS 伊特美甲，台北景美、新店地區專業美甲沙龍。日本材料、手到肩保養、萬篇真實作品。凝膠美甲 NT$699 起。" image="/images/hero.jpg" imageWidth={1920} imageHeight={1080} schema={[...localBusinessSchemas, faqSchema]}>
   <Header />
   <main>
     <!-- Hero: Full-bleed faded image -->
@@ -116,7 +145,7 @@ const serviceIcons: Record<string, string> = {
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
               <span>立即預約</span>
             </a>
-            <a href="/pricing" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-[#5C4A35] text-[#5C4A35] font-bold rounded-full hover:bg-[#5C4A35] hover:text-white transition-colors text-sm group hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300">
+            <a href="/pricing/" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-[#5C4A35] text-[#5C4A35] font-bold rounded-full hover:bg-[#5C4A35] hover:text-white transition-colors text-sm group hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300">
               <span>查看價格表</span>
               <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -171,7 +200,7 @@ const serviceIcons: Record<string, string> = {
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8 text-center">
-          <a href="/about" class="group block p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 reveal stagger-1">
+          <a href="/about/" class="group block p-6 rounded-2xl bg-it-primary/50 hover:bg-it-secondary/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 reveal stagger-1">
             <h3 class="font-bold text-it-dark mb-2 flex items-center justify-center gap-2">
               <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               景美・新店美甲
@@ -237,6 +266,33 @@ const serviceIcons: Record<string, string> = {
     <!-- Section divider -->
     <div class="h-px bg-gradient-to-r from-transparent via-it-secondary/40 to-transparent max-w-4xl mx-auto reveal-line"></div>
 
+    <!-- Editorial guides -->
+    <section class="py-20 md:py-24 bg-it-light/50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+          <div>
+            <p class="text-it-cta text-sm tracking-widest uppercase mb-3 font-medium reveal">Nail Journal</p>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-it-dark reveal stagger-1">最新美甲保養指南</h2>
+            <p class="mt-4 text-it-text max-w-2xl reveal stagger-2">從日常保養、衛生流程到款式選擇，先了解再安心安排適合自己的服務。</p>
+          </div>
+          <a href="/blog/" class="inline-flex items-center gap-2 text-it-cta font-bold hover:text-it-dark transition-colors reveal stagger-3">
+            <span>瀏覽全部專欄</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-x-8 border-t border-it-secondary/30">
+          {featuredPosts.map((post, index) => (
+            <a href={post.href} class={`group py-7 border-b border-it-secondary/20 md:border-b-0 reveal stagger-${index + 1}`}>
+              <time datetime={post.date} class="text-xs text-it-cta">{post.date}</time>
+              <h3 class="mt-3 text-lg font-bold leading-relaxed text-it-dark group-hover:text-it-cta transition-colors">{post.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-it-text">{post.excerpt}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section class="py-20 md:py-28 bg-it-primary/30">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -254,7 +310,7 @@ const serviceIcons: Record<string, string> = {
             </button>
             <div class="faq-content">
               <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">
-                <p>ITUNG NAILS 伊特美甲有兩個據點：景美店（台北市文山區景美，近景美捷運站，電話 02-2934-9297）與新店店（新北市新店區，近新店區公所捷運站 1 號出口，電話 02-8665-6288）。目前主要透過 Instagram 私訊 @itung_lin_nails 預約，也歡迎直接電話詢問。</p>
+                <p>ITUNG NAILS 伊特美甲有兩個據點：景美店位於台北市文山區景興路151號2樓，電話 02-2934-9297；新店店位於新北市新店區三民路35巷30號，電話 02-8665-6288。目前主要透過 Instagram 私訊 @itung_lin_nails 預約，也歡迎直接電話詢問。</p>
               </div>
             </div>
           </div>
@@ -266,7 +322,7 @@ const serviceIcons: Record<string, string> = {
             </button>
             <div class="faq-content">
               <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">
-                <p>單色凝膠 NT$699 起，貓眼/漸層/法式 NT$899 起，簡單手繪款 NT$1,200 起。詳細價目表請參考網站<a href="/pricing" class="text-it-cta underline hover:no-underline">價格頁</a>，或直接在 IG 私訊詢問。</p>
+                <p>單色凝膠 NT$699 起，貓眼/漸層/法式 NT$899 起，簡單手繪款 NT$1,200 起。詳細價目表請參考網站<a href="/pricing/" class="text-it-cta underline hover:no-underline">價格頁</a>，或直接在 IG 私訊詢問。</p>
               </div>
             </div>
           </div>
@@ -290,7 +346,7 @@ const serviceIcons: Record<string, string> = {
             </button>
             <div class="faq-content">
               <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">
-                <p>有的！伊特美甲提供美甲基礎到進階的教學課程，包含凝膠技法、彩繪設計與穿戴甲製作。詳細課程資訊請參考<a href="/courses" class="text-it-cta underline hover:no-underline">課程頁面</a>或 IG 私訊詢問。</p>
+                <p>有的！伊特美甲提供美甲基礎到進階的教學課程，包含凝膠技法、彩繪設計與穿戴甲製作。詳細課程資訊請參考<a href="/courses/" class="text-it-cta underline hover:no-underline">課程頁面</a>或 IG 私訊詢問。</p>
               </div>
             </div>
           </div>
@@ -302,14 +358,14 @@ const serviceIcons: Record<string, string> = {
             </button>
             <div class="faq-content">
               <div class="px-6 pb-6 text-sm text-it-text leading-relaxed">
-                <p>星座命盤美甲是伊特美甲的獨家特色服務！結合占星命盤分析與美甲設計，根據您的星座特質與命盤元素，設計專屬於您的美甲風格。費用約 NT$3,600–$7,200，詳情請參考<a href="/services" class="text-it-cta underline hover:no-underline">服務頁面</a>。</p>
+                <p>星座命盤美甲是伊特美甲的獨家特色服務！結合占星命盤分析與美甲設計，根據您的星座特質與命盤元素，設計專屬於您的美甲風格。費用約 NT$3,600–$7,200，詳情請參考<a href="/services/" class="text-it-cta underline hover:no-underline">服務頁面</a>。</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="text-center mt-8 reveal stagger-6">
-          <a href="/faq" class="inline-flex items-center gap-2 text-it-cta font-medium hover:text-it-dark transition-colors">
+          <a href="/faq/" class="inline-flex items-center gap-2 text-it-cta font-medium hover:text-it-dark transition-colors">
             <span>查看全部常見問題</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>

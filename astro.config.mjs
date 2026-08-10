@@ -5,6 +5,7 @@ import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   site: 'https://itungnails.com',
+  trailingSlash: 'always',
   integrations: [tailwind(), sitemap(), mdx()],
   markdown: {
     shikiConfig: {

@@ -1,0 +1,49 @@
+---
+import { getBlogCluster, getBlogPost, getRelatedPosts } from '../data/blog';
+
+const currentPost = getBlogPost(Astro.url.pathname);
+const cluster = currentPost ? getBlogCluster(currentPost.cluster) : undefined;
+const relatedPosts = currentPost ? getRelatedPosts(Astro.url.pathname) : [];
+---
+
+{currentPost && cluster && relatedPosts.length > 0 && (
+  <aside class="border-y border-it-secondary/20 bg-white py-14" aria-labelledby="related-reading-title">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div>
+          <p class="text-sm font-medium tracking-widest text-it-cta uppercase mb-2">Related Reading</p>
+          <h2 id="related-reading-title" class="text-2xl md:text-3xl font-serif font-bold text-it-dark">
+            {cluster.title}
+          </h2>
+          <p class="mt-2 text-sm text-it-text max-w-2xl">{cluster.description}</p>
+        </div>
+        <a href={cluster.hubHref} class="inline-flex items-center gap-2 text-sm font-bold text-it-cta hover:text-it-dark transition-colors">
+          <span>{cluster.hubLabel}</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-x-8 border-t border-it-secondary/20">
+        {relatedPosts.map((post) => (
+          <a href={post.href} class="group py-6 border-b border-it-secondary/20 md:border-b-0">
+            <time datetime={post.date} class="text-xs text-it-cta">{post.date}</time>
+            <h3 class="mt-2 font-bold text-it-dark leading-relaxed group-hover:text-it-cta transition-colors">
+              {post.title}
+            </h3>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-7 text-center">
+        <a href="/blog/" class="inline-flex items-center gap-2 text-sm font-medium text-it-text hover:text-it-cta transition-colors">
+          <span>瀏覽全部美甲專欄</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+)}
