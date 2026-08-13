@@ -237,27 +237,6 @@ export const blogPosts: BlogPost[] = [
     href: '/blog/post-4/',
     cluster: 'style-visit',
   },
-  {
-    title: '凝膠美甲可以維持多久？保養秘訣公開',
-    excerpt: '說明凝膠美甲常見維持時間、影響持久度的因素與日常保養技巧。',
-    date: '2025-01-15',
-    href: '/blog/post-1/',
-    cluster: 'gel-care',
-  },
-  {
-    title: '景美・新店美甲推薦：如何選擇適合自己的美甲店？',
-    excerpt: '從衛生標準、技術、作品風格、價格透明與顧客評價整理五個選店重點。',
-    date: '2025-01-10',
-    href: '/blog/post-2/',
-    cluster: 'style-visit',
-  },
-  {
-    title: '穿戴甲 vs 凝膠美甲：哪個適合你？',
-    excerpt: '比較穿戴甲與凝膠美甲的優缺點、適合場合、價格與維護方式。',
-    date: '2025-01-05',
-    href: '/blog/post-3/',
-    cluster: 'gel-care',
-  },
 ];
 
 export function normalizePagePath(pathname: string): string {

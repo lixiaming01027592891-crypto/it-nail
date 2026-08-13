@@ -105,8 +105,27 @@ const articleRoutes = pageEntries
   .map((page) => page.route)
   .filter((route) => route.startsWith('/blog/') && route !== '/blog/');
 
-if (articleRoutes.length !== 30) {
-  issues.push(`/blog/: expected 30 article pages, found ${articleRoutes.length}`);
+// 篇數以 src/data/blog.ts 為單一資料源，避免增刪文章時要回頭改這裡的魔術數字。
+// 真正要擋的是「資料與實際頁面脫節」，不是某個固定數量。
+const blogDataSource = readFileSync(resolve('src/data/blog.ts'), 'utf8');
+const declaredArticles = [...blogDataSource.matchAll(/href: '(\/blog\/[^']+)'/g)].map((m) => m[1]);
+
+if (articleRoutes.length !== declaredArticles.length) {
+  issues.push(
+    `/blog/: blog.ts declares ${declaredArticles.length} articles, build produced ${articleRoutes.length}`
+  );
+}
+
+for (const route of declaredArticles) {
+  if (!articleRoutes.includes(route)) {
+    issues.push(`blog.ts: declares ${route} but no page was built for it`);
+  }
+}
+
+for (const route of articleRoutes) {
+  if (!declaredArticles.includes(route)) {
+    issues.push(`blog.ts: missing entry for built article ${route}`);
+  }
 }
 
 if (blogIndex) {
