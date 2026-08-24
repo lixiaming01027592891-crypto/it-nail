@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: '景美足部保養不只是擦指甲油：久站、走路多的人先看受力與鞋襪習慣',
+    excerpt: '久站、通勤走很多路，腳底粗糙與趾甲不適不一定只靠一次保養解決。本文整理到店前的受力觀察、鞋襪與清潔習慣、基礎足部整理的範圍，以及傷口、感染疑慮等應先就醫的界線。',
+    date: '2026-08-24',
+    href: '/blog/jingmei-foot-care-standing-walking-20260824/',
+    cluster: 'hand-foot-care',
+  },
+  {
     title: '美甲器材怎麼消毒？景美美甲店的衛生流程與顧客可以觀察的重點',
     excerpt: '美甲用到的器材是怎麼清潔消毒的？美甲師拆解推棒、剪鉗、磨頭鑽針、指模與毛刷各自的處理方式，並整理顧客到店時可以自己觀察的重點。',
     date: '2026-08-07',

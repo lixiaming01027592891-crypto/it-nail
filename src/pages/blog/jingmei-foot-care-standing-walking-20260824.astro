@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: '景美足部保養不只是擦指甲油：久站、走路多的人先看受力與鞋襪習慣',
+  image: ['https://itungnails.com/images/blog/jingmei-foot-care-standing-walking-20260824.webp'],
+  author: { '@type': 'Organization', name: 'ITUNG NAILS 伊特美甲', url: 'https://itungnails.com/about/' },
+  publisher: { '@type': 'Organization', name: 'ITUNG NAILS 伊特美甲' },
+  datePublished: '2026-08-24',
+  dateModified: '2026-08-24',
+  description: '久站、通勤走很多路，腳底粗糙與趾甲不適不一定只靠一次保養解決。本文整理到店前的受力觀察、鞋襪與清潔習慣、基礎足部整理的範圍，以及傷口、感染疑慮等應先就醫的界線。',
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://itungnails.com/blog/jingmei-foot-care-standing-walking-20260824/' },
+};
+---
+
+<Layout title="景美足部保養不只是擦指甲油：久站、走路多的人先看受力與鞋襪習慣 | 伊特美甲" description="久站、通勤走很多路，腳底粗糙與趾甲不適不一定只靠一次保養解決。本文整理到店前的受力觀察、鞋襪與清潔習慣、基礎足部整理的範圍，以及傷口、感染疑慮等應先就醫的界線。" schema={schema}>
+  <Header />
+  <main class="pt-8 pb-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <nav class="text-sm text-it-text mb-4" aria-label="麵包屑">
+        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span>
+        <a href="/blog/" class="hover:text-it-cta">部落格</a> <span class="mx-2">/</span>
+        <span>久站與走路族足部保養</span>
+      </nav>
+      <article class="prose prose-lg mx-auto">
+        <h1>景美足部保養不只是擦指甲油：久站、走路多的人先看受力與鞋襪習慣</h1>
+        <p class="text-sm text-it-text">發布日期：2026-08-24 | 作者：伊特美甲團隊 | <a href="/about/" class="text-it-cta hover:underline">關於我們</a></p>
+
+        <img src="/images/blog/jingmei-foot-care-standing-walking-20260824.webp" alt="景美足部保養時觀察久站與走路族的腳底受力、趾甲與鞋襪摩擦位置" class="w-full rounded-2xl my-6" loading="eager" />
+
+        <p>餐飲、零售、美髮工作者一站就是幾個小時，通勤族一天走上好幾段路，晚上脫鞋時才發現前腳掌粗粗的、腳跟乾、趾甲邊緣一直被鞋子頂到。這類需求來做景美足部保養時，重點不只是把表面修得平整，更要回頭看每天的受力與摩擦從哪裡來。保養可以整理與滋潤，但若原本的鞋襪、站姿與清潔習慣完全不變，粗糙位置通常還是會慢慢回來。</p>
+
+        <h2>先看粗糙長在哪裡，而不是急著全部磨掉</h2>
+        <p>足底角質本來就有保護作用。久站的人常在腳跟與前腳掌出現較明顯的厚度，走路多、鞋頭較窄的人，則可能在大拇趾側或小趾外側看到固定的摩擦點。到店前可以先留意：是兩腳差不多，還是單邊特別明顯；換鞋後有沒有改善；休息一天時是否比較舒服。</p>
+        <p>這些位置會讓美甲師知道哪裡需要溫和整理、哪裡不宜再加力。景美足部保養的目標不是把所有角質磨成同一個厚度，而是在不造成傷口的前提下，處理過度粗糙的表面，再把日常保濕接上。</p>
+
+        <h2>鞋子合不合腳，要看走一整天之後</h2>
+        <p>試穿五分鐘覺得剛好，不代表站八小時仍合適。鞋頭過窄會讓趾甲與趾側反覆受壓；鞋跟不穩，腳趾會下意識抓地；鞋底太硬或磨偏，也可能讓某一區持續承受較多力量。建議把最常穿的兩雙鞋一起檢查，看看鞋墊與鞋底哪裡先磨薄，襪子是否總在同一處破。</p>
+        <p>調整不一定要立刻買最昂貴的鞋。先確認尺寸、鞋頭空間與鞋帶固定方式，久站時輪替不同鞋款，讓受力點不要天天完全相同，通常比只在休假日做一次處理更實際。</p>
+
+        <h2>襪子與下班後清潔，也會改變腳的狀態</h2>
+        <p>襪子吸濕能力不足、整天潮濕，或鞋子連續穿沒有乾燥時間，容易讓腳部長時間悶著。每天回家後清潔足部、確實擦乾趾縫，鞋襪輪替並保持乾燥，是基礎中的基礎。足部乳霜可擦在腳跟與較乾燥的位置，但趾縫不宜厚敷到一直潮濕。</p>
+        <p>若工作中大量流汗，可準備乾淨襪子中途替換。保養品不需要一次疊很多種，先維持簡單且穩定的清潔、乾燥與保濕節奏，才能看出哪個習慣真的有幫助。</p>
+
+        <h2>基礎足部整理會處理什麼、不處理什麼</h2>
+        <p>一般手足護理會先觀察甲面、指緣與足底表面，再依狀況進行趾甲修整、指緣清潔、粗糙角質的溫和整理與滋潤保養。是否上色是另一個選項，不上色也能只做清潔與整理。想先了解服務差異，可查看<a href="/services/" class="text-it-cta hover:underline">手足護理服務</a>與<a href="/pricing/" class="text-it-cta hover:underline">價格內容</a>。</p>
+        <p>美甲與足部保養不做疾病診斷，也不處理化膿、流血、明顯感染或深層疼痛。看起來像厚繭的區域，也可能有其他皮膚狀況；無法確認時，寧可保留並建議先就醫，不會為了追求當下平滑而硬削。</p>
+
+        <h2>去角質的頻率，應跟皮膚反應走</h2>
+        <p>天天磨、一次磨到發熱，通常不是更有效的做法。過度處理容易讓表面變得敏感，走路摩擦時反而更不舒服。居家使用磨腳工具時，應在皮膚狀況穩定的前提下輕柔少量，完成後補上保濕；若已經出現裂口或刺痛，就先停下來。</p>
+        <p>腳跟乾燥與厚繭的居家節奏，可搭配<a href="/blog/summer-foot-care-guide-20260720/" class="text-it-cta hover:underline">夏季足部保養指南</a>閱讀。若指甲同時有斷裂、分層等情況，另可參考<a href="/blog/common-nail-problems-guide-20260721/" class="text-it-cta hover:underline">常見指甲問題的觀察界線</a>。</p>
+
+        <h2>這些狀況先諮詢醫療專業</h2>
+        <p>足部出現持續疼痛、紅腫、滲液、水泡、傷口、明顯異味與脫皮，或趾甲變厚、變色、變形時，建議先諮詢皮膚科等醫療專業。糖尿病、周邊循環或感覺異常者，不建議自行削除角質，安排任何足部處理前也應先請醫師評估。突然的單側腫脹或劇烈疼痛，更不屬於美容保養範圍。</p>
+
+        <h2>到店前帶三個資訊，比指定項目更有用</h2>
+        <ul>
+          <li>每天大約站多久、走多少路，工作時主要穿哪一雙鞋。</li>
+          <li>最常粗糙或不舒服的位置，以及左右腳是否相同。</li>
+          <li>近期有沒有傷口、皮膚或趾甲外觀的明顯變化。</li>
+        </ul>
+        <p>帶著這三項來，會比一開始就指定「全部磨薄」更容易安排合適內容。伊特美甲在景美與新店提供手足護理；想確認目前狀況是否適合保養，可先查看<a href="/services/" class="text-it-cta hover:underline">服務與預約方式</a>並說明需求，再依現場觀察決定。本文為一般美容保養資訊，不替代醫療診斷或治療。</p>
+      </article>
+    </div>
+  </main>
+  <Footer />
+</Layout>
