@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: '做完美甲隔天要洗衣打掃，手套怎麼戴？景美凝膠美甲的家事防護',
+    excerpt: '美甲後不可能完全不碰水。本文整理洗碗、洗衣與清潔時如何選合適手套、為什麼內部潮濕要立刻更換、指尖不要拿來摳刮，以及凝膠翹起、疼痛或甲周紅腫時的處理界線。',
+    date: '2026-08-26',
+    href: '/blog/jingmei-manicure-housework-gloves-20260826/',
+    cluster: 'gel-care',
+  },
+  {
     title: '景美足部保養不只是擦指甲油：久站、走路多的人先看受力與鞋襪習慣',
     excerpt: '久站、通勤走很多路，腳底粗糙與趾甲不適不一定只靠一次保養解決。本文整理到店前的受力觀察、鞋襪與清潔習慣、基礎足部整理的範圍，以及傷口、感染疑慮等應先就醫的界線。',
     date: '2026-08-24',
