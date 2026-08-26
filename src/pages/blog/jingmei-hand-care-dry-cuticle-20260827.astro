@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: '景美手部保養不只修指緣：乾燥、倒刺與日常清潔怎麼整理',
+  image: ['https://itungnails.com/images/blog/jingmei-hand-care-dry-cuticle-20260827.webp'],
+  author: { '@type': 'Organization', name: 'ITUNG NAILS 伊特美甲', url: 'https://itungnails.com/about/' },
+  publisher: { '@type': 'Organization', name: 'ITUNG NAILS 伊特美甲' },
+  datePublished: '2026-08-27',
+  dateModified: '2026-08-27',
+  description: '手部乾燥與倒刺不適合直接撕掉。本文整理景美手部保養前如何觀察清潔、碰水與摩擦習慣，基礎指緣整理的安全界線、工具衛生、居家保濕，以及紅腫滲液等應先就醫的情況。',
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://itungnails.com/blog/jingmei-hand-care-dry-cuticle-20260827/' },
+};
+---
+
+<Layout title="景美手部保養：乾燥、倒刺與日常清潔怎麼整理 | 伊特美甲" description="手部乾燥與倒刺不適合直接撕掉。本文整理景美手部保養前如何觀察清潔、碰水與摩擦習慣，基礎指緣整理的安全界線、工具衛生、居家保濕，以及紅腫滲液等應先就醫的情況。" schema={schema}>
+  <Header />
+  <main class="pt-8 pb-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <nav class="text-sm text-it-text mb-4" aria-label="麵包屑">
+        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span>
+        <a href="/blog/" class="hover:text-it-cta">部落格</a> <span class="mx-2">/</span>
+        <span>景美手部保養</span>
+      </nav>
+      <article class="prose prose-lg mx-auto">
+        <h1>景美手部保養不只修指緣：乾燥、倒刺與日常清潔怎麼整理</h1>
+        <p class="text-sm text-it-text">發布日期：2026-08-27 | 作者：伊特美甲團隊 | <a href="/about/" class="text-it-cta hover:underline">關於我們</a></p>
+
+        <img src="/images/blog/jingmei-hand-care-dry-cuticle-20260827.webp" alt="景美手部保養前，美甲師在明亮衛生的桌面觀察乾燥指緣並準備清潔工具與保濕用品" class="w-full rounded-2xl my-6" loading="eager" />
+
+        <p>手洗得越勤、酒精用得越多，指緣旁的小皮就越容易翹起；一看到倒刺，很多人會順手撕掉，結果從一小片乾皮變成紅痛傷口。<strong>景美手部保養</strong>不只是把邊緣剪整齊，而是先看乾燥、碰水、清潔劑、摩擦和習慣，再決定哪些外觀可做美容整理、哪些狀況應停下來交給醫療專業。</p>
+
+        <h2>倒刺不要拉，先把撕扯循環停下來</h2>
+        <p>倒刺連著正常皮膚時，順著纖維拉扯可能撕開更大範圍。先洗淨雙手、保持乾燥，避免用牙咬、指甲摳或不乾淨的剪刀隨手剪。若只是表面乾燥，可依平常已適應的產品保濕；是否適合修剪、如何處理，由受過訓練的服務人員在看清狀態後說明。</p>
+        <p>已經出血、明顯疼痛、腫熱、滲液或疑似感染時，不應用美容工具繼續挖剪，也不要用凝膠、黏著劑或厚重裝飾把傷口蓋住。保持清潔並諮詢皮膚科等合格醫療專業。</p>
+
+        <h2>先記錄一週：手到底在什麼時候最乾</h2>
+        <p>觀察洗手與酒精頻率、是否長時間戴手套、洗碗與清潔劑接觸、紙張或紙箱摩擦，以及睡前和起床時的差異。乾燥若集中在工作日、某種手套或某項清潔後，調整暴露方式通常比不停增加保養品更有方向。</p>
+        <p>拍照時用相近光線與距離，不必把手泡水後再拍。也記下新換過的清潔、護手、指緣或美甲產品，讓現場能分辨是長期習慣，還是近期才出現的變化。</p>
+
+        <h2>基礎手部保養會整理什麼</h2>
+        <p>依店家項目，可能包含清潔、甲型修整、表面與指緣外觀整理、簡單保濕等。開始前應確認使用工具、是否會剪除組織、本人不希望碰觸的部位，以及過程中任何不適都能停。健康組織不需要為了看起來更深、更乾淨而反覆剪除。</p>
+        <p>工具衛生可參考<a href="/blog/nail-tool-sterilization-hygiene-20260807/" class="text-it-cta hover:underline">美甲器材清潔消毒重點</a>。一次性用品應依規範使用，重複使用工具則需經適當清潔與消毒；看不懂流程時可以直接詢問。</p>
+
+        <h2>甲型修短是減少勾扯，不是治療乾燥</h2>
+        <p>指甲邊緣不平、長度過長時容易勾到衣物與頭髮，適度修整可減少機械拉扯。但手部乾燥仍要回到接觸與保濕習慣，不能只靠磨短甲面。修型時不要來回磨進側邊太深，也不應用工具探入已疼痛的甲溝。</p>
+        <p>若甲片出現明顯變色、增厚、分離、疼痛或形狀突然改變，先暫停覆蓋與美容修整，讓醫療專業評估原因。</p>
+
+        <h2>碰水多的人，手套要乾燥且合手</h2>
+        <p>洗碗、洗衣與清潔時可依工作與產品標示選擇合適手套，但手套內進水或大量出汗就應更換。長時間把濕手悶在密閉手套裡，不等於保護。手套材質造成搔癢或紅疹時停止使用，已知過敏者選用品前先確認材質。</p>
+        <p>凝膠美甲後的家事安排，可搭配<a href="/blog/jingmei-manicure-housework-gloves-20260826/" class="text-it-cta hover:underline">家事手套與指尖防護</a>閱讀。無論有沒有做凝膠，都不要把指尖當刮刀或開蓋工具。</p>
+
+        <h2>保濕採少量、固定、能持續的方式</h2>
+        <p>洗手後完全擦乾，再使用自己已適應、用途清楚的護手或指緣產品。與其一次厚敷五種，不如選一種可固定使用的產品，觀察一到兩週。新品先依標示小範圍使用，出現刺、癢、紅或腫就停止。</p>
+        <p>香味、涼感、酸類、去角質或美白產品不一定適合已乾裂的皮膚，也不要把處方藥與一般護手品混在一起自行調配。正在治療皮膚問題時，以醫療端指示為準。</p>
+
+        <h2>這些狀況先不要預約美容整理</h2>
+        <ul>
+          <li>指緣或甲溝有出血、開放傷口、明顯紅腫熱痛或滲液。</li>
+          <li>突然出現大量水泡、疹子、持續搔癢或快速擴散的變化。</li>
+          <li>甲片明顯變色、增厚、分離，或按壓與日常活動會疼痛。</li>
+          <li>近期手術、外傷，或醫師已交代避免相關美容處理。</li>
+        </ul>
+        <p>美容服務不診斷也不治療疾病。延後一次保養，先把皮膚安全處理好，比用外觀遮住問題更重要。</p>
+
+        <h2>預約時把習慣和界線一起說</h2>
+        <p>可以這樣提供資料：「平常工作每天洗手多次，回家還會洗碗；兩側拇指容易出現倒刺，目前沒有出血，但某款護手霜會刺。想做基礎景美手部保養，了解修整範圍和居家方式。」明確資料能讓美甲師在服務前先判斷是否需要延期或調整。</p>
+
+        <p>ITUNG NAILS 伊特美甲在景美與新店提供手足保養及凝膠美甲。實際項目、工具流程與適用性依現場甲周狀態確認，可先查看<a href="/services/" class="text-it-cta hover:underline">服務內容</a>並於預約時說明。本文為一般美容保養資訊，不替代醫療診斷或治療。</p>
+      </article>
+    </div>
+  </main>
+  <Footer />
+</Layout>

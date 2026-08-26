@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: '景美手部保養不只修指緣：乾燥、倒刺與日常清潔怎麼整理',
+    excerpt: '手部乾燥與倒刺不適合直接撕掉。本文整理景美手部保養前如何觀察清潔、碰水與摩擦習慣，基礎指緣整理的安全界線、工具衛生、居家保濕，以及紅腫滲液等應先就醫的情況。',
+    date: '2026-08-27',
+    href: '/blog/jingmei-hand-care-dry-cuticle-20260827/',
+    cluster: 'hand-foot-care',
+  },
+  {
     title: '做完美甲隔天要洗衣打掃，手套怎麼戴？景美凝膠美甲的家事防護',
     excerpt: '美甲後不可能完全不碰水。本文整理洗碗、洗衣與清潔時如何選合適手套、為什麼內部潮濕要立刻更換、指尖不要拿來摳刮，以及凝膠翹起、疼痛或甲周紅腫時的處理界線。',
     date: '2026-08-26',
