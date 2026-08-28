@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: '新店凝膠美甲第一次怎麼選？長度、色系與卸甲安排先說清楚',
+    excerpt: '第一次預約新店凝膠美甲，可先整理工作用手、期望長度、喜歡與不喜歡的色系、甲況及卸甲時間。本文說明參考圖如何溝通、為何不必一開始就做複雜款，以及紅腫破皮等應先就醫的界線。',
+    date: '2026-08-29',
+    href: '/blog/xindian-first-gel-manicure-consultation-20260829/',
+    cluster: 'gel-care',
+  },
+  {
     title: '指甲剪得太短還能做美甲嗎？先看甲緣、皮膚與日常使用',
     excerpt: '指甲剪得很短不一定完全不能做美甲，但需要先看甲板是否完整、甲緣周圍有無破皮疼痛，以及日常工作是否容易磨碰。本文整理到店前不要再挖剪、服務項目怎麼調整，以及紅腫、滲液、甲片分離等應先就醫的界線。',
     date: '2026-08-28',
