@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: '指甲剪得太短還能做美甲嗎？先看甲緣、皮膚與日常使用',
+  image: ['https://itungnails.com/images/blog/jingmei-short-nails-manicure-assessment-20260828.webp'],
+  author: { '@type': 'Organization', name: 'ITUNG NAILS 伊特美甲', url: 'https://itungnails.com/about/' },
+  publisher: { '@type': 'Organization', name: 'ITUNG NAILS 伊特美甲' },
+  datePublished: '2026-08-28',
+  dateModified: '2026-08-28',
+  description: '指甲剪得很短不一定完全不能做美甲，但需要先看甲板是否完整、甲緣周圍有無破皮疼痛，以及日常工作是否容易磨碰。本文整理到店前不要再挖剪、服務項目怎麼調整，以及應先就醫的界線。',
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://itungnails.com/blog/jingmei-short-nails-manicure-assessment-20260828/' },
+};
+---
+
+<Layout title="指甲剪太短還能做美甲嗎？甲緣與皮膚先評估 | 伊特美甲" description="指甲剪得很短不一定完全不能做美甲，但需要先看甲板是否完整、甲緣周圍有無破皮疼痛，以及日常工作是否容易磨碰。整理到店前準備、項目調整與就醫界線。" schema={schema}>
+  <Header />
+  <main class="pt-8 pb-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <nav class="text-sm text-it-text mb-4" aria-label="麵包屑">
+        <a href="/" class="hover:text-it-cta">首頁</a> <span class="mx-2">/</span>
+        <a href="/blog/" class="hover:text-it-cta">部落格</a> <span class="mx-2">/</span>
+        <span>短指甲美甲評估</span>
+      </nav>
+      <article class="prose prose-lg mx-auto">
+        <h1>指甲剪得太短還能做美甲嗎？先看甲緣、皮膚與日常使用</h1>
+        <p class="text-sm text-it-text">發布日期：2026-08-28 | 作者：伊特美甲團隊 | <a href="/about/" class="text-it-cta hover:underline">關於我們</a></p>
+
+        <img src="/images/blog/jingmei-short-nails-manicure-assessment-20260828.webp" alt="景美美甲桌前，美甲師在服務開始前觀察顧客短指甲、甲緣與周圍皮膚狀態" class="w-full rounded-2xl my-6" loading="eager" />
+
+        <p>剛把指甲剪到幾乎沒有白邊，隔天才想起已預約凝膠，很多人會擔心「是不是完全不能做」。短指甲本身不是唯一判斷條件；更重要的是甲板是否完整、甲緣周圍有沒有被剪破、按壓會不會痛，以及你希望的款式和日常工作。到店前先停止繼續挖剪，讓美甲師在乾淨、明亮環境下看清實際狀態，再決定做基礎整理、簡單款式、調整長度，或暫緩服務。</p>
+
+        <h2>「短」和「剪傷」要分開看</h2>
+        <p>有些人天生甲床較短，或因工作習慣固定留短，周圍皮膚仍完整、沒有疼痛；另一些則是剪刀進到側邊、甲下皮膚受刺激，出現紅、破、刺或滲液。前者可以討論適合的外觀與耐用度，後者不應用凝膠、黏著劑或裝飾直接覆蓋。</p>
+        <p>如果有明顯紅腫熱痛、出血、膿液、甲片分離、變色增厚，或日常碰觸就痛，先停止美容處理並尋求皮膚科等合格醫療專業評估。美甲服務不能診斷或治療感染、甲溝炎和其他疾病。</p>
+
+        <h2>到店前不要再修一次，也不要泡軟後挖邊</h2>
+        <p>覺得剪得不整齊時，不要為了方便美甲師又往兩側深剪、用尖銳工具挖甲溝，或長時間泡水後撕皮。這些動作可能讓原本只是不平的邊緣變成傷口。維持日常溫和清潔、完全擦乾，讓現場看到真實狀態即可。</p>
+        <p>若指緣乾燥或有倒刺，可先參考<a href="/blog/jingmei-hand-care-dry-cuticle-20260827/" class="text-it-cta hover:underline">手部乾燥與倒刺整理</a>；倒刺不要拉扯，已經破皮就不要自行覆蓋。</p>
+
+        <h2>短指甲的款式先從比例和生活習慣談</h2>
+        <p>短甲可以透過顏色、線條、留白與局部設計調整視覺比例，不必強求每一款長甲參考圖原樣複製。甲面可用空間、弧度與左右手長度不同，設計會依現場調整；照片是溝通方向，不是交付保證。</p>
+        <p>需要打字、照護孩童、做餐飲、搬物或接觸精細零件的人，可把工作動作一起說明。外觀之外，也要考慮邊緣是否容易卡住、厚度是否妨礙使用，以及工作場所對美甲的規範。</p>
+
+        <h2>不要用延甲硬補每一段不足</h2>
+        <p>是否適合延長，要看甲板可用範圍、皮膚狀態、預計長度與日常受力，不是所有短甲都應延甲。過長或受力不合適可能增加勾扯；甲周有傷口或疼痛時，也不應為了活動造型勉強施工。</p>
+        <p>想延長時先問清楚材料、固定方式、長度、卸除與回補安排，任何過程出現灼熱、尖銳痛或明顯不適都要立即說。用燈照射時若持續灼熱，不必為了怕影響進度而忍耐。</p>
+
+        <h2>前處理的重點是衛生與保留健康組織</h2>
+        <p>開始前確認雙手清潔、桌面和工具流程。器材衛生可閱讀<a href="/blog/nail-tool-sterilization-hygiene-20260807/" class="text-it-cta hover:underline">美甲工具清潔消毒重點</a>。健康的指緣與甲下組織不需要為了看起來更深、更乾淨而剪除。</p>
+        <p>短甲邊緣若很靠近皮膚，修型和上色需要更仔細，也可能無法做到和長甲相同的包邊方式。美甲師應在開始前說明限制，而不是為了追求照片效果碰觸到不該剪的組織。</p>
+
+        <h2>完成後別用指尖測試耐不耐</h2>
+        <p>剛完成就拿指尖開罐、刮貼紙或摳硬物，短甲也可能在前緣承受集中力量。做家事時依工作選合適手套，手套進水或大量流汗就更換；詳細方式可參考<a href="/blog/jingmei-manicure-housework-gloves-20260826/" class="text-it-cta hover:underline">凝膠美甲後的家事防護</a>。</p>
+        <p>若出現翹起，不要自行撕除或用強力膠補黏，避免水分與髒污進入縫隙。拍下位置並聯絡原服務店家；伴隨疼痛、變色、紅腫或滲液時，停止覆蓋並尋求醫療評估。</p>
+
+        <h2>預約訊息可以直接這樣說</h2>
+        <p>「昨天把十指剪得很短，目前沒有出血，但右手食指側邊按壓有點刺。平常需要大量打字，想做短甲簡單凝膠，請先協助看是否適合；如果有破皮我可以改做其他項目或延後。」具體說明比只傳一張遠照問能不能做更安全。</p>
+
+        <p>ITUNG NAILS 伊特美甲在景美與新店提供凝膠美甲與手足保養。實際服務依甲板、甲周皮膚與生活需求現場確認，可先查看<a href="/services/" class="text-it-cta hover:underline">服務內容</a>。本文為一般美容保養資訊，不替代醫療診斷或治療。</p>
+      </article>
+    </div>
+  </main>
+  <Footer />
+</Layout>

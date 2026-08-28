@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: '指甲剪得太短還能做美甲嗎？先看甲緣、皮膚與日常使用',
+    excerpt: '指甲剪得很短不一定完全不能做美甲，但需要先看甲板是否完整、甲緣周圍有無破皮疼痛，以及日常工作是否容易磨碰。本文整理到店前不要再挖剪、服務項目怎麼調整，以及紅腫、滲液、甲片分離等應先就醫的界線。',
+    date: '2026-08-28',
+    href: '/blog/jingmei-short-nails-manicure-assessment-20260828/',
+    cluster: 'gel-care',
+  },
+  {
     title: '景美手部保養不只修指緣：乾燥、倒刺與日常清潔怎麼整理',
     excerpt: '手部乾燥與倒刺不適合直接撕掉。本文整理景美手部保養前如何觀察清潔、碰水與摩擦習慣，基礎指緣整理的安全界線、工具衛生、居家保濕，以及紅腫滲液等應先就醫的情況。',
     date: '2026-08-27',
