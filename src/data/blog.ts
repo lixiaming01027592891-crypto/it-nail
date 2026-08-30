@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: '美甲照片拍完才發現太亮？記錄作品時，光線與色差怎麼看',
+    excerpt: '同一款美甲在窗邊、店內與手機畫面可能看起來不同。從光線、角度、原圖留存到分享範圍，整理能幫助下次選色的作品拍照方法，不把照片當成色彩保證。',
+    date: '2026-08-30',
+    href: '/blog/nail-photo-lighting-color-record-20260830/',
+    cluster: 'style-visit',
+  },
+  {
     title: '新店凝膠美甲第一次怎麼選？長度、色系與卸甲安排先說清楚',
     excerpt: '第一次預約新店凝膠美甲，可先整理工作用手、期望長度、喜歡與不喜歡的色系、甲況及卸甲時間。本文說明參考圖如何溝通、為何不必一開始就做複雜款，以及紅腫破皮等應先就醫的界線。',
     date: '2026-08-29',
