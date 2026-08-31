@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: '新店美甲課程怎麼排練習？上班族報名前先算工具、時間與回饋',
+    excerpt: '選新店美甲課程，不只比較上課堂數。從每週練習空檔、工具清單、手模安排到作品回饋，整理上班族報名前可以問清楚的學習條件，不承諾短期接案。',
+    date: '2026-08-31',
+    href: '/blog/xindian-nail-course-practice-schedule-20260831/',
+    cluster: 'courses',
+  },
+  {
     title: '美甲照片拍完才發現太亮？記錄作品時，光線與色差怎麼看',
     excerpt: '同一款美甲在窗邊、店內與手機畫面可能看起來不同。從光線、角度、原圖留存到分享範圍，整理能幫助下次選色的作品拍照方法，不把照片當成色彩保證。',
     date: '2026-08-30',
