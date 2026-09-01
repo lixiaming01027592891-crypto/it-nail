@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店手足護理怎麼安排鞋襪與行程？預約前先說明日常使用狀況",
+    excerpt: "手足護理前先整理工作用手、鞋襪、運動與敏感狀況，確認服務範圍和返家動線；有傷口或疑似感染時，不用勉強進行美容服務。",
+    date: "2026-09-01",
+    href: '/blog/xindian-hand-foot-care-shoes-schedule-20260901/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: '新店美甲課程怎麼排練習？上班族報名前先算工具、時間與回饋',
     excerpt: '選新店美甲課程，不只比較上課堂數。從每週練習空檔、工具清單、手模安排到作品回饋，整理上班族報名前可以問清楚的學習條件，不承諾短期接案。',
     date: '2026-08-31',
