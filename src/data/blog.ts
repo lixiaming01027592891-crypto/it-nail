@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店手足護理前有破皮或壓痛怎麼說？預約、鞋襪與停止界線",
+    excerpt: "手足有破皮、紅腫或壓痛時，先描述位置與時間，不自行遮蓋。服務前確認是否適合進行，必要時先由醫療人員評估。",
+    date: "2026-09-02",
+    href: '/blog/xindian-hand-foot-care-skin-break-tenderness-boundaries-20260902/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店手足護理怎麼安排鞋襪與行程？預約前先說明日常使用狀況",
     excerpt: "手足護理前先整理工作用手、鞋襪、運動與敏感狀況，確認服務範圍和返家動線；有傷口或疑似感染時，不用勉強進行美容服務。",
     date: "2026-09-01",
