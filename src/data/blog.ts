@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "景美手部保養預約前，指緣、甲面與日常工作怎麼說明？",
+    excerpt: "安排景美手部保養時，先說明指緣、甲面、慣用手與工作接觸，遇到破皮疼痛或感染疑慮應先尋求醫療評估。",
+    date: "2026-09-03",
+    href: '/blog/jingmei-hand-care-cuticle-nail-daily-work-20260903/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店手足護理前有破皮或壓痛怎麼說？預約、鞋襪與停止界線",
     excerpt: "手足有破皮、紅腫或壓痛時，先描述位置與時間，不自行遮蓋。服務前確認是否適合進行，必要時先由醫療人員評估。",
     date: "2026-09-02",
