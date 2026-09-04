@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "景美手部保養後隔天要做家事？碰水、手套與不適觀察清單",
+    excerpt: "景美手部保養後若要洗碗、清潔或搬物，先確認碰水與手套使用方式，並觀察指緣、甲面和皮膚是否持續不適。",
+    date: "2026-09-04",
+    href: '/blog/jingmei-hand-care-aftercare-water-gloves-discomfort-20260904/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "景美手部保養預約前，指緣、甲面與日常工作怎麼說明？",
     excerpt: "安排景美手部保養時，先說明指緣、甲面、慣用手與工作接觸，遇到破皮疼痛或感染疑慮應先尋求醫療評估。",
     date: "2026-09-03",
