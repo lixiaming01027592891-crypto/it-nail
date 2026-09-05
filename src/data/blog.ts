@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "景美足部保養預約前，鞋款、步行安排與指甲現況怎麼整理？",
+    excerpt: "景美足部保養前，先說明常穿鞋款、當天步行計畫、既有甲面材料與目前不適，確認服務範圍、清潔流程和需要先就醫的問題。",
+    date: "2026-09-05",
+    href: '/blog/jingmei-foot-care-shoes-walking-nail-condition-booking-20260905/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "景美手部保養後隔天要做家事？碰水、手套與不適觀察清單",
     excerpt: "景美手部保養後若要洗碗、清潔或搬物，先確認碰水與手套使用方式，並觀察指緣、甲面和皮膚是否持續不適。",
     date: "2026-09-04",
