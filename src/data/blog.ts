@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "景美手部保養怎麼排？打字、家事、指甲長度與卸除需求先說",
+    excerpt: "預約景美手部保養時，先說明工作打字、家事、常戴手套等使用情境，並確認甲面材料、長度、清潔與卸除範圍。",
+    date: "2026-09-06",
+    href: '/blog/jingmei-hand-care-typing-chores-nail-length-removal-20260906/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "景美足部保養預約前，鞋款、步行安排與指甲現況怎麼整理？",
     excerpt: "景美足部保養前，先說明常穿鞋款、當天步行計畫、既有甲面材料與目前不適，確認服務範圍、清潔流程和需要先就醫的問題。",
     date: "2026-09-05",
