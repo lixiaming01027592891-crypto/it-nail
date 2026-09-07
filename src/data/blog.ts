@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "第一次找景美美甲店怎麼比較？作品、卸除、工具與日常需求清單",
+    excerpt: "第一次比較景美美甲店時，可用相同欄位查看作品方向、既有材料卸除、工具清潔、所需時間及日常使用需求。",
+    date: "2026-09-07",
+    href: '/blog/jingmei-nail-shop-first-visit-portfolio-removal-tools-daily-needs-20260907/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "景美手部保養怎麼排？打字、家事、指甲長度與卸除需求先說",
     excerpt: "預約景美手部保養時，先說明工作打字、家事、常戴手套等使用情境，並確認甲面材料、長度、清潔與卸除範圍。",
     date: "2026-09-06",
