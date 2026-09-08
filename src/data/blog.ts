@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店凝膠美甲遇到旅行行程，款式、長度、維護與卸除時間怎麼排？",
+    excerpt: "新店凝膠美甲若要配合旅行，可先確認施作與卸除日期、活動所需長度、款式素材、日常維護和異常處理方式。",
+    date: "2026-09-08",
+    href: '/blog/xindian-gel-nails-travel-design-length-care-removal-20260908/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "第一次找景美美甲店怎麼比較？作品、卸除、工具與日常需求清單",
     excerpt: "第一次比較景美美甲店時，可用相同欄位查看作品方向、既有材料卸除、工具清潔、所需時間及日常使用需求。",
     date: "2026-09-07",
