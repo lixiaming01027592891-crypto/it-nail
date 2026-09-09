@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店凝膠美甲參考圖怎麼選？短甲的比例、留白與配色練習",
+    excerpt: "挑選新店凝膠美甲參考圖時，分開看甲形、留白、配色和飾品位置，整理短甲也能清楚溝通的設計方向。",
+    date: "2026-09-09",
+    href: '/blog/xindian-gel-nails-short-nail-reference-proportion-color-20260909/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店凝膠美甲遇到旅行行程，款式、長度、維護與卸除時間怎麼排？",
     excerpt: "新店凝膠美甲若要配合旅行，可先確認施作與卸除日期、活動所需長度、款式素材、日常維護和異常處理方式。",
     date: "2026-09-08",
