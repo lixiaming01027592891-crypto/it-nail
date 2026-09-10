@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店美甲教學怎麼安排練習？用作品紀錄找到下一次修正重點",
+    excerpt: "新店美甲教學練習可從課程目標、工具準備、作品拍照與老師回饋開始，建立清楚的修正順序，讓每次練習都有可比較的依據。",
+    date: "2026-09-10",
+    href: '/blog/xindian-nail-class-practice-record-feedback-20260910/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店凝膠美甲參考圖怎麼選？短甲的比例、留白與配色練習",
     excerpt: "挑選新店凝膠美甲參考圖時，分開看甲形、留白、配色和飾品位置，整理短甲也能清楚溝通的設計方向。",
     date: "2026-09-09",
