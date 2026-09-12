@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店美甲教學如何配合樂器與運動？把手部使用情境帶進練習",
+    excerpt: "新店美甲教學可把樂器、球拍、攀岩或其他手部使用習慣帶入課程溝通，安排長度、操作和作品紀錄。",
+    date: "2026-09-12",
+    href: '/blog/xindian-nail-class-musician-sports-practice-plan-20260912/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店美甲教學怎麼安排練習？用作品紀錄找到下一次修正重點",
     excerpt: "新店美甲教學練習可從課程目標、工具準備、作品拍照與老師回饋開始，建立清楚的修正順序，讓每次練習都有可比較的依據。",
     date: "2026-09-10",
