@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "景美足部保養配合長途旅行：鞋襪、步行量與預約時間怎麼排",
+    excerpt: "景美足部保養若安排在長途旅行前，可先整理鞋襪、預估步行量、既有甲面狀態與卸除需求，避免臨行才改方案。",
+    date: "2026-09-13",
+    href: '/blog/jingmei-foot-care-long-trip-shoes-schedule-20260913/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店美甲教學如何配合樂器與運動？把手部使用情境帶進練習",
     excerpt: "新店美甲教學可把樂器、球拍、攀岩或其他手部使用習慣帶入課程溝通，安排長度、操作和作品紀錄。",
     date: "2026-09-12",
