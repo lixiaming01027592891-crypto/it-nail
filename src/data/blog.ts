@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店凝膠美甲配合鍵盤工作：短甲長度、邊緣與回店時間怎麼選",
+    excerpt: "新店凝膠美甲若需要長時間打字，可先整理慣用手、鍵盤操作、短甲長度與工作行程，再討論款式和維護安排。",
+    date: "2026-09-14",
+    href: '/blog/xindian-gel-nails-keyboard-work-short-nail-maintenance-20260914/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "景美足部保養配合長途旅行：鞋襪、步行量與預約時間怎麼排",
     excerpt: "景美足部保養若安排在長途旅行前，可先整理鞋襪、預估步行量、既有甲面狀態與卸除需求，避免臨行才改方案。",
     date: "2026-09-13",
