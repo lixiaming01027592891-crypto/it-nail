@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "景美足部保養配合久站工作：鞋襪輪替、壓力點與休假日怎麼記",
+    excerpt: "景美足部保養諮詢若面對久站工作，可先記錄班表、鞋襪、摩擦位置與休假日變化，再討論一般保養與日常維持。",
+    date: "2026-09-15",
+    href: '/blog/jingmei-foot-care-standing-work-shoes-pressure-notes-20260915/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店凝膠美甲配合鍵盤工作：短甲長度、邊緣與回店時間怎麼選",
     excerpt: "新店凝膠美甲若需要長時間打字，可先整理慣用手、鍵盤操作、短甲長度與工作行程，再討論款式和維護安排。",
     date: "2026-09-14",
