@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店凝膠美甲配合婚禮賓客造型：試色、拍照光線與卸除日期怎麼抓",
+    excerpt: "安排新店凝膠美甲搭配婚禮，可從服裝實色、手部使用、現場光線、預約緩衝與後續卸除五方面做決定。",
+    date: "2026-09-20",
+    href: '/blog/xindian-gel-nails-wedding-guest-color-removal-plan-20260920/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "景美足部保養配合久站工作：鞋襪輪替、壓力點與休假日怎麼記",
     excerpt: "景美足部保養諮詢若面對久站工作，可先記錄班表、鞋襪、摩擦位置與休假日變化，再討論一般保養與日常維持。",
     date: "2026-09-15",
