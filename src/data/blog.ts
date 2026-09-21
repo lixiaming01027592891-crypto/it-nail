@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店凝膠美甲給鍵盤工作者：甲型長度、前緣觸鍵與卸除時點怎麼選",
+    excerpt: "長時間打字者安排新店凝膠美甲，可依鍵盤、快捷鍵、觸控板及工作節奏選擇長度與甲型，並預留保養和卸除安排。",
+    date: "2026-09-21",
+    href: '/blog/xindian-gel-nails-keyboard-work-length-edge-removal-20260921/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店凝膠美甲配合婚禮賓客造型：試色、拍照光線與卸除日期怎麼抓",
     excerpt: "安排新店凝膠美甲搭配婚禮，可從服裝實色、手部使用、現場光線、預約緩衝與後續卸除五方面做決定。",
     date: "2026-09-20",
