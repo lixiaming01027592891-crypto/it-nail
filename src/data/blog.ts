@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "景美足部保養給跑步初學者：鞋襪摩擦、水泡與活動時程怎麼說明",
+    excerpt: "剛開始跑步安排景美足部保養，可先記錄鞋襪、里程、摩擦位置、皮膚與甲面變化，並把賽事和就醫需求分開規劃。",
+    date: "2026-09-23",
+    href: '/blog/jingmei-foot-care-new-runner-shoes-friction-timing-20260923/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店凝膠美甲給鍵盤工作者：甲型長度、前緣觸鍵與卸除時點怎麼選",
     excerpt: "長時間打字者安排新店凝膠美甲，可依鍵盤、快捷鍵、觸控板及工作節奏選擇長度與甲型，並預留保養和卸除安排。",
     date: "2026-09-21",
