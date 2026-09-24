@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "景美手部保養給常洗碗的人：手套、清潔劑與指緣狀況怎麼記",
+    excerpt: "常洗碗或接觸清潔劑時，手部保養前可整理濕作業時間、手套使用、指緣變化與工作限制，避免只看一次乾燥外觀。",
+    date: "2026-09-24",
+    href: '/blog/jingmei-hand-care-frequent-dishwashing-glove-routine-20260924/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "景美足部保養給跑步初學者：鞋襪摩擦、水泡與活動時程怎麼說明",
     excerpt: "剛開始跑步安排景美足部保養，可先記錄鞋襪、里程、摩擦位置、皮膚與甲面變化，並把賽事和就醫需求分開規劃。",
     date: "2026-09-23",
