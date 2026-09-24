@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "景美足部保養準備穿露趾鞋：修整、清潔與鞋款摩擦",
+    excerpt: "換穿露趾鞋前，先看指甲邊緣、鞋帶摩擦與清潔需求；有疼痛或感染疑慮時不以一般美甲服務替代醫療。",
+    date: "2026-09-25",
+    href: '/blog/jingmei-foot-care-open-toe-sandal-nail-preparation-20260925/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "景美手部保養給常洗碗的人：手套、清潔劑與指緣狀況怎麼記",
     excerpt: "常洗碗或接觸清潔劑時，手部保養前可整理濕作業時間、手套使用、指緣變化與工作限制，避免只看一次乾燥外觀。",
     date: "2026-09-24",
