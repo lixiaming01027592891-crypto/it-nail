@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "新店凝膠美甲卸除後覺得甲面薄：先看狀態再決定下一款",
+    excerpt: "卸除凝膠後若覺得指甲敏感，先分辨正常外觀與疼痛、破損等異常，再討論保養和再次施作的時間。",
+    date: "2026-09-26",
+    href: '/blog/xindian-gel-nail-removal-thin-nail-recovery-20260926/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "景美足部保養準備穿露趾鞋：修整、清潔與鞋款摩擦",
     excerpt: "換穿露趾鞋前，先看指甲邊緣、鞋帶摩擦與清潔需求；有疼痛或感染疑慮時不以一般美甲服務替代醫療。",
     date: "2026-09-25",
