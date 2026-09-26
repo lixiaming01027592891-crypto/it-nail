@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "短甲也能做法式，白邊寬度比照抄照片更值得討論",
+    excerpt: "短甲法式設計先看白邊佔比、弧線和底色；用符合自己甲面大小的樣片討論，不直接照搬長甲照片。",
+    date: "2026-09-27",
+    href: '/blog/short-nail-french-tip-width-negative-space-20260927/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "新店凝膠美甲卸除後覺得甲面薄：先看狀態再決定下一款",
     excerpt: "卸除凝膠後若覺得指甲敏感，先分辨正常外觀與疼痛、破損等異常，再討論保養和再次施作的時間。",
     date: "2026-09-26",
