@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "透色凝膠為什麼每個人擦起來不同？從甲床底色看試色",
+    excerpt: "透色凝膠受原生甲色、遮蓋程度與疊擦方式影響，試色要放到自己的甲面及合適光線下討論。",
+    date: "2026-09-28",
+    href: '/blog/sheer-gel-natural-nail-base-layer-color-20260928/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "短甲也能做法式，白邊寬度比照抄照片更值得討論",
     excerpt: "短甲法式設計先看白邊佔比、弧線和底色；用符合自己甲面大小的樣片討論，不直接照搬長甲照片。",
     date: "2026-09-27",
