@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "立體美甲有裝飾，日常清潔與勾拉要怎麼顧",
+    excerpt: "立體美甲的日常照顧要保留正常洗手，避免裝飾受勾拉；鬆動時由店家處理，不用自行補膠掩蓋異常。",
+    date: "2026-09-29",
+    href: '/blog/raised-nail-decoration-cleaning-snagging-20260929/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "透色凝膠為什麼每個人擦起來不同？從甲床底色看試色",
     excerpt: "透色凝膠受原生甲色、遮蓋程度與疊擦方式影響，試色要放到自己的甲面及合適光線下討論。",
     date: "2026-09-28",
