@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "貓眼美甲換個角度就不同，選款不要只看一張照片",
+    excerpt: "貓眼美甲的光帶會隨觀察角度與照明改變。選款時分清底色、光帶方向與甲面長度，用多角度試色協助溝通，避免只靠單張照片想像成果。",
+    date: "2026-10-03",
+    href: '/blog/cat-eye-gel-angle-light-reference-20261003/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "立體美甲有裝飾，日常清潔與勾拉要怎麼顧",
     excerpt: "立體美甲的日常照顧要保留正常洗手，避免裝飾受勾拉；鬆動時由店家處理，不用自行補膠掩蓋異常。",
     date: "2026-09-29",
