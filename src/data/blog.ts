@@ -49,6 +49,13 @@ export const blogClusters: BlogCluster[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "凝膠美甲前端翹起，補膠封住就好了嗎？",
+    excerpt: "凝膠翹起後，外觀補平不代表底下狀態已確認。先減少勾扯、聯絡美甲師，辨認需要卸除或醫療評估的情況，避免自己封膠。",
+    date: "2026-10-04",
+    href: '/blog/gel-nail-lifting-assessment-before-refilling-20261004/',
+    cluster: "hand-foot-care",
+  },
+  {
     title: "貓眼美甲換個角度就不同，選款不要只看一張照片",
     excerpt: "貓眼美甲的光帶會隨觀察角度與照明改變。選款時分清底色、光帶方向與甲面長度，用多角度試色協助溝通，避免只靠單張照片想像成果。",
     date: "2026-10-03",
